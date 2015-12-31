@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Client-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXDetectiveExploraNode",
+	"pools" : [
+		 ],
+	"super" : "RTExploraNodeLazy",
+	"type" : "normal" }

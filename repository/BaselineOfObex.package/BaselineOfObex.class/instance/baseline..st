@@ -17,10 +17,9 @@ baseline: spec
     do: [ 
       spec
         package: 'Obex-Client-Model'
-          with: [ spec requires: #('Roassal2' 'RPointerDetective') ];
+          with: [ spec requires: #('Roassal2' 'Roassal2') ];
         package: 'Obex-Client-Tode'
           with: [ spec requires: #('Obex-Client-Model') ];
-        package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
         package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';
         package: 'Obex-Core-Model' with: [ spec requires: #('Roassal2') ];

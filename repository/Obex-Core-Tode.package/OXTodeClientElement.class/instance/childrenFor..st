@@ -1,3 +1,3 @@
 actions
 childrenFor: aTDPPINode
-  ^ self topez getChildrenForClientRoassalElement: self node: aTDPPINode
+  ^ self topez getChildrenForOXTodeClientElement: self node: aTDPPINode
