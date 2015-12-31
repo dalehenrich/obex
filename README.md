@@ -16,20 +16,20 @@
 **Stay tuned for further work, as this project is still under development**
 
 
-[1] http://seaside.gemtalksystems.com/ss/ScanBackup.html
-[2] http://www.smalltalkhub.com/#!/~PierreChanson/RPointerDetective
-[3] http://smalltalkhub.com/#!/~BenComan/PointerDetective
-[4] http://smalltalkhub.com/#!/~ObjectProfile/Roassal2
+[1]: http://seaside.gemtalksystems.com/ss/ScanBackup.html
+[2]: http://www.smalltalkhub.com/#!/~PierreChanson/RPointerDetective
+[3]: http://smalltalkhub.com/#!/~BenComan/PointerDetective
+[4]: http://smalltalkhub.com/#!/~ObjectProfile/Roassal2
 
-[9] https://github.com/dalehenrich/tode
-[10] https://github.com/GsDevKit/GsDevKit_home
+[9]: https://github.com/dalehenrich/tode
+[10]: https://github.com/GsDevKit/GsDevKit_home
 
-[12] https://gemtalksystems.com/products/gs64/
+[12]: https://gemtalksystems.com/products/gs64/
 
-[13] https://programminggems.wordpress.com/2009/05/14/scanbackup/
+[13]: https://programminggems.wordpress.com/2009/05/14/scanbackup/
 
-[14] https://vimeo.com/131145038
+[14]: https://vimeo.com/131145038
 
-[15] https://fr.linkedin.com/in/pierre-chanson-7a817064
-[16] https://github.com/jgfoster
-[17] https://github.com/bencoman
+[15]: https://fr.linkedin.com/in/pierre-chanson-7a817064
+[16]: https://github.com/jgfoster
+[17]: https://github.com/bencoman
