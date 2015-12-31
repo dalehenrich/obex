@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"initialize" : "dkh 12/31/2015 10:33",
+		"obex" : "dkh 12/31/2015 10:33",
+		"obexManPage" : "dkh 12/31/2015 10:33",
+		"obexcalcManPage" : "dkh 12/31/2015 10:33",
+		"obexclearManPage" : "dkh 12/31/2015 10:33",
+		"obexviewManPage" : "dkh 12/31/2015 10:33",
+		"priority" : "dkh 12/31/2015 10:33",
+		"toolName" : "dkh 12/31/2015 10:33",
+		"toolReadMe" : "dkh 12/31/2015 10:33" },
+	"instance" : {
+		"obexGlobalName" : "dkh 12/31/2015 10:33",
+		"obexProcessNodes:for:" : "dkh 12/31/2015 10:33",
+		"obexcalc" : "dkh 12/31/2015 10:34",
+		"obexclear" : "dkh 12/31/2015 10:33",
+		"obexview" : "dkh 12/31/2015 10:33" } }

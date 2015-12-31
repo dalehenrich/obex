@@ -1,0 +1,19 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/31/2015 10:34",
+	"instvars" : [
+		"searchResult",
+		"searchObjectMap",
+		"oopToNodeMap",
+		"searchNodeMap",
+		"classNameMap",
+		"summary" ],
+	"name" : "OXObjectExplorer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,20 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 12/31/2015 10:30",
+	"instvars" : [
+		"oop",
+		"className",
+		"children",
+		"parents",
+		"clientElement",
+		"myOop",
+		"referencePaths" ],
+	"name" : "OXNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

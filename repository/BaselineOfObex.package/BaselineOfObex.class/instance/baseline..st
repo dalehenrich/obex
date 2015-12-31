@@ -33,6 +33,8 @@ baseline: spec
     do: [ 
       spec
         package: 'Obex-Server-Tode'
+          with: [ spec requires: #('Obex-Server-Model') ];
+        package: 'Obex-Server-Model'
           with: [ spec requires: #('Obex-Core-Tode') ];
         yourself.
       spec
