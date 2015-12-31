@@ -1,0 +1,18 @@
+{
+	"category" : "Obex-Core-Tode",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"initialNodes",
+		"childrenBlock",
+		"childrenBlockOop",
+		"parentsBlock",
+		"parentsBlockOop" ],
+	"name" : "TodeClientRoassalElement",
+	"pools" : [
+		 ],
+	"super" : "TodeClientElement",
+	"type" : "normal" }

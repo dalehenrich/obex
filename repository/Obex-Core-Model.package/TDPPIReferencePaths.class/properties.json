@@ -1,0 +1,19 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"searchResult",
+		"searchObjectMap",
+		"oopToNodeMap",
+		"searchNodeMap",
+		"classNameMap",
+		"summary" ],
+	"name" : "TDPPIReferencePaths",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfObex",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfObex",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDPPIRootNode",
+	"pools" : [
+		 ],
+	"super" : "TDPPINode",
+	"type" : "normal" }
