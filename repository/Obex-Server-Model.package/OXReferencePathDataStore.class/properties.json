@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 12/31/2015 10:34",
+	"commentStamp" : "dkh 12/31/2015 14:19",
 	"instvars" : [
 		"searchResult",
 		"searchObjectMap",
@@ -12,7 +12,7 @@
 		"searchNodeMap",
 		"classNameMap",
 		"summary" ],
-	"name" : "OXObjectExplorer",
+	"name" : "OXReferencePathDataStore",
 	"pools" : [
 		 ],
 	"super" : "Object",

@@ -1,17 +1,15 @@
 obex
 obexcalc
   "
-  obex calc [--maxPaths=<max-paths>] [--globalName=<cache-name>] \
-           [ --st=<st-expression> | oop... ]
+  obex calc [--maxPaths=<max-paths>] --st=<st-expression> | oop... 
 "
 
-  | objects maxPaths searchResult obexRefPath globalName |
+  | objects maxPaths dataStore |
   self
     getSubcommandOptsMixedLongShort:
       {#('globalName' nil #'required').
       #('st' nil #'required').
       #('maxPaths' nil #'required')}.
-  globalName := self obexGlobalName.
   subOptions
     at: 'maxPaths'
     ifPresent: [ :arg | maxPaths := arg asNumber ]
@@ -20,13 +18,5 @@ obexcalc
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ].
-  System abort.
-  searchResult := SystemRepository
-    findAllReferencePathsToObjects: objects
-    maxPaths: maxPaths.
-  obexRefPath := OXObjectExplorer searchResult: searchResult.
-  UserGlobals at: globalName put: obexRefPath.
-  System commit.
-  obexRefPath analyze.
-  System commit.
-  ^ obexRefPath
+  dataStore := self obexDataStore.
+  dataStore findAllReferencePathsToObjects: objects maxPaths: maxPaths

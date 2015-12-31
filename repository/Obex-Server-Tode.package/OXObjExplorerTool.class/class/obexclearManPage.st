@@ -4,16 +4,17 @@ obexclearManPage
   manPage := TDManPage
     commandName: 'calc'
     sourceMethod: self name asString , '>>obexclear'
-    fromString: 'NAME
+    fromString:
+      'NAME
   obex clear - Clear reference path cache
 
 SYNOPSIS
-  obex clear [--globalName=<cache-name>]
+  obex clear
 
 DESCRIPTION
 
 EXAMPLES
   obex clear
-  obex clear --globalName=PpiRefPathCache 
+  obex --dataStore=OX_Index_1 clear 
 '.
   ^ manPage

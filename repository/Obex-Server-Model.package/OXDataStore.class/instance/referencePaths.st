@@ -1,0 +1,3 @@
+reference paths
+referencePaths
+  ^ referencePaths

@@ -1,22 +1,29 @@
 obex
 obexManPage
   | manPage |
-  manPage := TDManPage commandName: 'obex' fromString: 'NAME
+  manPage := TDManPage
+    commandName: 'obex'
+    fromString:
+      'NAME
   obex - Roassal-based tool for analyzing object reference paths
 
 SYNOPSIS
-  obex [--help] <command> [<options>] [ <priority>... ]
+  obex [--help] [--dataStore=<data-store-name>] <command> [<options>]
 
 DESCRIPTION
   Commands:
     calc  Calculate reference paths to given object
     clear Clear reference path cache
-    view  Browse reference paths to given objects
+    scan  Scan backup file to collect collect class instance counts
+    view  Visualize object reference graphs and class instance counts
 
 OPTIONS
-  --help [<command>]
+  --help [command]
     Bring up this man page or a man page for a subCommand.
  
+  --dataStore=<data-store-name>
+    Specify that the named data store be used for the operation
+
 EXAMPLES
   obex --help
 
@@ -25,5 +32,6 @@ EXAMPLES
     at: 'calc' put: self obexcalcManPage;
     at: 'view' put: self obexviewManPage;
     at: 'clear' put: self obexclearManPage;
+    at: 'scan' put: self obexscanManPage;
     yourself.
   ^ manPage

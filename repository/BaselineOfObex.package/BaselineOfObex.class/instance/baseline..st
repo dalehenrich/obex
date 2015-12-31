@@ -31,10 +31,11 @@ baseline: spec
     for: #(#'gs3.x')
     do: [ 
       spec
+        package: 'ScanBackup';
         package: 'Obex-Server-Tode'
           with: [ spec requires: #('Obex-Server-Model') ];
         package: 'Obex-Server-Model'
-          with: [ spec requires: #('Obex-Core-Tode') ];
+          with: [ spec requires: #('Obex-Core-Tode' 'ScanBackup') ];
         yourself.
       spec
         group: 'Core' with: #('Obex-Server-Tode');

@@ -6,8 +6,7 @@ obexview
 
   | globalName obexRefPath clientRoassalElement |
   self getSubcommandOptsMixedLongShort: {#('globalName' nil #'required')}.
-  globalName := self obexGlobalName.
-  obexRefPath := UserGlobals at: globalName.
+  obexRefPath := self obexDataStore referencePaths.
   clientRoassalElement := OXTodeClientElement new
     theObject: obexRefPath;
     usePersistentClientElementCache: false;

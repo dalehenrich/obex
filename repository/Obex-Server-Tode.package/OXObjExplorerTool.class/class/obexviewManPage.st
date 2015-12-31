@@ -4,17 +4,18 @@ obexviewManPage
   manPage := TDManPage
     commandName: 'view'
     sourceMethod: self name asString , '>>obexview'
-    fromString: 'NAME
-  obex view - Browse reference paths to given objects
+    fromString:
+      'NAME
+  obex view - Visualize object reference graphs and class instance counts
 
 SYNOPSIS
-  obex view [--globalName=<cache-name>]
+  obex view
 
 DESCRIPTION
 OPTIONS
 
 EXAMPLES
   obex view
-  obex view --globalName=PpiRefPathCache 
+  obex --dataStore=OX_Index_1 view
 '.
   ^ manPage

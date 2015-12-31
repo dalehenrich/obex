@@ -1,10 +1,8 @@
 obex
 obexclear
   "
-  obex clear [--globalName=<cache-name>]
+  obex clear
 "
 
-  | globalName |
-  self getSubcommandOptsMixedLongShort: {#('globalName' nil #'required')}.
-  globalName := self obexGlobalName.
-  ^ UserGlobals removeKey: globalName ifAbsent: [  ]
+  self getSubcommandOptsMixedLongShort: {}.
+  self obexDataStore clearReferencePaths

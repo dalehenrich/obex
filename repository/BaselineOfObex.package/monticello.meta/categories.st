@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfObex!
+SystemOrganization addCategory: #'BaselineOfObex'!
