@@ -5,16 +5,8 @@ baseline: spec
     for: #'common'
     do: [ 
       spec
-        baseline: 'Tode'
-          with: [ 
-              spec
-                loads: 'GemStone';
-                repository: 'github://dalehenrich/tode:dev/repository' ];
-        yourself.
-      spec
         package: 'Obex-Core-Model';
-        package: 'Obex-Core-Tode'
-          with: [ spec requires: #('Tode' 'Obex-Core-Model') ];
+        package: 'Obex-Core-Tode' with: [ spec requires: #('Obex-Core-Model') ];
         yourself.
       spec
         group: 'Core' with: #('Obex-Core-Model' 'Obex-Core-Tode');
@@ -27,7 +19,7 @@ baseline: spec
         package: 'Obex-Client-Model'
           with: [ spec requires: #('Roassal2' 'RPointerDetective') ];
         package: 'Obex-Client-Tode'
-          with: [ spec requires: #('Tode' 'Obex-Client-Model') ];
+          with: [ spec requires: #('Obex-Client-Model') ];
         package: 'RPointerDetective' with: [ spec requires: #('Roassal2') ];
         package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';
