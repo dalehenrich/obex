@@ -1,5 +1,5 @@
 actions
-inspectRoassalObject
+inspectOXObject
   self isCacheValid
     ifFalse: [ 
       self

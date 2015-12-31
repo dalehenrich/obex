@@ -12,7 +12,7 @@ obexview
     theObject: obexRefPath;
     usePersistentClientElementCache: false;
     windowBuilder: self;
-    editorAspectSelector: #'activateRoassalEditor';
+    editorAspectSelector: #'activateObjectExplorerEditor';
     editorWindowLabel: 'xxx';
     editorWindowLocation: #'method';
     topez: self topez;
