@@ -1,0 +1,17 @@
+{
+	"category" : "Obex-Client-Tode",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"roassalView",
+		"b1",
+		"b2",
+		"graphBuilder" ],
+	"name" : "TodeRoassalEditor",
+	"pools" : [
+		 ],
+	"super" : "TodeCommonEditor",
+	"type" : "normal" }
