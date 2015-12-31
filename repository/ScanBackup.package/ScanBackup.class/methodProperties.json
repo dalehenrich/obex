@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"classes" : "jgf 01/19/2010 13:23",
+		"scanBackupAtServerPath:" : "jgf 01/19/2010 13:23" },
+	"instance" : {
+		"determineFileTypeAndVersion" : "JamesFoster 11/26/2013 11:02",
+		"initialize" : "jgf 01/19/2010 13:31",
+		"physicalRecordHeader" : "jgf 01/19/2010 21:03",
+		"processHeader:record:" : "jgf 01/19/2010 13:23",
+		"report" : "JamesFoster 04/12/2015 13:26" } }

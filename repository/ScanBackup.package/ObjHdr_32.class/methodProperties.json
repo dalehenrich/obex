@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"byteSize" : "jgf 12/14/2009 15:10" },
+	"instance" : {
+		"_struct" : "JamesFoster 11/26/2013 10:43",
+		"classOop" : "jgf 12/14/2009 15:02",
+		"gcSize" : "jgf 12/14/2009 15:02",
+		"objId" : "jgf 12/14/2009 15:02",
+		"objSize" : "JamesFoster 11/26/2013 12:24",
+		"physSize" : "jgf 12/14/2009 15:10",
+		"printOn:" : "JamesFoster 11/26/2013 12:29",
+		"rawFlags" : "jgf 12/14/2009 15:08",
+		"segment" : "jgf 12/14/2009 15:07" } }

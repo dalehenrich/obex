@@ -1,0 +1,4 @@
+other
+determineFileTypeAndVersion
+
+	self subclassResponsibility.

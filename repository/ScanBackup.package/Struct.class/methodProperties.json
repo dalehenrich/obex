@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"bytes:" : "jgf 12/02/2009 14:34",
+		"compatibilityLevel" : "jgf 12/14/2009 14:36",
+		"from:" : "jgf 01/20/2010 13:59",
+		"int16a" : "jgf 12/02/2009 14:38",
+		"int16b" : "jgf 12/02/2009 14:39",
+		"reset" : "jgf 12/02/2009 14:51" },
+	"instance" : {
+		"byteAt:" : "jgf 12/02/2009 14:34",
+		"bytes" : "jgf 12/02/2009 14:34",
+		"initialize:" : "jgf 12/02/2009 14:34",
+		"int16At:" : "jgf 12/02/2009 14:34",
+		"int32At:" : "jgf 12/02/2009 14:34",
+		"int64At:" : "jgf 01/19/2010 14:00",
+		"int64At:in:" : "jgf 01/19/2010 14:00",
+		"isbigEndian" : "jgf 01/19/2010 15:59",
+		"objectAt:from:" : "jgf 01/19/2010 16:25",
+		"saveObject:at:" : "jgf 01/19/2010 21:20" } }

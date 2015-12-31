@@ -1,0 +1,17 @@
+{
+	"class" : {
+		"new" : "jgf 01/19/2010 13:31" },
+	"instance" : {
+		"determineFileTypeAndVersion" : "jgf 01/20/2010 10:51",
+		"fileId" : "jgf 01/20/2010 14:26",
+		"logPhysRecordHdrClass" : "jgf 01/19/2010 13:24",
+		"logRootRecordClass" : "JamesFoster 11/26/2013 06:48",
+		"open:" : "JamesFoster 11/26/2013 06:04",
+		"path:" : "jgf 01/19/2010 13:25",
+		"physicalRecordHeader" : "jgf 01/19/2010 21:03",
+		"processHeader:record:" : "jgf 01/19/2010 13:26",
+		"readFile" : "JamesFoster 11/26/2013 06:28",
+		"readPhysicalRecord" : "JamesFoster 11/26/2013 11:43",
+		"readRecord:" : "JamesFoster 11/26/2013 10:37",
+		"readRecords:" : "jgf 01/20/2010 14:39",
+		"report" : "jgf 01/19/2010 13:28" } }

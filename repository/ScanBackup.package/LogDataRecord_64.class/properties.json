@@ -1,0 +1,16 @@
+{
+	"category" : "ScanBackup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"instvars" : [
+		"stream",
+		"object",
+		"objectHeader" ],
+	"name" : "LogDataRecord_64",
+	"pools" : [
+		 ],
+	"super" : "LogRecord",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+other
+logPhysRecordHdrClass
+
+	self subclassResponsibility.

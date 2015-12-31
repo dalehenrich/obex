@@ -1,0 +1,4 @@
+objects
+processClass
+
+	self halt.

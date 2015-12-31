@@ -1,0 +1,22 @@
+{
+	"category" : "ScanBackup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"instvars" : [
+		"invocationCount",
+		"numBreakpoints",
+		"selector",
+		"literalsOffset",
+		"numArgs",
+		"inClass",
+		"numSends",
+		"sourceString",
+		"debugInfo" ],
+	"name" : "LogGsMethod",
+	"pools" : [
+		 ],
+	"super" : "LogObject",
+	"type" : "normal" }

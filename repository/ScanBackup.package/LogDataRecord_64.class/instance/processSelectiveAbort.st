@@ -1,0 +1,4 @@
+other
+processSelectiveAbort
+
+	self halt.

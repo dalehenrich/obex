@@ -1,0 +1,4 @@
+other
+objectTable
+
+	^Objects.

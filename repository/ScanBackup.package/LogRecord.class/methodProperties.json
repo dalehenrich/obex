@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"bytes:header:fileId:blockId:recordId:" : "jgf 01/20/2010 14:43" },
+	"instance" : {
+		"beginId" : "jgf 01/20/2010 14:42",
+		"blockId" : "jgf 01/20/2010 14:42",
+		"blockId:" : "jgf 01/20/2010 14:42",
+		"fileId" : "jgf 01/20/2010 14:42",
+		"fileId:" : "jgf 01/20/2010 14:42",
+		"header" : "jgf 01/20/2010 14:42",
+		"header:" : "jgf 01/20/2010 14:42",
+		"name" : "jgf 01/25/2010 11:09",
+		"printOn:" : "JamesFoster 11/26/2013 11:03",
+		"processRecordWithHeader:" : "jgf 01/25/2010 11:03",
+		"recordId" : "jgf 01/20/2010 14:42",
+		"recordId:" : "jgf 01/20/2010 14:48",
+		"recordKind" : "jgf 01/20/2010 14:42",
+		"recordSize" : "jgf 01/20/2010 14:42",
+		"sessionId" : "jgf 01/20/2010 14:42" } }

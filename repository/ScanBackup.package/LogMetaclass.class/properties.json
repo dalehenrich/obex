@@ -1,0 +1,24 @@
+{
+	"category" : "ScanBackup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"instvars" : [
+		"superClass",
+		"format",
+		"instVars",
+		"instVarNames",
+		"constraints",
+		"classVars",
+		"methodDict",
+		"poolDictionaries",
+		"categories",
+		"secondarySuperclasses",
+		"thisClass" ],
+	"name" : "LogMetaclass",
+	"pools" : [
+		 ],
+	"super" : "LogObject",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"byteSize" : "jgf 01/20/2010 11:57" },
+	"instance" : {
+		"_struct" : "JamesFoster 11/26/2013 09:52",
+		"blockId" : "jgf 01/20/2010 13:58",
+		"fileCreationTime" : "jgf 01/20/2010 11:57",
+		"fileId" : "jgf 01/20/2010 13:57",
+		"isBackupRecord" : "jgf 01/20/2010 11:57",
+		"isEmptyRecord" : "jgf 01/20/2010 11:57",
+		"isLogRecord" : "jgf 01/20/2010 11:57",
+		"numLogicalRecords" : "jgf 01/20/2010 11:57",
+		"pageId" : "jgf 01/20/2010 14:37",
+		"pageKind" : "jgf 01/20/2010 11:57",
+		"prevRecordFileId" : "jgf 01/20/2010 14:37",
+		"prevRecordId" : "jgf 01/20/2010 11:57",
+		"prevRecordRecordId" : "jgf 01/20/2010 14:37",
+		"printOn:" : "JamesFoster 11/26/2013 10:39",
+		"recordSize" : "jgf 01/20/2010 11:57" } }

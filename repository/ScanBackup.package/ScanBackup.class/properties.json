@@ -1,0 +1,14 @@
+{
+	"category" : "ScanBackup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Classes" ],
+	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"instvars" : [
+		"classes" ],
+	"name" : "ScanBackup",
+	"pools" : [
+		 ],
+	"super" : "ScanTool",
+	"type" : "normal" }

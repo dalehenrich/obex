@@ -1,0 +1,14 @@
+{
+	"category" : "ScanBackup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"instvars" : [
+		 ],
+	"name" : "LogRootRecord",
+	"pools" : [
+		 ],
+	"super" : "LogRecord",
+	"type" : "normal" }

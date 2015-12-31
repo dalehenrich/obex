@@ -1,0 +1,4 @@
+Accessing
+sessionId
+
+	^header sessionId.

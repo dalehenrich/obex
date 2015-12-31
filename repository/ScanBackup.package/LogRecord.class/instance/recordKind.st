@@ -1,0 +1,4 @@
+Accessing
+recordKind
+
+	^header recordKind.

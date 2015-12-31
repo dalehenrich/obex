@@ -1,0 +1,4 @@
+Accessing
+beginId
+
+	^header beginId.

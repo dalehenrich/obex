@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"byteSize" : "jgf 01/19/2010 12:06" },
+	"instance" : {
+		"_struct" : "jgf 01/19/2010 12:05",
+		"extentId" : "jgf 01/19/2010 12:07",
+		"kind" : "jgf 01/19/2010 12:07",
+		"numIvs" : "jgf 01/19/2010 12:08",
+		"objIdWord" : "jgf 01/19/2010 12:09",
+		"physSize" : "jgf 01/19/2010 12:08",
+		"printOn:" : "jgf 01/25/2010 10:40",
+		"startIv" : "jgf 01/19/2010 12:08" } }
