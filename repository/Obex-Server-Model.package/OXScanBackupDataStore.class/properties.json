@@ -12,6 +12,7 @@
 		"sortedClassInstanceCountList",
 		"instanceReferencesCount",
 		"instanceReferencesCountAndInstances",
+		"sortedInstanceReferencesCountList",
 		"summary" ],
 	"name" : "OXScanBackupDataStore",
 	"pools" : [

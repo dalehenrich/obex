@@ -1,5 +1,5 @@
-instance reference count analysis
-addInstanceReferenceCountTo: instanceRefDictionary instanceSamplesTo: sampleDictionary instanceClassOops: instanceClassOops sampleLimit: sampleLimit from: logRecord
+instance count analysis
+addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClassOop: sampleClassOop limit: limit from: logRecord
   | offset objects |
   offset := 33.	"(28 / 8) ceiling * 8 + 1."
   objects := OrderedCollection new.
@@ -9,13 +9,13 @@ addInstanceReferenceCountTo: instanceRefDictionary instanceSamplesTo: sampleDict
       header := ObjHdr_64
         bytes:
           (logRecord bytes copyFrom: offset to: ObjHdr_64 byteSize + offset - 1).
-      header isOops
+      classOop := header classOop.
+      count := classDictionary at: classOop ifAbsentPut: [ 0 ].
+      classDictionary at: classOop put: count + 1.
+      sampleClassOop == classOop
         ifTrue: [ 
-          classOop := header classOop.
-          count := instanceRefDictionary at: classOop ifAbsentPut: [ 0 ].
-          instanceRefDictionary at: classOop put: count + 1.
           samples := sampleDictionary at: classOop ifAbsentPut: [ Set new ].
-          samples size < sampleLimit
+          (limit isNil or: [ samples size <= limit ])
             ifTrue: [ 
               | oop obj |
               oop := header objId.

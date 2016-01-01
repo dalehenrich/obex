@@ -3,8 +3,9 @@
 		 },
 	"instance" : {
 		"clear" : "dkh 12/31/2015 17:54",
-		"findAllReferencePathsToObjects:maxPaths:" : "dkh 12/31/2015 14:27",
-		"referencePaths" : "dkh 12/31/2015 14:33",
-		"scanBackupForClassInstanceCount:" : "dkh 12/31/2015 16:16",
-		"scanBackupForClassInstanceCountAndInstanceSamples:sampleLimit:" : "dkh 12/31/2015 17:42",
-		"scanBackups" : "dkh 12/31/2015 16:03" } }
+		"findAllReferencePathsToObjects:maxPaths:" : "dkh 01/01/2016 01:14",
+		"referencePaths" : "dkh 01/01/2016 01:14",
+		"scanBackupForClassInstanceCount:" : "dkh 01/01/2016 01:15",
+		"scanBackupForClassInstanceCountAndInstanceSamples:sampleClass:limit:" : "dkh 01/01/2016 01:15",
+		"scanBackupForClassInstanceReferenceCountAndInstanceSamples:instanceClass:limit:" : "dkh 01/01/2016 01:15",
+		"scanBackups" : "dkh 01/01/2016 01:13" } }
