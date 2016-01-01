@@ -5,7 +5,7 @@ obexinstances
                  --classes=<class-limit> --passes=<pass-limit> <backup-file-name>
 "
 
-  | backupPath classes passes dataStore classInstanceCounts baselineClasses oopLimit classInstanceCountsAndInstances passCnt |
+  | backupPath classes passes dataStore classInstanceCounts baselineClasses oopLimit classInstanceCountsAndInstances passCnt leaves |
   self
     getSubcommandOptsMixedLongShort:
       {#('dir' nil #'required').
@@ -41,8 +41,14 @@ obexinstances
     scanBackup: backupPath
     sampleClasses: baselineClasses
     limit: oopLimit.	"create initial sample with instance counts and sample instances"
-  classInstanceCountsAndInstances := dataStore classInstanceCountAndInstances.
-  baselineClasses := classInstanceCountsAndInstances keys
-    collect: [ :classOop | Object _objectForOop: classOop ].
+  self obexDataStore scanBackups push: dataStore.
+  classInstanceCountsAndInstances := dataStore sortedClassInstanceCountList.
+  classInstanceCountsAndInstances := classInstanceCountsAndInstances
+    copyFrom: 1
+    to: (classes min: classInstanceCountsAndInstances size).
+  baselineClasses := classInstanceCountsAndInstances
+    collect: [ :dp | Smalltalk at: dp className ].
   passCnt := passCnt + 1.
-  self halt
+  leaves := classInstanceCountsAndInstances
+    collect: [ :dp | OXClassInstanceDataPointNode for: dp nodeType: #'root' label: dp printString ].
+  self obexViewDective: dataStore initalNodes: leaves

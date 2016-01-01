@@ -1,0 +1,3 @@
+testing
+isNonTerminal
+  self subclassResponsibility

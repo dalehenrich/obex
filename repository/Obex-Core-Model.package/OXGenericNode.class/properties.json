@@ -6,9 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OXSearchNode",
+		"oop",
+		"children",
+		"parents",
+		"clientElement",
+		"myOop" ],
+	"name" : "OXGenericNode",
 	"pools" : [
 		 ],
-	"super" : "OXNode",
+	"super" : "Object",
 	"type" : "normal" }

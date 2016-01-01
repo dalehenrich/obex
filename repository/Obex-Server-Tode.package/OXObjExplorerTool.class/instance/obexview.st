@@ -1,4 +1,4 @@
-obex
+obex view
 obexview
   "
   obex view --detective | --classes=<class-limit>

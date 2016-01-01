@@ -1,0 +1,3 @@
+accessing
+stringLabel
+  ^ self label

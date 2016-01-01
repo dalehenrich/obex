@@ -24,5 +24,6 @@ addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClas
               obj class asOop == classOop
                 ifTrue: [ samples add: oop ] ]
                 on: SecurityError
-                do: [ :ignored |  ] ] ].
+                do: [ :ignored |  ] ].
+          self commit ].
       offset := offset + header physSize ]

@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "OXSearchNode",
+		"dataPoint",
+		"nodeType",
+		"label" ],
+	"name" : "OXClassInstanceDataPointNode",
 	"pools" : [
 		 ],
-	"super" : "OXNode",
+	"super" : "OXGenericNode",
 	"type" : "normal" }
