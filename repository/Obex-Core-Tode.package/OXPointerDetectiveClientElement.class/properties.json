@@ -4,14 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 12/31/2015 18:34",
 	"instvars" : [
 		"initialNodes",
 		"childrenBlock",
 		"childrenBlockOop",
 		"parentsBlock",
 		"parentsBlockOop" ],
-	"name" : "OXTodeClientElement",
+	"name" : "OXPointerDetectiveClientElement",
 	"pools" : [
 		 ],
 	"super" : "TodeClientElement",

@@ -7,7 +7,7 @@ obexview
   | globalName obexRefPath clientRoassalElement |
   self getSubcommandOptsMixedLongShort: {}.
   obexRefPath := self obexDataStore referencePaths.
-  clientRoassalElement := OXTodeClientElement new
+  clientRoassalElement := OXPointerDetectiveClientElement new
     theObject: obexRefPath;
     usePersistentClientElementCache: false;
     windowBuilder: self;
