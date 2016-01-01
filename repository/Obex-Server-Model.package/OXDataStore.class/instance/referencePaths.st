@@ -1,4 +1,4 @@
 accessing
 referencePaths
-  referencePaths ifNil: [ referencePaths := OXReferencePathDataStore new ].
+  referencePaths ifNil: [ referencePaths := Stack new ].
   ^ referencePaths

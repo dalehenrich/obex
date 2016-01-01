@@ -1,7 +1,7 @@
 obex
 obexViewClassInstances: obexDataStore limit: limit
-  | obexScan clientElement |
-  obexScan := obexDataStore scanBackups.
+  | obexScan clientElement viewLimit |
+  obexScan := obexDataStore scanBackups top.
   clientElement := OXClassInstanceCountClientElement new
     theObject: obexScan;
     usePersistentClientElementCache: false;
@@ -14,7 +14,9 @@ obexViewClassInstances: obexDataStore limit: limit
     yourself.
   obexScan sortedClassInstanceCountList isEmpty
     ifTrue: [ self error: 'There are no elements in the instance count list' ].
+  viewLimit := limit min: obexScan sortedClassInstanceCountList size.
   clientElement
-    dataPoints: (obexScan sortedClassInstanceCountList copyFrom: 1 to: limit).
+    dataPoints:
+      (obexScan sortedClassInstanceCountList copyFrom: 1 to: viewLimit).
   self topez cacheClientElement: clientElement.
   self topez editElement: clientElement

@@ -2,10 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"clear" : "dkh 12/31/2015 17:54",
-		"findAllReferencePathsToObjects:maxPaths:" : "dkh 01/01/2016 01:14",
-		"referencePaths" : "dkh 01/01/2016 01:14",
-		"scanBackupForClassInstanceCount:" : "dkh 01/01/2016 01:15",
-		"scanBackupForClassInstanceCountAndInstanceSamples:sampleClass:limit:" : "dkh 01/01/2016 01:15",
-		"scanBackupForClassInstanceReferenceCountAndInstanceSamples:instanceClass:limit:" : "dkh 01/01/2016 01:15",
-		"scanBackups" : "dkh 01/01/2016 01:13" } }
+		"clear" : "dkh 01/01/2016 07:51",
+		"referencePaths" : "dkh 01/01/2016 07:22",
+		"scanBackups" : "dkh 01/01/2016 07:22" } }

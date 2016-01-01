@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXScanBackupClassSamplesDataStore",
+	"pools" : [
+		 ],
+	"super" : "OXScanBackupGenericSamplesDataStore",
+	"type" : "normal" }

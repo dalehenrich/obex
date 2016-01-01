@@ -1,11 +1,11 @@
-instance count analysis
-scanBackupForClassInstanceCountAndInstanceSamples: backupPath sampleClass: sampleClass limit: limit
+analysis
+scanBackup: backupPath sampleClass: sampleClass limit: limit
   | scanBackup sampleClassOop |
-  scanBackup := OXScanBackup64 new.
   classInstanceCount := IntegerKeyValueDictionary new.
   classInstanceCountAndInstances := IntegerKeyValueDictionary new.
-  sampleClassOop := sampleClass asOop.
-  scanBackup
+  sampleClass ifNotNil: [ sampleClassOop := sampleClass asOop ].
+  scanBackup := OXScanBackup64
+    path: backupPath
     processBlock: [ :logHdr :logRecord | 
       self
         addObjectCountTo: classInstanceCount
@@ -13,6 +13,5 @@ scanBackupForClassInstanceCountAndInstanceSamples: backupPath sampleClass: sampl
         sampleClassOop: sampleClassOop
         limit: limit
         from: logRecord ].
-  scanBackup path: backupPath.
   self classOopToClassMap.
-  self analyzeClassInstanceCount
+  self analyze

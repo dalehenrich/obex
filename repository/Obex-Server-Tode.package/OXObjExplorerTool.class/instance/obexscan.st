@@ -6,7 +6,7 @@ obexscan
   obex scan [--limit=<sample-limit>] --ref=<class-name> <backup-file-name>
 "
 
-  | dir buTool backupPath scan dataStore limit |
+  | dir buTool backupPath analysis limit |
   self
     getSubcommandOptsMixedLongShort:
       {#('dir' nil #'required').
@@ -27,22 +27,26 @@ obexscan
     at: 'limit'
     ifPresent: [ :arg | limit := arg asNumber ]
     ifAbsent: [ limit := nil ].
-  dataStore := self obexDataStore.
-  subOptions
+  analysis := subOptions
     at: 'sample'
     ifPresent: [ :className | 
-      dataStore
-        scanBackupForClassInstanceCountAndInstanceSamples: backupPath
+      OXScanBackupClassSamplesDataStore new
+        scanBackup: backupPath
         sampleClass: (Smalltalk at: className)
         limit: limit ]
     ifAbsent: [ 
       subOptions
         at: 'ref'
         ifPresent: [ :className | 
-          dataStore
-            scanBackupForClassInstanceReferenceCountAndInstanceSamples:
-              backupPath
-            instanceClass: (Smalltalk at: className)
+          | sampleInstanceOops |
+          sampleInstanceOops := self obexDataStore scanBackups top
+            classInstanceCountAndInstances
+            at: (Smalltalk at: className) asOop
+            ifAbsent: [ #() ].
+          OXScanBackupClassInstanceReferenceSamplesDataStore new
+            scanBackup: backupPath
+            sampleInstanceOops: sampleInstanceOops
             limit: limit ]
-        ifAbsent: [ dataStore scanBackupForClassInstanceCount: backupPath ] ].
+        ifAbsent: [ OXScanBackupClassDataStore new scanBackup: backupPath ] ].
+  self obexDataStore scanBackups push: analysis.
   ^ true

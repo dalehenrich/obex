@@ -1,4 +1,3 @@
-reference paths
+accessing
 clear
-  scanBackups := referencePaths := nil.
-  System commit
+  scanBackups := referencePaths := nil

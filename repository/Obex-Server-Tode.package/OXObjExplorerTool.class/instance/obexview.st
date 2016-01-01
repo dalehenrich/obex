@@ -1,7 +1,7 @@
 obex
 obexview
   "
-  obex view --detective | --classes=<class-limit> | --refs=<class-limit>
+  obex view --detective | --classes=<class-limit>
 "
 
   self
@@ -16,11 +16,4 @@ obexview
       subOptions
         at: 'classes'
         ifPresent: [ :limitArg | self obexViewClassInstances: self obexDataStore limit: limitArg asNumber ]
-        ifAbsent: [ 
-          subOptions
-            at: 'refs'
-            ifPresent: [ :limitArg | 
-              self
-                obexViewClassInstanceReferences: self obexDataStore
-                limit: limitArg asNumber ]
-            ifAbsent: [ self error: 'Missing required options. See man page for more info' ] ] ]
+        ifAbsent: [ self error: 'Missing required options. See man page for more info' ] ]

@@ -4,14 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/01/2016 06:43",
 	"instvars" : [
-		"searchResult",
-		"searchObjectMap",
-		"oopToNodeMap",
-		"searchNodeMap",
-		"classNameMap" ],
-	"name" : "OXReferencePathDataStore",
+		"classInstanceCount",
+		"classOopToClassMap",
+		"sortedClassInstanceCountList" ],
+	"name" : "OXScanBackupClassDataStore",
 	"pools" : [
 		 ],
 	"super" : "OXGenericDataStore",

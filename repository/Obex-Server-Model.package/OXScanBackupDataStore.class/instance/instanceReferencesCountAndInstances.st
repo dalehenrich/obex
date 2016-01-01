@@ -1,3 +1,0 @@
-instance reference count analysis
-instanceReferencesCountAndInstances
-  ^ instanceReferencesCountAndInstances

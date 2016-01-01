@@ -1,4 +1,4 @@
-util
+private
 sortClassInstanceCount: classInstanceCountMap instances: classInstanceCountInstanceMap
   | sortedList |
   sortedList := SortedCollection

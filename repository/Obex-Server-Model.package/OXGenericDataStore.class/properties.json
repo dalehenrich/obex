@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"summary" ],
+	"name" : "OXGenericDataStore",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

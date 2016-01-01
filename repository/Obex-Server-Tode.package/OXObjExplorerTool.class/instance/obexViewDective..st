@@ -1,7 +1,7 @@
 obex
 obexViewDective: obexDataStore
   | obexRefPath clientElement |
-  obexRefPath := obexDataStore referencePaths.
+  obexRefPath := obexDataStore referencePaths top.
   clientElement := OXPointerDetectiveClientElement new
     theObject: obexRefPath;
     usePersistentClientElementCache: false;

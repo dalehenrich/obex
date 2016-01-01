@@ -1,4 +1,4 @@
-instance count analysis
+analysis
 addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClassOop: sampleClassOop limit: limit from: logRecord
   | offset objects |
   offset := 33.	"(28 / 8) ceiling * 8 + 1."

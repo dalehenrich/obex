@@ -1,6 +1,6 @@
-instance count analysis
-analyzeClassInstanceCount
+analysis
+analyze
   sortedClassInstanceCountList := self
     sortClassInstanceCount: classInstanceCount
     instances: classInstanceCountAndInstances.
-  self summary at: 'classes instances' put: sortedClassInstanceCountList size
+  self summary at: self summaryLabel put: sortedClassInstanceCountList size

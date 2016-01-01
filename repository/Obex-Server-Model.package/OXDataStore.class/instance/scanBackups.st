@@ -1,4 +1,4 @@
 accessing
 scanBackups
-  scanBackups ifNil: [ scanBackups := OXScanBackupDataStore new ].
+  scanBackups ifNil: [ scanBackups := Stack new ].
   ^ scanBackups
