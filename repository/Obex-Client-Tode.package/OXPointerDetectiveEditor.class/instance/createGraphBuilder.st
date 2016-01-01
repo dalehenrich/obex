@@ -5,7 +5,7 @@ createGraphBuilder
 	b := OXPointerDetective new
 		topez: self clientElement topez;
 		view: roassalView;
-		on: self initialNodes.
+		yourself.
 	b builder
 		addListenerBlock: [ :n | 
 			anim := RTNopAnimation new.
@@ -15,5 +15,6 @@ createGraphBuilder
 					b2 notifyWith: n element.
 					b1 notifyWith: n element ].
 			b builder view addAnimation: anim ].
+	b on: self initialNodes.
 	roassalView signalUpdate.
 	roassalView open
