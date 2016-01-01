@@ -15,6 +15,7 @@ DESCRIPTION
     calc      Calculate reference paths to given object
     clear     Clear dataStores
     datastore Return the current dataStore
+    instances Run a multi-scan class instance count analysis
     scan      Scan backup file to collect collect class instance counts
     view      Visualize object reference graphs and class instance counts
 
@@ -35,5 +36,6 @@ EXAMPLES
     at: 'clear' put: self obexclearManPage;
     at: 'scan' put: self obexscanManPage;
     at: 'datastore' put: self obexdatastoreManPage;
+    at: 'instances' put: self obexinstancesManPage;
     yourself.
   ^ manPage

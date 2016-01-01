@@ -1,7 +1,11 @@
 analysis
-scanBackup: backupPath sampleInstanceOops: sampleInstanceOops limit: limit
+scanBackup: backupPath sampleClasses: sampleClasses limit: limit
+  | sampleClassOops |
   classInstanceCount := IntegerKeyValueDictionary new.
   classInstanceCountAndInstances := IntegerKeyValueDictionary new.
+  sampleClassOops := #().
+  sampleClasses
+    ifNotNil: [ sampleClassOops := (sampleClasses collect: [ :cl | cl asOop ]) asIdentitySet ].
   scanner := OXScanBackup64 new.
   self commit.	"make scanner persistent"
   scanner
@@ -9,7 +13,7 @@ scanBackup: backupPath sampleInstanceOops: sampleInstanceOops limit: limit
           self
             addObjectCountTo: classInstanceCount
             instanceSamplesTo: classInstanceCountAndInstances
-            sampleInstanceOops: sampleInstanceOops
+            sampleClassOops: sampleClassOops
             limit: limit
             from: logRecord ];
     path: backupPath.

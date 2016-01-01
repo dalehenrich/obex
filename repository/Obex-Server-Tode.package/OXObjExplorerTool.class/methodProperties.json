@@ -2,10 +2,11 @@
 	"class" : {
 		"initialize" : "dkh 12/31/2015 14:34",
 		"obex" : "dkh 12/31/2015 14:07",
-		"obexManPage" : "dkh 12/31/2015 17:53",
+		"obexManPage" : "dkh 01/01/2016 10:08",
 		"obexcalcManPage" : "dkh 12/31/2015 14:45",
 		"obexclearManPage" : "dkh 12/31/2015 14:45",
 		"obexdatastoreManPage" : "dkh 12/31/2015 17:55",
+		"obexinstancesManPage" : "dkh 01/01/2016 10:41",
 		"obexscanManPage" : "dkh 01/01/2016 07:40",
 		"obexviewManPage" : "dkh 01/01/2016 07:37",
 		"priority" : "dkh 12/31/2015 10:33",
@@ -19,5 +20,7 @@
 		"obexcalc" : "dkh 12/31/2015 15:16",
 		"obexclear" : "dkh 12/31/2015 17:53",
 		"obexdatastore" : "dkh 12/31/2015 17:56",
-		"obexscan" : "dkh 01/01/2016 08:09",
+		"obexinstances" : "dkh 01/01/2016 11:16",
+		"obexscan" : "dkh 01/01/2016 10:17",
+		"obexscanHandleBackup" : "dkh 01/01/2016 10:16",
 		"obexview" : "dkh 01/01/2016 07:35" } }

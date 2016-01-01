@@ -1,0 +1,3 @@
+private
+clearScanner
+  scanner := nil

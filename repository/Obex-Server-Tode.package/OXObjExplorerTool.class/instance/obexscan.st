@@ -6,7 +6,7 @@ obexscan
   obex scan [--limit=<sample-limit>] --ref=<class-name> <backup-file-name>
 "
 
-  | dir buTool backupPath analysis limit |
+  | backupPath analysis limit |
   self
     getSubcommandOptsMixedLongShort:
       {#('dir' nil #'required').
@@ -14,15 +14,7 @@ obexscan
       #('limit' nil #'required').
       #('ref' nil #'required').
       #('sample' nil #'required')}.
-  buTool := self topez toolInstanceFor: 'bu'.
-  subOptions
-    at: 'dir'
-    ifPresent: [ :arg | dir := arg ]
-    ifAbsent: [ dir := buTool buBackupDirectory ].
-  subArguments isEmpty
-    ifTrue: [ self error: 'Missing required argument <backup-file>. See man page for details.' ].
-  backupPath := dir , '/' , (subArguments at: 1).
-  subOptions at: 'backup' ifPresent: [ :ignored | buTool buBackup: dir ].
+  backupPath := self obexscanHandleBackup.
   subOptions
     at: 'limit'
     ifPresent: [ :arg | limit := arg asNumber ]

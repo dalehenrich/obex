@@ -1,7 +1,9 @@
 analysis
 scanBackup: backupPath
-  | scanBackup |
-  scanBackup := OXScanBackup64 path: backupPath.
-  classInstanceCount := scanBackup classes.
+  scanner := OXScanBackup64 new.
+  self commit.	"make scanner persistent"
+  scanner path: backupPath.
+  classInstanceCount := scanner classes.
+  self clearScanner.
   self classOopToClassMap.
   self analyze

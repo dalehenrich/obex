@@ -1,5 +1,5 @@
 analysis
-addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClassOop: sampleClassOop limit: limit from: logRecord
+addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClassOops: sampleClassOops limit: limit from: logRecord
   | offset objects |
   offset := 33.	"(28 / 8) ceiling * 8 + 1."
   objects := OrderedCollection new.
@@ -12,7 +12,7 @@ addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleClas
       classOop := header classOop.
       count := classDictionary at: classOop ifAbsentPut: [ 0 ].
       classDictionary at: classOop put: count + 1.
-      sampleClassOop == classOop
+      (sampleClassOops includes: classOop)
         ifTrue: [ 
           samples := sampleDictionary at: classOop ifAbsentPut: [ Set new ].
           (limit isNil or: [ samples size <= limit ])

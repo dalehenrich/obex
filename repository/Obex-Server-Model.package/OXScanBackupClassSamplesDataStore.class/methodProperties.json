@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addObjectCountTo:instanceSamplesTo:sampleClassOop:limit:from:" : "dkh 01/01/2016 07:10",
+		"addObjectCountTo:instanceSamplesTo:sampleClassOops:limit:from:" : "dkh 01/01/2016 10:38",
 		"scanBackup:" : "dkh 01/01/2016 07:44",
-		"scanBackup:sampleClass:limit:" : "dkh 01/01/2016 07:44" } }
+		"scanBackup:sampleClass:limit:" : "dkh 01/01/2016 10:37",
+		"scanBackup:sampleClasses:limit:" : "dkh 01/01/2016 11:06" } }

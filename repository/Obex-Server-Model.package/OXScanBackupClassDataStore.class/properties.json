@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 01/01/2016 06:43",
+	"commentStamp" : "",
 	"instvars" : [
 		"classInstanceCount",
 		"classOopToClassMap",
-		"sortedClassInstanceCountList" ],
+		"sortedClassInstanceCountList",
+		"scanner" ],
 	"name" : "OXScanBackupClassDataStore",
 	"pools" : [
 		 ],
