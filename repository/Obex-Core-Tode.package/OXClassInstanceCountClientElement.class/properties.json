@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Core-Tode",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXClassInstanceCountClientElement",
+	"pools" : [
+		 ],
+	"super" : "TodeClientElement",
+	"type" : "normal" }
