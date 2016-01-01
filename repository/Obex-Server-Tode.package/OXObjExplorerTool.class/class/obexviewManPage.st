@@ -16,6 +16,5 @@ OPTIONS
 
 EXAMPLES
   obex view
-  obex --dataStore=OX_Index_1 view
 '.
   ^ manPage

@@ -17,6 +17,10 @@ obexcalc
   objects := subOptions
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ].
+    ifAbsent: [ 
+      subArguments isEmpty
+        ifTrue: [ self error: 'Missing required argument(s) <oop. See man page for details.' ].
+      (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
+        asArray ].
   dataStore := self obexDataStore.
   dataStore findAllReferencePathsToObjects: objects maxPaths: maxPaths

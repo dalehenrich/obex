@@ -14,7 +14,6 @@ SYNOPSIS
 DESCRIPTION
 
 EXAMPLES
-  obex clear
-  obex --dataStore=OX_Index_1 clear 
+  obex clear 
 '.
   ^ manPage

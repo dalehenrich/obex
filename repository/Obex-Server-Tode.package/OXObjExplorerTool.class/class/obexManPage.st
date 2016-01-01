@@ -12,10 +12,11 @@ SYNOPSIS
 
 DESCRIPTION
   Commands:
-    calc  Calculate reference paths to given object
-    clear Clear reference path cache
-    scan  Scan backup file to collect collect class instance counts
-    view  Visualize object reference graphs and class instance counts
+    calc      Calculate reference paths to given object
+    clear     Clear dataStores
+    datastore Return the current dataStore
+    scan      Scan backup file to collect collect class instance counts
+    view      Visualize object reference graphs and class instance counts
 
 OPTIONS
   --help [command]
@@ -33,5 +34,6 @@ EXAMPLES
     at: 'view' put: self obexviewManPage;
     at: 'clear' put: self obexclearManPage;
     at: 'scan' put: self obexscanManPage;
+    at: 'datastore' put: self obexdatastoreManPage;
     yourself.
   ^ manPage

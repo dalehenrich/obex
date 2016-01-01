@@ -21,6 +21,5 @@ EXAMPLES
 
   obex calc 452261889
   obex calc --maxPaths=3 452261889
-  obex --dataStore=OX_Index_1 calc --maxPaths=3 452261889
 '.
   ^ manPage

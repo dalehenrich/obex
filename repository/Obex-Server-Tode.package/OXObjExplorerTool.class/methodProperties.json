@@ -2,17 +2,20 @@
 	"class" : {
 		"initialize" : "dkh 12/31/2015 14:34",
 		"obex" : "dkh 12/31/2015 14:07",
-		"obexManPage" : "dkh 12/31/2015 14:17",
-		"obexcalcManPage" : "dkh 12/31/2015 14:18",
-		"obexclearManPage" : "dkh 12/31/2015 14:16",
-		"obexscanManPage" : "dkh 12/31/2015 14:17",
-		"obexviewManPage" : "dkh 12/31/2015 14:17",
+		"obexManPage" : "dkh 12/31/2015 17:53",
+		"obexcalcManPage" : "dkh 12/31/2015 14:45",
+		"obexclearManPage" : "dkh 12/31/2015 14:45",
+		"obexdatastoreManPage" : "dkh 12/31/2015 17:55",
+		"obexscanManPage" : "dkh 12/31/2015 17:32",
+		"obexviewManPage" : "dkh 12/31/2015 14:45",
 		"priority" : "dkh 12/31/2015 10:33",
 		"toolName" : "dkh 12/31/2015 10:33",
 		"toolReadMe" : "dkh 12/31/2015 10:33" },
 	"instance" : {
 		"obexDataStore" : "dkh 12/31/2015 14:19",
 		"obexProcessNodes:for:" : "dkh 12/31/2015 10:33",
-		"obexcalc" : "dkh 12/31/2015 14:31",
-		"obexclear" : "dkh 12/31/2015 14:29",
-		"obexview" : "dkh 12/31/2015 14:32" } }
+		"obexcalc" : "dkh 12/31/2015 15:16",
+		"obexclear" : "dkh 12/31/2015 17:53",
+		"obexdatastore" : "dkh 12/31/2015 17:56",
+		"obexscan" : "dkh 12/31/2015 17:42",
+		"obexview" : "dkh 12/31/2015 14:51" } }

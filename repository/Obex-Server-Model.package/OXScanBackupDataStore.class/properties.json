@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"referencePaths",
-		"scanBackups" ],
-	"name" : "OXDataStore",
+		"classInstanceCount",
+		"classInstanceCountAndInstances" ],
+	"name" : "OXScanBackupDataStore",
 	"pools" : [
 		 ],
 	"super" : "Object",

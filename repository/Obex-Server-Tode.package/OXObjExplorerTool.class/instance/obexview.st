@@ -1,11 +1,11 @@
 obex
 obexview
   "
-  obex view [--globalName=<cache-name>]
+  obex view
 "
 
   | globalName obexRefPath clientRoassalElement |
-  self getSubcommandOptsMixedLongShort: {#('globalName' nil #'required')}.
+  self getSubcommandOptsMixedLongShort: {}.
   obexRefPath := self obexDataStore referencePaths.
   clientRoassalElement := OXTodeClientElement new
     theObject: obexRefPath;

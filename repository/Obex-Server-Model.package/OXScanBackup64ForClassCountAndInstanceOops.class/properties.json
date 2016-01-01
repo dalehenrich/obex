@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"referencePaths",
-		"scanBackups" ],
-	"name" : "OXDataStore",
+		"classInstanceSamples",
+		"sampleLimit" ],
+	"name" : "OXScanBackup64ForClassCountAndInstanceOops",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OXScanBackup64ForClassCount",
 	"type" : "normal" }

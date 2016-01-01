@@ -1,8 +1,8 @@
 obex
-obexclear
+obexdatastore
   "
-  obex clear
+  obex datastore
 "
 
   self getSubcommandOptsMixedLongShort: {}.
-  self obexDataStore clear
+  ^ self obexDataStore
