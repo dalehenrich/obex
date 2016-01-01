@@ -15,7 +15,7 @@
 
 ###Class Instance Historgram
 
-<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/sample.png" />
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstances.png" />
 
 ###Object Reference Paths
 
