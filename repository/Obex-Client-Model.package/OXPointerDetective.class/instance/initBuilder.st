@@ -27,9 +27,11 @@ initBuilder
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
-				{('center'
+				{
+					('inspect' -> [ :exploraNode | self topez inspectOXObject: exploraNode element model wrapper ]).
+					('inspect (reified)' -> [ :exploraNode | self topez inspectReifiedOXObject: exploraNode element model wrapper ]).
+					('center'
 						-> [ :exploraNode | 
 							self view canvas camera translateTo: exploraNode element encompassingRectangle center.
-							self view canvas signalUpdate ]).
-					('inspect' -> [ :exploraNode | self topez inspectOXObject: exploraNode element model wrapper ])}.
+							self view canvas signalUpdate ]).}.
 	builder dragChildren
