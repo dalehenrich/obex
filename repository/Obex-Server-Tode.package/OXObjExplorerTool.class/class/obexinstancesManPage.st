@@ -15,6 +15,6 @@ SYNOPSIS
 DESCRIPTION
 
 EXAMPLES
-  obex instances --classes=5 --passes=3 sample.dbf.gz
+  obex instances --classes=3 --passes=0 sample.dbf.gz
 '.
   ^ manPage

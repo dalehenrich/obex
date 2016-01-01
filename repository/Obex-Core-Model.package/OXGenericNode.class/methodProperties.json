@@ -1,7 +1,6 @@
 {
 	"class" : {
-		"for:" : "dkh 01/01/2016 11:43",
-		"for:in:" : "dkh 01/01/2016 11:43" },
+		 },
 	"instance" : {
 		"addChild:" : "dkh 01/01/2016 11:43",
 		"addParent:" : "dkh 01/01/2016 11:43",
@@ -10,8 +9,7 @@
 		"clientElement" : "dkh 01/01/2016 11:43",
 		"clientElement:" : "dkh 01/01/2016 11:43",
 		"excludedInstVarNames" : "dkh 01/01/2016 11:45",
-		"inspectOXObject" : "dkh 01/01/2016 11:45",
-		"isCacheValid" : "dkh 01/01/2016 11:49",
+		"inspectOXObject" : "dkh 01/01/2016 15:12",
 		"isDone" : "dkh 01/01/2016 11:50",
 		"isLeaf" : "dkh 01/01/2016 11:50",
 		"isNonTerminal" : "dkh 01/01/2016 11:50",

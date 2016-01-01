@@ -1,18 +1,19 @@
 {
 	"class" : {
 		"for:" : "dkh 12/31/2015 10:30",
-		"for:in:" : "dkh 12/31/2015 10:30" },
+		"for:in:" : "dkh 01/01/2016 15:06" },
 	"instance" : {
 		"className" : "dkh 12/31/2015 10:30",
 		"className:" : "dkh 12/31/2015 10:30",
-		"excludedInstVarNames" : "dkh 01/01/2016 11:49",
-		"isCacheValid" : "dkh 12/31/2015 10:30",
+		"excludedInstVarNames" : "dkh 01/01/2016 15:07",
+		"inspectOXObject" : "dkh 01/01/2016 15:12",
+		"isCacheValid" : "dkh 01/01/2016 15:07",
 		"isDone" : "dkh 12/31/2015 10:30",
 		"isLeaf" : "dkh 12/31/2015 10:30",
 		"isNonTerminal" : "dkh 12/31/2015 10:30",
 		"isRoot" : "dkh 12/31/2015 10:30",
 		"printOn:" : "dkh 12/31/2015 10:30",
-		"referencePaths" : "dkh 12/31/2015 10:30",
-		"referencePaths:" : "dkh 12/31/2015 10:30",
+		"referencePathDataStore" : "dkh 01/01/2016 15:05",
+		"referencePathDataStore:" : "dkh 01/01/2016 15:06",
 		"stringLabel" : "dkh 12/31/2015 10:30",
 		"stringName" : "dkh 12/31/2015 10:30" } }

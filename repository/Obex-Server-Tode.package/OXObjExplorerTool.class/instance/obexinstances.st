@@ -28,7 +28,6 @@ obexinstances
     ifAbsent: [ self error: 'Missing required option `passes`. See man page for details' ].
   System commit.
   dataStore := OXScanBackupClassDataStore new scanBackup: backupPath.	"initial pass to collect baseline data"
-  self obexViewClassInstancesScan: dataStore limit: 20.
   self obexDataStore scanBackups push: dataStore.
   classInstanceCounts := dataStore sortedClassInstanceCountList.
   classInstanceCounts := classInstanceCounts

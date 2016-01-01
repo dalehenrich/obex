@@ -1,3 +1,3 @@
 ston
 excludedInstVarNames
-  ^ super excludedInstVarNames , #(#'referencePaths')
+  ^ super excludedInstVarNames , #(#'referencePathDataStore')

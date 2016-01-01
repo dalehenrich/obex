@@ -1,7 +1,7 @@
 instance creation
-for: anObject in: aTDPPIReferencePaths
+for: anObject in: aReferencePathDataStore
   ^ self new
     oop: anObject asOop;
     className: anObject class name;
-    referencePaths: aTDPPIReferencePaths;
+    referencePathDataStore: aReferencePathDataStore;
     yourself
