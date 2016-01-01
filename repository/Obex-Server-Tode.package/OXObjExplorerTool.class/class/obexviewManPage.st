@@ -9,12 +9,13 @@ obexviewManPage
   obex view - Visualize object reference graphs and class instance counts
 
 SYNOPSIS
-  obex view
+  obex view --detective | --classes=<class-limit>
 
 DESCRIPTION
 OPTIONS
 
 EXAMPLES
-  obex view
+  obex view --detective
+  obex view --classes=50
 '.
   ^ manPage

@@ -1,32 +1,18 @@
 obex
 obexview
   "
-  obex view
+  obex view --detective | --classes=<class-limit>
 "
 
-  | globalName obexRefPath clientRoassalElement |
-  self getSubcommandOptsMixedLongShort: {}.
-  obexRefPath := self obexDataStore referencePaths.
-  clientRoassalElement := OXPointerDetectiveClientElement new
-    theObject: obexRefPath;
-    usePersistentClientElementCache: false;
-    windowBuilder: self;
-    editorAspectSelector: #'activateObjectExplorerEditor';
-    editorWindowLabel: 'xxx';
-    editorWindowLocation: #'method';
-    topez: self topez;
-    timestamp;
-    yourself.
-  clientRoassalElement
-    childrenBlock: [ :cre :aTDPPINode | 
-          self topez objectSerializer
-            toString:
-              (self obexProcessNodes: aTDPPINode children asArray for: clientRoassalElement) ];
-    parentsBlock: [ :cre :aTDPPINode | 
-          self topez objectSerializer
-            toString:
-              (self obexProcessNodes: aTDPPINode parents asArray for: clientRoassalElement) ];
-    initialNodes:
-        (self obexProcessNodes: obexRefPath searchNodeMap keys for: clientRoassalElement).
-  self topez cacheClientElement: clientRoassalElement.
-  self topez editElement: clientRoassalElement
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('detective' nil #'none').
+      #('classes' nil #'required')}.
+  subOptions
+    at: 'detective'
+    ifPresent: [ :ignored | self obexViewDective: self obexDataStore ]
+    ifAbsent: [ 
+      subOptions
+        at: 'classes'
+        ifPresent: [ :limitArg | self obexViewClassInstances: self obexDataStore limit: limitArg asNumber ]
+        ifAbsent: [ self error: 'Missing required options. See man page for more info' ] ]

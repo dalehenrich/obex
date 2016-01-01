@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"analyze" : "dkh 12/31/2015 19:35",
+		"analyze" : "dkh 12/31/2015 21:05",
 		"classOopToClassMap" : "dkh 12/31/2015 18:53",
 		"scanBackupForClassInstanceCount:" : "dkh 12/31/2015 19:05",
 		"scanBackupForClassInstanceCountAndInstanceSamples:sampleLimit:" : "dkh 12/31/2015 18:58",
-		"sortedClassInstanceCountList" : "dkh 12/31/2015 19:36" } }
+		"sortedClassInstanceCountList" : "dkh 12/31/2015 19:36",
+		"summary" : "dkh 12/31/2015 21:04" } }
