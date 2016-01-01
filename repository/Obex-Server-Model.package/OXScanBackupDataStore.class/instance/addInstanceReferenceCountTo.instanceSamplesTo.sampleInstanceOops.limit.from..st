@@ -15,7 +15,7 @@ addInstanceReferenceCountTo: instanceRefDictionary instanceSamplesTo: sampleDict
           classOop := header classOop.
           object := bytes
             copyFrom: ObjHdr_64 byteSize + offset
-            to: offset + header physSize - ObjHdr_64 byteSize - 1.
+            to: offset + header physSize - 1.
           1 to: header gcSize do: [ :i | 
             | logOop |
             logOop := logRecord int64At: (i - 1) * 8 + 1 in: object.
