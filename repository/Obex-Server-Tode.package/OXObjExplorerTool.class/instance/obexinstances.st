@@ -46,37 +46,19 @@ obexinstances
     copyFrom: 1
     to: (classes min: classInstanceCountsAndInstances size).
   leaves := classInstanceCountsAndInstances
-    collect: [ :dp | OXClassInstanceDataPointNode for: dp nodeType: #'leaf' label: dp printString ].
+    collect: [ :dp | 
+      (OXDynamicClassInstanceDataPointNode
+        for: dp
+        nodeType: #'leaf'
+        label: dp printString)
+        backupPath: backupPath;
+        parentLimit: classes;
+        yourself ].
   self obexViewDective: dataStore initalNodes: leaves.
-  passCnt := 1.
-  [ passCnt < passes ]
-    whileTrue: [ 
-      | newLeaves nodeType |
-      newLeaves := {}.
-      passCnt := passCnt + 1.
-      nodeType := passCnt = passes
-        ifTrue: [ #'root' ]
-        ifFalse: [ #'internal' ].
-      Transcript
-        cr;
-        show:
-            'pass ' , passCnt printString , ' leaves: ' , leaves size printString.
-      leaves
-        do: [ :dpNode | 
-          | dataPoint parents |
-          dataPoint := dpNode dataPoint.
-          dataStore := OXScanBackupClassInstanceReferenceSamplesDataStore new
-            scanBackup: backupPath
-            sampleInstanceOops: dataPoint samples
-            limit: nil.
-          classInstanceCountsAndInstances := dataStore
-            sortedClassInstanceCountList.
-          classInstanceCountsAndInstances := classInstanceCountsAndInstances
-            copyFrom: 1
-            to: (classes min: classInstanceCountsAndInstances size).
-          parents := classInstanceCountsAndInstances
-            collect: [ :dp | OXClassInstanceDataPointNode for: dp nodeType: nodeType label: dp printString ].
-          dpNode parents: parents asArray.
-          newLeaves addAll: parents.
-          System commit ].
-      leaves := newLeaves ]
+  passes > 0
+    ifTrue: [ 
+      self
+        obexInstances: leaves
+        passes: passes
+        classes: classes
+        backupPath: backupPath ]

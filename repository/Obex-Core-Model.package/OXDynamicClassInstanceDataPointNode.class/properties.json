@@ -1,0 +1,15 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"backupPath",
+		"parentLimit" ],
+	"name" : "OXDynamicClassInstanceDataPointNode",
+	"pools" : [
+		 ],
+	"super" : "OXClassInstanceDataPointNode",
+	"type" : "normal" }
