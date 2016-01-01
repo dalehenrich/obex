@@ -1,13 +1,14 @@
-*obex-server-model
-addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleLimit: sampleLimit
+instance count analysis
+addObjectCountTo: classDictionary instanceSamplesTo: sampleDictionary sampleLimit: sampleLimit from: logRecord
   | offset objects |
   offset := 33.	"(28 / 8) ceiling * 8 + 1."
   objects := OrderedCollection new.
-  self numObjs
+  logRecord numObjs
     timesRepeat: [ 
       | header classOop count samples |
       header := ObjHdr_64
-        bytes: (bytes copyFrom: offset to: ObjHdr_64 byteSize + offset - 1).
+        bytes:
+          (logRecord bytes copyFrom: offset to: ObjHdr_64 byteSize + offset - 1).
       classOop := header classOop.
       count := classDictionary at: classOop ifAbsentPut: [ 0 ].
       classDictionary at: classOop put: count + 1.

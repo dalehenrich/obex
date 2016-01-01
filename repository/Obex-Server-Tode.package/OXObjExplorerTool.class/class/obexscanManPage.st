@@ -24,7 +24,7 @@ OPTIONS
 
 EXAMPLES
   obex scan sample.dbf.gz
-  obex scan --samples=20 wip.dbf.gz
+  obex scan --samples=10 wip.dbf.gz
   obex scan --backup sample.dbf.gz
   obex scan --dir=$GS_HOME/local/server/backups sample.dbf.gz
 

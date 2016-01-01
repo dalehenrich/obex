@@ -1,5 +1,5 @@
-analysis
-analyze
+instance count analysis
+analyzeClassInstanceCount
   sortedClassInstanceCountList := SortedCollection
     sortBlock: [ :a :b | a instanceCount > b instanceCount ].
   classInstanceCount

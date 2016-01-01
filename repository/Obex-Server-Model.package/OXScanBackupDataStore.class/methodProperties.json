@@ -2,9 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"analyze" : "dkh 12/31/2015 21:05",
+		"addInstanceReferenceCountTo:instanceSamplesTo:instanceClassOops:sampleLimit:from:" : "dkh 12/31/2015 22:51",
+		"addObjectCountTo:instanceSamplesTo:sampleLimit:from:" : "dkh 12/31/2015 22:03",
+		"analyzeClassInstanceCount" : "dkh 12/31/2015 22:40",
+		"analyzeInstanceReferenceCount" : "dkh 12/31/2015 22:40",
 		"classOopToClassMap" : "dkh 12/31/2015 18:53",
-		"scanBackupForClassInstanceCount:" : "dkh 12/31/2015 19:05",
-		"scanBackupForClassInstanceCountAndInstanceSamples:sampleLimit:" : "dkh 12/31/2015 18:58",
+		"instanceReferencesCount" : "dkh 12/31/2015 22:38",
+		"instanceReferencesCountAndInstances" : "dkh 12/31/2015 22:39",
+		"scanBackupForClassInstanceCount:" : "dkh 12/31/2015 22:40",
+		"scanBackupForClassInstanceCountAndInstanceSamples:sampleLimit:" : "dkh 12/31/2015 22:40",
+		"scanBackupForClassInstanceReferenceCountAndInstanceSamples:instanceClasses:sampleLimit:" : "dkh 12/31/2015 22:47",
 		"sortedClassInstanceCountList" : "dkh 12/31/2015 19:36",
 		"summary" : "dkh 12/31/2015 21:04" } }

@@ -1,0 +1,2 @@
+instance reference count analysis
+analyzeInstanceReferenceCount
