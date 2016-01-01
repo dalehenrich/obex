@@ -1,14 +1,15 @@
 {
-	"category" : "ScanBackup",
+	"category" : "Obex-Core-Model",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"oop",
-		"blocks" ],
-	"name" : "LogForwardReference",
+		"className",
+		"instanceCount",
+		"samples" ],
+	"name" : "OXClassInstanceDataPoint",
 	"pools" : [
 		 ],
 	"super" : "Object",

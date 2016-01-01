@@ -3,4 +3,6 @@ scanBackupForClassInstanceCount: backupPath
   | scanBackup |
   scanBackup := OXScanBackup64ForClassCount new path: backupPath.
   classInstanceCount := scanBackup classes.
-  classInstanceCountAndInstances := nil
+  classInstanceCountAndInstances := Dictionary new.
+  self classOopToClassMap.
+  self analyze

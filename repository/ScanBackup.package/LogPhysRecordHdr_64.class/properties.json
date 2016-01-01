@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"commentStamp" : "",
 	"instvars" : [
 		"blockId" ],
 	"name" : "LogPhysRecordHdr_64",

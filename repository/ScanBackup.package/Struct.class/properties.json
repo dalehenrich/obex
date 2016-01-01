@@ -18,7 +18,7 @@
 		"Int64f",
 		"Int64g",
 		"Int64h" ],
-	"commentStamp" : "JamesFoster 04/12/2015 13:21",
+	"commentStamp" : "",
 	"instvars" : [
 		"bytes" ],
 	"name" : "Struct",

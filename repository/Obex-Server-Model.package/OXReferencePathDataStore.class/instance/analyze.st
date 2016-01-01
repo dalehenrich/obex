@@ -1,6 +1,6 @@
 analysis
 analyze
-  oopToNodeMap := IdentityKeyValueDictionary new.
+  oopToNodeMap := IntegerKeyValueDictionary new.
   searchNodeMap := IdentityKeyValueDictionary new.
   self searchObjects
     do: [ :searchObject | 

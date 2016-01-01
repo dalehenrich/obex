@@ -1,7 +1,8 @@
 {
 	"class" : {
-		"classes" : "jgf 01/19/2010 13:23",
-		"scanBackupAtServerPath:" : "jgf 01/19/2010 13:23" },
+		"classes" : "dkh 12/31/2015 18:49",
+		"scanBackupAtServerPath:" : "jgf 01/19/2010 13:23",
+		"scanClasses:" : "dkh 12/31/2015 18:49" },
 	"instance" : {
 		"determineFileTypeAndVersion" : "JamesFoster 11/26/2013 11:02",
 		"initialize" : "jgf 01/19/2010 13:31",

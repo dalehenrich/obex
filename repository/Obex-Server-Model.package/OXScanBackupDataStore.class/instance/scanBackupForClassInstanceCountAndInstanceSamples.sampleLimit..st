@@ -6,4 +6,6 @@ scanBackupForClassInstanceCountAndInstanceSamples: backupPath sampleLimit: sampl
     sampleLimit: sampleLimit;
     path: backupPath.
   classInstanceCount := scanBackup classes.
-  classInstanceCountAndInstances := scanBackup classInstanceSamples
+  classInstanceCountAndInstances := scanBackup classInstanceSamples.
+  self classOopToClassMap.
+  self analyze
