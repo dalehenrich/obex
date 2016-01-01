@@ -3,7 +3,7 @@ obexViewDective: dataStore initalNodes: initialNodes
   | clientElement |
   clientElement := OXPointerDetectiveClientElement new
     theObject: dataStore;
-    usePersistentClientElementCache: false;
+    usePersistentClientElementCache: true;
     windowBuilder: self;
     editorAspectSelector: #'activateObjectExplorerEditor';
     editorWindowLabel: 'xxx';

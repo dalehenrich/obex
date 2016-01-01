@@ -3,7 +3,7 @@ obexViewClassInstancesScan: obexScan limit: limit
   | clientElement viewLimit |
   clientElement := OXClassInstanceCountClientElement new
     theObject: obexScan;
-    usePersistentClientElementCache: false;
+    usePersistentClientElementCache: true;
     windowBuilder: self;
     editorAspectSelector: #'activateObjectExplorerEditor';
     editorWindowLabel: 'xxx';

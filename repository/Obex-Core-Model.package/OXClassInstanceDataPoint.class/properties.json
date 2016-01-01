@@ -8,7 +8,8 @@
 	"instvars" : [
 		"className",
 		"instanceCount",
-		"samples" ],
+		"samples",
+		"reifiedSamples" ],
 	"name" : "OXClassInstanceDataPoint",
 	"pools" : [
 		 ],
