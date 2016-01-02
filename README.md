@@ -13,13 +13,18 @@
 ## Object Explorer
 **Object Explorer** expands upon this work and provides a tool visualizing and exploring the objects in a [GemStone/S 64][12] repository. 
 
-###Class Instance Histogram
-
-<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstances.png" />
 
 ###Object Reference Paths
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/sample.png" />
+
+###Class Instance Histogram
+
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstances.png" />
+
+###Class Instance Counts based on selected set of instances
+
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstancesWithInstances.png" />
 
 **Stay tuned for further work, as this project is still under development**
 
