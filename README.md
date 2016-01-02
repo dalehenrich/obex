@@ -24,7 +24,11 @@
 
 ###Class Instance Counts based on selected set of instances
 
+Each of the green nodes in the graph the instance count of the listed class in the image. The parent nodes of the green nodes (to the right) list the instance count of the classes that **reference** the instances in the child node ... and so on.
+
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstancesWithInstances.png" />
+
+When you click on a brown node, the parent nodes (i.e., class instance counts for the instances associated with the node) is clalculated and displayed,
 
 **Stay tuned for further work, as this project is still under development**
 
