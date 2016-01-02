@@ -3,4 +3,4 @@ menuActionSpec
   ^ super menuActionSpec
     ,
       {#('-').
-      #('find all reference paths' nil #'findReferencePathsMenuAction:selectionIndex:')}
+      #('pointer detective' nil #'findReferencePathsMenuAction:selectionIndex:')}
