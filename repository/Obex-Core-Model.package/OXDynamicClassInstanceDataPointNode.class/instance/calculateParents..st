@@ -17,5 +17,6 @@ calculateParents: parentNodeType
         label: dp printString)
         backupPath: self backupPath;
         parentLimit: self parentLimit;
+        dataSource: dataStore;
         yourself ].
   ^ newParents asArray

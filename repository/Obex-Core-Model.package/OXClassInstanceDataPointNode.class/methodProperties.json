@@ -4,7 +4,9 @@
 	"instance" : {
 		"dataPoint" : "dkh 01/01/2016 11:54",
 		"dataPoint:" : "dkh 01/01/2016 11:54",
-		"excludedInstVarNames" : "dkh 01/01/2016 11:54",
+		"dataSource" : "dkh 01/02/2016 09:00",
+		"dataSource:" : "dkh 01/02/2016 09:00",
+		"excludedInstVarNames" : "dkh 01/02/2016 09:02",
 		"inspectReifiedOXObject:" : "dkh 01/01/2016 17:20",
 		"isDone" : "dkh 01/01/2016 11:58",
 		"isLeaf" : "dkh 01/01/2016 11:56",

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"dataPoint",
 		"nodeType",
-		"label" ],
+		"label",
+		"dataSource" ],
 	"name" : "OXClassInstanceDataPointNode",
 	"pools" : [
 		 ],

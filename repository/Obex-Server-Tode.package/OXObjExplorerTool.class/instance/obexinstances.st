@@ -52,6 +52,7 @@ obexinstances
         label: dp printString)
         backupPath: backupPath;
         parentLimit: classes;
+        dataSource: dataStore;
         yourself ].
   self obexViewDective: dataStore initalNodes: leaves.
   passes > 0
