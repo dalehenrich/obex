@@ -4,7 +4,7 @@ obexcalc
   obex calc [--maxPaths=<max-paths>] --st=<st-expression> | oop... 
 "
 
-  | objects maxPaths dataStore |
+  | objects maxPaths dataStore result |
   self
     getSubcommandOptsMixedLongShort:
       {#('globalName' nil #'required').
@@ -22,5 +22,8 @@ obexcalc
         ifTrue: [ self error: 'Missing required argument(s) <oop. See man page for details.' ].
       (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
         asArray ].
-  dataStore := self obexDataStore.
-  dataStore findAllReferencePathsToObjects: objects maxPaths: maxPaths
+  System commitTransaction.
+  result := OXReferencePathDataStore new
+    findAllReferencePathsToObjects: objects
+    maxPaths: maxPaths.
+  self obexDataStore referencePaths push: result

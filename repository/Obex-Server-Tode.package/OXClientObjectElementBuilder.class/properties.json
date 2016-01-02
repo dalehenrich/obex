@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tode",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXClientObjectElementBuilder",
+	"pools" : [
+		 ],
+	"super" : "TDClientObjectElementBuilder",
+	"type" : "normal" }
