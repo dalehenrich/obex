@@ -28,7 +28,7 @@ Each of the green nodes in the graph the instance count of the listed class in t
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstancesWithInstances.png" />
 
-When you click on a brown node, the parent nodes (i.e., class instance counts for the instances associated with the node) is clalculated and displayed,
+When you click on a brown node, the parent nodes (i.e., class instance counts for the instances associated with the node) is calculated and displayed,
 
 **Stay tuned for further work, as this project is still under development**
 
