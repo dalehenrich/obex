@@ -13,6 +13,50 @@
 ## Object Explorer
 **Object Explorer** expands upon this work and provides a tool visualizing and exploring the objects in a [GemStone/S 64][12] repository. 
 
+###Installation
+
+#### GsDevKit_home Server
+Execute the following tODE commands:
+
+```
+project install --url=http://gsdevkit.github.io/GsDevKit_home/Obex.ston
+project load Obex
+```
+
+To update using the `project list`, with the `Obex` project selected, use the `Git >> pull` menu item, the the `load` menu item.
+
+#### GsDevKit_home Client
+If Server is running on a remote host, then execute the following Bash on the client machine:
+
+```shell
+cd $GS_HOME/shaed/repos
+git clone git@github.com:dalehenrich/obex.git
+```
+
+Then in a workspace in the client (use the `Pharo >> Pharo World Menu` to enable the Pharo System Menu and use `tODE World Menu` to restore tODE System Menu) execute the followg:
+
+```Smalltalk
+| gs_home |
+gs_home := Smalltalk os environment at: 'GS_HOME'.
+Metacello new
+  baseline: 'Obex';
+  repository: 'filetree://', gs_home, '/shared/repos/obex/repository';
+  load: 'Core'
+```
+
+To update the client:
+
+  - With a remote server update the git repo:
+
+    ```shell
+    cd $GS_HOME/shared/repos/obex
+    git pull origin master
+    ```
+T  - in a client workspace, execute:  
+
+    ```Smalltalk
+    Metacello image baseline: 'Obex'; get; load
+    ```
 
 ###Object Reference Paths
 
