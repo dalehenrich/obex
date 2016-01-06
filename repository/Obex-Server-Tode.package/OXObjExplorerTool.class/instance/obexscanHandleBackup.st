@@ -9,5 +9,5 @@ obexscanHandleBackup
   subArguments isEmpty
     ifTrue: [ self error: 'Missing required argument <backup-file>. See man page for details.' ].
   backupPath := dir , '/' , (subArguments at: 1).
-  subOptions at: 'backup' ifPresent: [ :ignored | buTool buBackup: dir ].
+  subOptions at: 'backup' ifPresent: [ :ignored | buTool buBackup: backupPath ].
   ^ backupPath
