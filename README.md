@@ -14,6 +14,7 @@
 **Object Explorer** expands upon this work and provides a tool visualizing and exploring the objects in a [GemStone/S 64][12] repository. 
 
 ###Installation
+**Note: this project is under active developement and may undergo significant changes without notice ... with that said, if you are fighting an object leak issue, then feel free to use the tool and provide feedback.**
 
 #### GsDevKit_home Server
 Execute the following tODE commands:
