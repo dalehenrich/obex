@@ -23,7 +23,9 @@ project install --url=http://gsdevkit.github.io/GsDevKit_home/Obex.ston
 project load Obex
 ```
 
-To update using the `project list`, with the `Obex` project selected, use the `Git >> pull` menu item, the the `load` menu item.
+To update using the `project list`:
+
+  - with the `Obex` project selected, use the `Git >> pull` menu item, the the `load` menu item.
 
 #### GsDevKit_home Client
 If Server is running on a remote host, then execute the following Bash on the client machine:
@@ -52,7 +54,7 @@ To update the client:
     cd $GS_HOME/shared/repos/obex
     git pull origin master
     ```
-T  - in a client workspace, execute:  
+  - in a client workspace, execute:  
 
     ```Smalltalk
     Metacello image baseline: 'Obex'; get; load
