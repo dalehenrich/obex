@@ -14,12 +14,25 @@
 **Object Explorer** expands upon this work and provides a tool visualizing and exploring the objects in a [GemStone/S 64][12] repository. 
 
 0. Prerequisites
-   1. Using a recently updated version of GsDevKit_home
-   2. Using the dev branch of tODE (installation instructions include info for updating to dev version).
+   - Use a recently updated version of the master branch of GsDevKit_home.
+   - Use the dev branch of tODE.
 
 1. Install Object Explorer
-   - [install in Server](#gsdevkithome-server)
-   - [install in Client](#gsdevkithome-client)
+   - Install Object Explorer in a tODE stone
+
+     ```shell
+     cd $GS_HOME/shared/repos
+     git clone git@github.com:dalehenrich/obex.git
+     # $GS_HOME/bin/createStone obex 3.2.12
+     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallServer obex
+     ```
+
+   - Install Object Explorere in a client
+
+     ```shell
+     # $GS_HOME/bin/createClient tode_obex
+     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallClient tode_obex
+     ```
 
 2. Log into the stone where you installed the Object Exploer and open an editor on the README from within tODE, so that you can run the examples:
 
@@ -41,75 +54,6 @@
      obex scan --backup obex.dbf.gz
      obex view --classes=20
      ```
-
-###Installation
-**Note: this project is under active developement and may undergo significant changes without notice ... with that said, if you are fighting an object leak issue, then feel free to use the tool and provide feedback.**
-
-In order to use Object Explorer, you need to install [GsDevKit_home](https://github.com/GsDevKit/GsDevKit_home#installation) so that tODE is installed. 
-
-#### GsDevKit_home Server
-After the initial installation, execute the following bash commands:
-
-```shell
-cd $GS_HOME/shared/repos/tode
-git checkout dev
-git pull origin dev
-```
-
-Execute the following tODE commands:
-
-```
-project install --url=http://gsdevkit.github.io/GsDevKit_home/Obex.ston
-project load Obex
-edit /sys/stone/dirs/Obex/README.md
-```
-
-Then execute the following bash commands:
-
-```
-cp $GS_HOME/shared/repo/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
-```
-
-To update using the `project list`:
-
-  - with the `Obex` project selected, use the `Git >> pull` menu item, the the `load` menu item.
-
-#### GsDevKit_home Client
-If Server is running on a remote host, then execute the following Bash on the client machine:
-
-```shell
-cd $GS_HOME/shared/repos/tode
-git checkout dev
-git pull origin dev
-cd ..
-git clone git@github.com:dalehenrich/obex.git
-cp $GS_HOME/shared/repo/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
-```
-
-Then in a workspace in the client (use the `Pharo >> Pharo World Menu` to enable the Pharo System Menu and use `tODE World Menu` to restore tODE System Menu) execute the following (ignore the GT* warnings):
-
-```Smalltalk
-| gs_home |
-gs_home := Smalltalk os environment at: 'GS_HOME'.
-Metacello new
-  baseline: 'Obex';
-  repository: 'filetree://', gs_home, '/shared/repos/obex/repository';
-  load: 'Core'
-```
-
-To update the client:
-
-  - With a remote server update the git repo:
-
-    ```shell
-    cd $GS_HOME/shared/repos/obex
-    git pull origin master
-    ```
-  - in a client workspace, execute:  
-
-    ```Smalltalk
-    Metacello image baseline: 'Obex'; get; load
-    ```
 
 ###Object Reference Paths
 
