@@ -1,0 +1,55 @@
+TDStringLeafNode{#name:'notes_bob',#contents:'Bob Bretl <bob.bretl@gemtalksystems.com>
+----------------------------------------
+
+Some basic help for the multi threaded refPath methods;
+
+SystemRepository _refPathSetupScanWithMaxThreads: 2 waitForLock: 120 pageBufSize: 2 percentCpuLimit: 90 .
+\"Sets up the current session for performing multi threaded scans of the
+ repository for finding reference paths to objects.  Performs and abort
+ and leaves the session in a transaction.
+
+limitSet := SystemRepository buildLimitSetForRefPathScan.
+SystemRepository _refPathDoScanForParents: { next } withLimits: limitSet excludeOops: { }
+\"Scans the data pages found in the refPathSetup method to find the parent oops for all of the
+ objects in the repository.  For each of the objects in the searchArray it saves up to  1024 parent
+ references and for all other objects it has a boolean to indicate if there is more than one parent.
+
+ When the scan is complete the parentsOf or findReferencePath methods can be used to get the
+ information captured for any object. \"
+
+SystemRepository _refPathForObject: anObj
+\"Returns a reference path to a single object.
+ This method returns an array with 5 elements:
+   The first element is anObj.
+   The second element is a boolean, true if anObj was in the searchOops
+     array for the last scan.
+   The third element is a boolean indicating whether this is a complete
+     path, i.e., whether it ends with an element from the limit set or
+     a class or GsObjectSecurityPolicy or another object already in the
+     path (a cycle) the latter are considered to be part of the limit set.
+   The fourth element is the number of parents found for this object.
+     If anObj was in the searchOops for the last scan this can be
+     up to 1024 (maximum number kept).  If anObj was NOT in the searchOops
+     this element is 0 or 1.
+   The fifth element is a boolean which is true if it is known that there are more
+     parent objects than returned in the number of parents (previous element).
+     These parents can be found by performing another scan with anObj in
+     the searchOops list.
+   The sixth element is an array containing a parent path starting with
+     anObj.  It is possible that the object is disconnected so the
+     path may not result in a limitSet object, a class or a
+     GsObjectSecurityPolicy.
+\"
+
+SystemRepository _refPathParentsOf: anObj
+\"This method returns an array with 4 elements:
+   The first element is anObj.
+   The second element is a boolean indicating whether anObj was in the searchOops array.
+   The third element is a boolean which is true if it is known that there are more
+     parent objects than returned in the last element.
+   The fourth element is an array containing up to 1024 parents.\"
+
+SystemRepository refPathCleanup
+\"This method logs out the sessions and cleans up the saved state for the
+ multi threaded reference path scans.\"
+',#creationTime:DateAndTime['2016-01-07T12:23:01.3651740550994-08:00'],#modificationTime:@2}

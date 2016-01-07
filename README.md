@@ -52,7 +52,14 @@
 
      ```
      obex scan --backup obex.dbf.gz
-     obex view --classes=20
+     obex view --scan=20
+     ```
+
+   - **[Class Instance Count Histogram**](#class-instance-count-histogram): use ojbect inventory to create data for class instance counts; open class instance count histogram:
+
+     ```
+     obex inventory --count
+     obex view --inventory=20
      ```
 
    - [**Class Instance Count detective**](#class-instance-counts-based-on-selected-set-of-instances)
