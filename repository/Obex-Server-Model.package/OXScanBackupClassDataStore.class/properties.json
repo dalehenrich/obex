@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"classInstanceCount",
-		"classOopToClassMap",
-		"sortedClassInstanceCountList",
 		"scanner" ],
 	"name" : "OXScanBackupClassDataStore",
 	"pools" : [
 		 ],
-	"super" : "OXGenericDataStore",
+	"super" : "OXClassInstanceCountDataStore",
 	"type" : "normal" }

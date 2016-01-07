@@ -7,7 +7,7 @@ sortClassInstanceCount: classInstanceCountMap instances: classInstanceCountInsta
     keysAndValuesDo: [ :classOop :instanceCount | 
       | samples class |
       samples := classInstanceCountInstanceMap at: classOop ifAbsent: [ #() ].
-      class := classOopToClassMap
+      class := self classOopToClassMap
         at: classOop
         ifAbsent: [ classOop printString ].
       sortedList

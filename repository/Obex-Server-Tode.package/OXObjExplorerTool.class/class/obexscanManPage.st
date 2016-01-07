@@ -37,11 +37,11 @@ EXAMPLES
   obex scan --dir=$GS_HOME/local/server/backups sample.dbf.gz
 
   obex scan sample.dbf.gz                 # instance counts by class
-  obex view --classes=20
+  obex view --scan=20
   obex scan --sample=String sample.dbf.gz # gather samples of String
-  obex view --classes=20
+  obex view --scan=20
   obex scan --ref=String sample.dbf.gz    # ref count by class to instances of String
-  obex view --classes=20
+  obex view --scan=20
 
   obex scan --limit=1000 --sample=String sample.dbf.gz
 

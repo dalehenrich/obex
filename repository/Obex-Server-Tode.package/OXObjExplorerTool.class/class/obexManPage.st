@@ -12,10 +12,11 @@ SYNOPSIS
 
 DESCRIPTION
   Commands:
-    calc      Calculate reference paths to given object
+    calc      Calculate reference paths to given object (Repository>>findAllReferencePathsToObjects:)
     clear     Clear dataStores
     datastore Return the current dataStore
     instances Run a multi-scan class instance count analysis
+    inventory GsObjectInventory analysis
     scan      Scan backup file to collect collect class instance counts
     view      Visualize object reference graphs and class instance counts
 
@@ -37,5 +38,6 @@ EXAMPLES
     at: 'scan' put: self obexscanManPage;
     at: 'datastore' put: self obexdatastoreManPage;
     at: 'instances' put: self obexinstancesManPage;
+    at: 'inventory' put: self obexinventoryManPage;
     yourself.
   ^ manPage

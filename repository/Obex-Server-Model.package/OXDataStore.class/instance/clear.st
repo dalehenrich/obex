@@ -1,3 +1,3 @@
 accessing
 clear
-  scanBackups := referencePaths := nil
+  objectInventory := scanBackups := referencePaths := nil
