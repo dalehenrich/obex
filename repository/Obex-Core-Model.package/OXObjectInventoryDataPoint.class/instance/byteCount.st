@@ -1,0 +1,4 @@
+accessing
+byteCount
+
+   ^byteCount

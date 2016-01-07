@@ -4,11 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 01/07/2016 11:19",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"objectInventory",
+		"sortedClassByteCountList",
+		"sortedClassInstanceCountList" ],
 	"name" : "OXObjectInventoryDataStore",
 	"pools" : [
 		 ],
-	"super" : "OXClassInstanceCountDataStore",
+	"super" : "OXGenericDataStore",
 	"type" : "normal" }

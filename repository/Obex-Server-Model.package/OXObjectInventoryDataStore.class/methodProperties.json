@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"initialize" : "dkh 01/07/2016 12:41",
+		"objectInventory" : "dkh 01/07/2016 12:41",
+		"sortClassByteCount:" : "dkh 01/07/2016 12:59",
+		"sortClassInstanceCount:" : "dkh 01/07/2016 13:00",
+		"sortedClassByteCountList" : "dkh 01/07/2016 12:51",
+		"sortedClassInstanceCountList" : "dkh 01/07/2016 12:42" } }

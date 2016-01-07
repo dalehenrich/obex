@@ -1,7 +1,9 @@
 obex view
 obexViewClassInstancesCount: obexInstanceCountDataStore limit: limit
   | clientElement viewLimit |
-  clientElement := OXClassInstanceCountClientElement new
+  clientElement := OXHistogramClientElement new
+    graphicLabel: 'Class instance count';
+    dataPointSelector: #'instanceCount';
     theObject: obexInstanceCountDataStore;
     usePersistentClientElementCache: true;
     windowBuilder: self;

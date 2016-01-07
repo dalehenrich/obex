@@ -1,30 +1,47 @@
 obex view
 obexview
   "
-  obex view --detective | --scan=<class-limit> | --inventory=<class-limit>
+  obex view --detective 
+  obex view --limit=<sample-limit> --scan
+  obex view --limit=<sample-limit>  --inventory=instances|bytes 
 "
 
   self
     getSubcommandOptsMixedLongShort:
       {#('detective' nil #'none').
-      #('scan' nil #'required').
+      #('scan' nil #'none').
+      #('limit' nil #'required').
       #('inventory' nil #'required')}.
   subOptions
     at: 'detective'
     ifPresent: [ :ignored | self obexViewDective: self obexDataStore ]
     ifAbsent: [ 
+      | limit |
+      subOptions
+        at: 'limit'
+        ifPresent: [ :limitArg | limit := limitArg asNumber ]
+        ifAbsent: [ self error: 'Missing equired option ''limit''.  See man page for more info' ].
       subOptions
         at: 'scan'
-        ifPresent: [ :limitArg | 
+        ifPresent: [ :ignored | 
           self
             obexViewClassInstancesCount: self obexDataStore scanBackups top
-            limit: limitArg asNumber ]
+            limit: limit ]
         ifAbsent: [ 
           subOptions
             at: 'inventory'
-            ifPresent: [ :limitArg | 
-              self
-                obexViewClassInstancesCount:
-                  self obexDataStore objectInventory top
-                limit: limitArg asNumber ]
+            ifPresent: [ :sortKey | 
+              sortKey = 'instances'
+                ifTrue: [ 
+                  self
+                    obexViewClassInstancesCount:
+                      self obexDataStore objectInventory top
+                    limit: limit ]
+                ifFalse: [ 
+                  sortKey = 'bytes'
+                    ifTrue: [ self obexViewBytesCount: self obexDataStore objectInventory top limit: limit ]
+                    ifFalse: [ 
+                      self
+                        error:
+                          'Unknown sort key: ' , sortKey printString , '. See man page for more info' ] ] ]
             ifAbsent: [ self error: 'Missing required options. See man page for more info' ] ] ]

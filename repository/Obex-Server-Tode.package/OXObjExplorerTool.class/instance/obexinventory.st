@@ -1,15 +1,13 @@
 obex
 obexinventory
   "
-  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] (--bytes | --count)
+  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>]
 "
 
   | maxSessions percentCpu objInventory dataStore |
   self
     getSubcommandOptsMixedLongShort:
-      {#('bytes' nil #'none').
-      #('count' nil #'none').
-      #('max' nil #'required').
+      {#('max' nil #'required').
       #('pct' nil #'required')}.
   subOptions
     at: 'max'
@@ -29,16 +27,15 @@ obexinventory
     listInstances: nil
     toFile: nil.
   dataStore := OXObjectInventoryDataStore new.
-  subOptions
-    at: 'count'
-    ifPresent: [ :ignored | 
-      objInventory entriesByCount
-        do: [ :entry | 
-          | clsOop |
-          clsOop := entry theClass asOop.
-          dataStore classOopToClassMap at: clsOop put: entry theClass.
-          dataStore classInstanceCount at: clsOop put: entry instanceCount ] ]
-    ifAbsent: [ 
-      self halt: 'not implemented'.
-      objInventory entriesByBytes ].
+  objInventory entriesByCount
+    do: [ :entry | 
+      | clsOop ds |
+      clsOop := entry theClass asOop.
+      ds := OXObjectInventoryDataPoint new
+        className: entry theClass printString;
+        classOop: clsOop;
+        instanceCount: entry instanceCount;
+        byteCount: entry byteCount;
+        yourself.
+      dataStore objectInventory at: clsOop put: ds ].
   self obexDataStore objectInventory push: dataStore

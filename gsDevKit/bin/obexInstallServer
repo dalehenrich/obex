@@ -57,6 +57,7 @@ $GS_HOME/bin/devKitCommandLine todeIt $stoneName << EOF
 project load Tode
 project install --url=http://gsdevkit.github.io/GsDevKit_home/Obex.ston
 project load Obex
+# mount @/sys/stone/dirs/Obex/ /home obex
 EOF
 
 

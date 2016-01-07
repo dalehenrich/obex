@@ -1,0 +1,15 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"classOop",
+		"byteCount" ],
+	"name" : "OXObjectInventoryDataPoint",
+	"pools" : [
+		 ],
+	"super" : "OXClassInstanceDataPoint",
+	"type" : "normal" }

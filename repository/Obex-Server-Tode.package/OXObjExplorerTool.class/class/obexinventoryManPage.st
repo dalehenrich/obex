@@ -9,12 +9,13 @@ obexinventoryManPage
   obex inventory - GsObjectInventory analysis
 
 SYNOPSIS
-  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] (--bytes | --count)
+  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>]
 
 DESCRIPTION
 
 EXAMPLES
-  obex inventory --count
-  obex view --inventory
+  obex inventory
+  obex view --limit=20 --inventory=instances
+  obex view --limit=20 --inventory=bytes
 '.
   ^ manPage

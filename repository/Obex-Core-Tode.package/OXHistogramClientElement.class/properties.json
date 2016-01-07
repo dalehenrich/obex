@@ -4,10 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/07/2016 14:30",
 	"instvars" : [
-		"dataPoints" ],
-	"name" : "OXClassInstanceCountClientElement",
+		"dataPoints",
+		"dataPointSelector",
+		"graphicLabel" ],
+	"name" : "OXHistogramClientElement",
 	"pools" : [
 		 ],
 	"super" : "TodeClientElement",
