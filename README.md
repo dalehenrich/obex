@@ -15,7 +15,7 @@
 
 0. Prerequisites
    - Use a recently updated version of the master branch of GsDevKit_home.
-   - The $Gs_HOME/shared/repos/tode git repo will be updated to the latest version of the dev branch during installation.
+   - The $GS_HOME/shared/repos/tode git repo will be updated to the latest version of the dev branch during installation.
 
 1. Install Object Explorer
    - Install Object Explorer in a tODE stone
