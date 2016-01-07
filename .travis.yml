@@ -30,3 +30,7 @@ addons:
 #        - bash # create a client
 #        - bash # install server
 #        - bash # install client
+
+matrix:
+  allow_failures:
+    os: osx
