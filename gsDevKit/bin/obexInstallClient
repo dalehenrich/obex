@@ -56,6 +56,6 @@ cd $clientPath
 pharoCmd="$directoryPath/pharo"
 imageName=${clientName}.image
 
-$phaorCmd "$directoryPath/$imageName --quit --save --eval "| gs_home | gs_home := Smalltalk os environment at: 'GS_HOME'.  Metacello new baseline: 'Obex'; repository: 'filetree://', gs_home, '/shared/repos/obex/repository'; load: 'Core'"
+$phaorCmd "$directoryPath/$imageName" --quit --save --st $GS_HOME/shared/repo/obex/gsDevKit/local/pharo/obexLoad.st
 
 echo "...finished $(basename $0)"
