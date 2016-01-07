@@ -21,7 +21,7 @@ addons:
 
 # test obex install scripts for client and server
 #
-#matrix:
+matrix:
 #  include:
 #    - language: generic
 #      sudo: true
@@ -30,7 +30,5 @@ addons:
 #        - bash # create a client
 #        - bash # install server
 #        - bash # install client
-
-matrix:
   allow_failures:
-    - os: osx
+    - os: osx      # osx is more susceptible to api rate limit failures
