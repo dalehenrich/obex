@@ -40,22 +40,22 @@ if [ $# -ne 1 ]; then
 fi
 clientName=$1
 
-clientPath=GS_CLIENT_DEV_CLIENTS/$clientName
+clientPath=${GS_CLIENT_DEV_CLIENTS}/$clientName
 if [ ! -d "$clientPath" ] ; then
-  echo "The client $clientName does not exist"
+  echo "The client $clientPath does not exist"
   exit 1
 fi
 
 cd $GS_HOME/shared/repos/tode
 git checkout dev
 git pull origin dev
-cp $GS_HOME/shared/repo/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
+cp $GS_HOME/shared/repos/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
 
 cd $clientPath
 
-pharoCmd="$directoryPath/pharo"
-imageName=${clientName}.image
+pharoCmd="$clientPath/pharo"
+imageName=todeClient.image
 
-$phaorCmd "$directoryPath/$imageName" --quit --save --st $GS_HOME/shared/repo/obex/gsDevKit/local/pharo/obexLoad.st
+$pharoCmd "$clientPath/$imageName" --quit --save $GS_HOME/shared/repos/obex/gsDevKit/local/pharo/obexLoad.st
 
 echo "...finished $(basename $0)"

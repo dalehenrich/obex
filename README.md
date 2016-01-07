@@ -55,6 +55,11 @@
      obex view --classes=20
      ```
 
+   - [**Class Instance Count detective**](#class-instance-counts-based-on-selected-set-of-instances)
+     ```
+     obex instances --classes=3 --passes=0 obex.dbf.gz
+     ```
+
 ###Object Reference Paths
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/sample.png" />

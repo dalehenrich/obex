@@ -51,9 +51,10 @@ fi
 cd $GS_HOME/shared/repos/tode
 git checkout dev
 git pull origin dev
-cp $GS_HOME/shared/repo/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
+cp $GS_HOME/shared/repos/obex/gsDevKit/local/gsdevkit_bin/* $GS_HOME/sys/local/gsdevkit_bin
 
-$GS_HOME/bin/todeIt $stoneName << EOF
+$GS_HOME/bin/devKitCommandLine todeIt $stoneName << EOF
+project load Tode
 project install --url=http://gsdevkit.github.io/GsDevKit_home/Obex.ston
 project load Obex
 EOF
