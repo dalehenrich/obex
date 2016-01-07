@@ -1,0 +1,39 @@
+language: smalltalk
+sudo: true
+
+os:
+  - linux
+  - osx
+
+smalltalk:
+  - GemStone-3.2.12
+  - GemStone-3.1.0.6
+
+env:
+  global:
+    - BASELINE="Obex"
+    - BASELINE_GROUP="Core"
+    - PACKAGES="repository"
+
+addons:
+  hosts:
+    - travis.dev
+
+install:
+  - unset SMALLTALK_CI_HOME && source env_vars # make sure to use smalltalkCI from this branch
+  - wget -q -O fixtures.zip https://github.com/hpi-swa/smalltalkCI/archive/fixtures.zip
+  - unzip -q fixtures.zip
+  - export PROJECT_HOME="$(pwd)/smalltalkCI-fixtures"
+
+# test obex install scripts for client and server
+#
+#matrix:
+#  include:
+#    - language: generic
+#      sudo: true
+#      script:
+#        - bash # create a stone 
+#        - bash # create a client
+#        - bash # install server
+#        - bash # install client
+	
