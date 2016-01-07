@@ -22,9 +22,9 @@
 
      ```shell
      cd $GS_HOME/shared/repos
-     git clone git@github.com:dalehenrich/obex.git
-     # $GS_HOME/bin/createStone obex 3.2.12
-     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallServer obex
+     git clone https://github.com/dalehenrich/obex.git
+     # $GS_HOME/bin/createStone obex_test 3.2.12
+     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallServer obex_test
      ```
 
    - Install Object Explorere in a client
