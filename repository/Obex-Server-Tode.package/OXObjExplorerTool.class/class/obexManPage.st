@@ -18,6 +18,7 @@ DESCRIPTION
     instances Run a multi-scan class instance count analysis
     inventory GsObjectInventory analysis
     scan      Scan backup file to collect collect class instance counts
+    spectro   Produce a class spectrograph - class instance count plus sample instances
     view      Visualize object reference graphs and class instance counts
 
 OPTIONS
@@ -39,5 +40,6 @@ EXAMPLES
     at: 'datastore' put: self obexdatastoreManPage;
     at: 'instances' put: self obexinstancesManPage;
     at: 'inventory' put: self obexinventoryManPage;
+    at: 'spectro' put: self obexspectroManPage;
     yourself.
   ^ manPage
