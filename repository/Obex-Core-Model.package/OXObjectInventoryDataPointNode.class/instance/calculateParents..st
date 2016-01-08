@@ -21,11 +21,10 @@ calculateParents: parentNodeType
       cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
       classInstanceMap at: classOop put: cnt + 1.
       set := classSamplesMap at: classOop ifAbsentPut: [ IdentitySet new ].
-      set add: inst asOop ].
+      set add: inst asOop.
+      System commit ].
   dataStore classInstanceMap: classInstanceMap.
   classInstanceCountsAndInstances := dataStore sortedClassInstanceCountList.
-  self parentLimit < classInstanceCountsAndInstances size
-    ifTrue: [ self parentLimit to: classInstanceCountsAndInstances size do: [ :index | (classInstanceCountsAndInstances at: index) samples: nil ] ].
   classInstanceCountsAndInstances := classInstanceCountsAndInstances
     copyFrom: 1
     to: (self parentLimit min: classInstanceCountsAndInstances size).
@@ -38,4 +37,5 @@ calculateParents: parentNodeType
         parentLimit: self parentLimit;
         dataSource: dataStore;
         yourself ].
+  System commit.
   ^ newParents asArray
