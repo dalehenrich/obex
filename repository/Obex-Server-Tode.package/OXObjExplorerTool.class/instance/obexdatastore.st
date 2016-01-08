@@ -5,4 +5,4 @@ obexdatastore
 "
 
   self getSubcommandOptsMixedLongShort: {}.
-  ^ self obexDataStore
+  ^ self obexDataStoreRoot

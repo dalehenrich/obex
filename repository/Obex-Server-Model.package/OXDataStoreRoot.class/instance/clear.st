@@ -1,0 +1,3 @@
+accessing
+clear
+  dataStores := nil

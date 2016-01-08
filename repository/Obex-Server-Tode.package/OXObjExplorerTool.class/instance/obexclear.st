@@ -5,4 +5,4 @@ obexclear
 "
 
   self getSubcommandOptsMixedLongShort: {}.
-  self obexDataStore clear
+  UserGlobals removeKey: self obexRootDataStoreName ifAbsent: [  ]

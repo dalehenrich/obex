@@ -6,10 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"referencePaths",
-		"scanBackups",
-		"objectInventory" ],
-	"name" : "OXDataStore",
+		"dataStores" ],
+	"name" : "OXDataStoreRoot",
 	"pools" : [
 		 ],
 	"super" : "Object",

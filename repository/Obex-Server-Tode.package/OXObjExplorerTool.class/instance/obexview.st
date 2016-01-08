@@ -14,7 +14,7 @@ obexview
       #('inventory' nil #'required')}.
   subOptions
     at: 'detective'
-    ifPresent: [ :ignored | self obexViewDective: self obexDataStore ]
+    ifPresent: [ :ignored | self obexViewDective: self obexDataStoreRoot ]
     ifAbsent: [ 
       | limit |
       subOptions
@@ -25,7 +25,7 @@ obexview
         at: 'scan'
         ifPresent: [ :ignored | 
           self
-            obexViewClassInstancesCount: self obexDataStore scanBackups top
+            obexViewClassInstancesCount: self obexDataStoreRoot scanBackups top
             limit: limit ]
         ifAbsent: [ 
           subOptions
@@ -35,11 +35,11 @@ obexview
                 ifTrue: [ 
                   self
                     obexViewClassInstancesCount:
-                      self obexDataStore objectInventory top
+                      self obexDataStoreRoot objectInventory top
                     limit: limit ]
                 ifFalse: [ 
                   sortKey = 'bytes'
-                    ifTrue: [ self obexViewBytesCount: self obexDataStore objectInventory top limit: limit ]
+                    ifTrue: [ self obexViewBytesCount: self obexDataStoreRoot objectInventory top limit: limit ]
                     ifFalse: [ 
                       self
                         error:

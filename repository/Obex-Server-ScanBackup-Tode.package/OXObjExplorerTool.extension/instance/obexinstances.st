@@ -28,7 +28,7 @@ obexinstances
     ifAbsent: [ self error: 'Missing required option `passes`. See man page for details' ].
   System commit.
   dataStore := OXScanBackupClassDataStore new scanBackup: backupPath.	"initial pass to collect baseline data"
-  self obexDataStore scanBackups push: dataStore.
+  self obexDataStoreRoot scanBackups push: dataStore.
   classInstanceCounts := dataStore sortedClassInstanceCountList.
   classInstanceCounts := classInstanceCounts
     copyFrom: 1
@@ -39,7 +39,7 @@ obexinstances
     scanBackup: backupPath
     sampleClasses: baselineClasses
     limit: oopLimit.	"create initial sample with instance counts and sample instances"
-  self obexDataStore scanBackups push: dataStore.
+  self obexDataStoreRoot scanBackups push: dataStore.
   classInstanceCountsAndInstances := dataStore sortedClassInstanceCountList.
   classInstanceCountsAndInstances := classInstanceCountsAndInstances
     copyFrom: 1

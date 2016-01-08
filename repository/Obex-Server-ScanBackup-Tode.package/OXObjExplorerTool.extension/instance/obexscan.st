@@ -31,7 +31,7 @@ obexscan
         at: 'ref'
         ifPresent: [ :className | 
           | sampleInstanceOops |
-          sampleInstanceOops := self obexDataStore scanBackups top
+          sampleInstanceOops := self obexDataStoreRoot scanBackups top
             classInstanceCountAndInstances
             at: (Smalltalk at: className) asOop
             ifAbsent: [ #() ].
@@ -40,5 +40,5 @@ obexscan
             sampleInstanceOops: sampleInstanceOops
             limit: limit ]
         ifAbsent: [ OXScanBackupClassDataStore new scanBackup: backupPath ] ].
-  self obexDataStore scanBackups push: analysis.
+  self obexDataStoreRoot scanBackups push: analysis.
   ^ true

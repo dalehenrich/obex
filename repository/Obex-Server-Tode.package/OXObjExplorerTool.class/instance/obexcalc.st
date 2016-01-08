@@ -26,4 +26,4 @@ obexcalc
   result := OXReferencePathDataStore new
     findAllReferencePathsToObjects: objects
     maxPaths: maxPaths.
-  self obexDataStore referencePaths push: result
+  self obexDataStoreRoot referencePaths push: result

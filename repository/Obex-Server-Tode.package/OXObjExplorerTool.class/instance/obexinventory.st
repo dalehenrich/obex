@@ -38,4 +38,4 @@ obexinventory
         byteCount: entry byteCount;
         yourself.
       dataStore objectInventory at: clsOop put: ds ].
-  self obexDataStore objectInventory push: dataStore
+  self obexDataStoreRoot objectInventory push: dataStore
