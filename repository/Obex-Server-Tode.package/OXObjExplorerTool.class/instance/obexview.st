@@ -22,7 +22,7 @@ obexview
             ifTrue: [ self obexViewReferenceDective: self obexDataStoreRoot ]
             ifFalse: [ 
               type = 'spectro'
-                ifTrue: [  ]
+                ifTrue: [ self obexViewSpectroDective: self obexDataStoreRoot ]
                 ifFalse: [ 
                   self
                     error:

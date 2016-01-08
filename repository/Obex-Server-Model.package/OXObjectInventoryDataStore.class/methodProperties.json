@@ -4,8 +4,15 @@
 	"instance" : {
 		"classOopToDataPointMap" : "dkh 01/08/2016 07:23",
 		"initialize" : "dkh 01/07/2016 12:41",
+		"maxCpuUsage" : "dkh 01/08/2016 11:53",
+		"maxCpuUsage:" : "dkh 01/08/2016 11:53",
+		"maxThreads" : "dkh 01/08/2016 11:53",
+		"maxThreads:" : "dkh 01/08/2016 11:53",
 		"objectInventory" : "dkh 01/07/2016 12:41",
+		"objectInventory:" : "dkh 01/08/2016 11:53",
 		"sortClassByteCount:" : "dkh 01/07/2016 12:59",
 		"sortClassInstanceCount:" : "dkh 01/07/2016 13:00",
 		"sortedClassByteCountList" : "dkh 01/07/2016 12:51",
-		"sortedClassInstanceCountList" : "dkh 01/07/2016 12:42" } }
+		"sortedClassByteCountList:" : "dkh 01/08/2016 11:53",
+		"sortedClassInstanceCountList" : "dkh 01/07/2016 12:42",
+		"sortedClassInstanceCountList:" : "dkh 01/08/2016 11:53" } }

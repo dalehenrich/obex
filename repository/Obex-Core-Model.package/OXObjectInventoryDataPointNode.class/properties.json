@@ -6,14 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"oop",
-		"children",
-		"parents",
-		"clientElement",
-		"myOop",
-		"parentLimit" ],
-	"name" : "OXGenericNode",
+		"maxThreads",
+		"maxCpuUsage" ],
+	"name" : "OXObjectInventoryDataPointNode",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OXClassInstanceDataPointNode",
 	"type" : "normal" }

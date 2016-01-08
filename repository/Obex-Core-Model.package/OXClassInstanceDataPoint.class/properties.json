@@ -9,7 +9,8 @@
 		"className",
 		"instanceCount",
 		"samples",
-		"reifiedSamples" ],
+		"reifiedSamples",
+		"label" ],
 	"name" : "OXClassInstanceDataPoint",
 	"pools" : [
 		 ],

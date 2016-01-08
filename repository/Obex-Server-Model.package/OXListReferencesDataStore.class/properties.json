@@ -6,12 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"objectInventory",
+		"classInstanceMap",
 		"sortedClassByteCountList",
 		"sortedClassInstanceCountList",
 		"maxThreads",
 		"maxCpuUsage" ],
-	"name" : "OXObjectInventoryDataStore",
+	"name" : "OXListReferencesDataStore",
 	"pools" : [
 		 ],
 	"super" : "OXGenericDataStore",

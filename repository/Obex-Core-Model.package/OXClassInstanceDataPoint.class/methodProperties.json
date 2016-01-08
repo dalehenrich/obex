@@ -2,12 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
+		"classDefinition" : "dkh 01/08/2016 11:33",
 		"className" : "dkh 12/31/2015 19:33",
 		"className:" : "dkh 12/31/2015 19:33",
 		"excludedInstVarNames" : "dkh 01/08/2016 11:12",
 		"instanceCount" : "dkh 12/31/2015 19:33",
 		"instanceCount:" : "dkh 12/31/2015 19:33",
-		"printOn:" : "dkh 01/01/2016 11:39",
+		"label" : "dkh 01/08/2016 11:37",
+		"printOn:" : "dkh 01/08/2016 11:37",
 		"reifySamples" : "dkh 01/01/2016 15:41",
 		"samples" : "dkh 12/31/2015 19:33",
 		"samples:" : "dkh 12/31/2015 19:33",

@@ -1,3 +1,3 @@
 printing
 printOn: aStream
-  aStream nextPutAll: self className , ', ' , instanceCount printString
+  aStream nextPutAll: self label , ', ' , instanceCount printString

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classInstanceMap" : "dkh 01/08/2016 12:12",
+		"classInstanceMap:" : "dkh 01/08/2016 12:12",
+		"classOopToDataPointMap" : "dkh 01/08/2016 12:11",
+		"initialize" : "dkh 01/08/2016 12:11",
+		"maxCpuUsage" : "dkh 01/08/2016 12:11",
+		"maxCpuUsage:" : "dkh 01/08/2016 12:11",
+		"maxThreads" : "dkh 01/08/2016 12:11",
+		"maxThreads:" : "dkh 01/08/2016 12:11",
+		"sortClassByteCount:" : "dkh 01/08/2016 12:11",
+		"sortClassInstanceCount:" : "dkh 01/08/2016 12:11",
+		"sortedClassByteCountList" : "dkh 01/08/2016 12:11",
+		"sortedClassByteCountList:" : "dkh 01/08/2016 12:11",
+		"sortedClassInstanceCountList" : "dkh 01/08/2016 12:11",
+		"sortedClassInstanceCountList:" : "dkh 01/08/2016 12:11" } }

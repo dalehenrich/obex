@@ -26,7 +26,10 @@ obexinventory
     aHiddenSet: 0
     listInstances: nil
     toFile: nil.
-  dataStore := OXObjectInventoryDataStore new.
+  dataStore := OXObjectInventoryDataStore new
+    maxThreads: maxSessions;
+    maxCpuUsage: percentCpu;
+    yourself.
   objInventory entriesByCount
     do: [ :entry | 
       | clsOop ds |
@@ -36,6 +39,7 @@ obexinventory
         classOop: clsOop;
         instanceCount: entry instanceCount;
         byteCount: entry byteCount;
+        label;
         yourself.
       dataStore objectInventory at: clsOop put: ds ].
   self obexDataStoreRoot objectInventory push: dataStore
