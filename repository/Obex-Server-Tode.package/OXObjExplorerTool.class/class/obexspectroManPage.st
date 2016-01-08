@@ -17,5 +17,6 @@ DESCRIPTION
 EXAMPLES
   obex inventory
   obex spectro --src=inventory --bytes --classes=3 
+  obex view
 '.
   ^ manPage

@@ -5,7 +5,7 @@ obexspectro
                 [--src=(inventory|spectro|scan)] (--bytes|--instances) --classes=<class-limit> 
 "
 
-  | maxSessions percentCpu classLimit classArray srcMap dataStoreKey srcDataStore sortedClassList result classOopToDataPointMap |
+  | maxSessions percentCpu classLimit classArray srcMap dataStoreKey srcDataStore sortedClassList result classOopToDataPointMap resultInstances resultClassOopMap |
   self
     getSubcommandOptsMixedLongShort:
       {#('classes' nil #'required').
@@ -59,9 +59,18 @@ obexspectro
     withMaxThreads: maxSessions
     maxCpuUsage: percentCpu.
   classOopToDataPointMap := srcDataStore classOopToDataPointMap.
+  resultInstances := System hiddenSetAsArray: 1.
+  resultClassOopMap := IntegerKeyValueDictionary new.
+  resultInstances
+    do: [ :obj | 
+      | samples |
+      samples := resultClassOopMap
+        at: obj class asOop
+        ifAbsentPut: [ Array new ].
+      samples add: obj asOop ].
   1 to: result size by: 2 do: [ :index | 
     | classOop resultCount samples |
     classOop := (result at: index) asOop.
     resultCount := result at: index + 1.
-    samples := System hiddenSetEnumerateAsInts: 1 limit: resultCount.
-    (classOopToDataPointMap at: classOop) samples: samples ]
+    (classOopToDataPointMap at: classOop)
+      samples: (resultClassOopMap at: classOop ifAbsent: [ {} ]) ]
