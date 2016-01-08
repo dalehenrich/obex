@@ -20,11 +20,11 @@ EXAMPLES
   obex -h
 
   obex calc --maxPaths=3 --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
-  obex view --detective
+  obex view --detective=reference
 
   obex calc 452261889
 
   obex calc --maxPaths=3 452261889
-  obex view --detective
+  obex view --detective=reference
 '.
   ^ manPage

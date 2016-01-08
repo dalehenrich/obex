@@ -1,5 +1,5 @@
 analysis
-scanBackup: backupPath sampleClasses: sampleClasses limit: limit
+scanBackup: aPath sampleClasses: sampleClasses limit: limit
   | sampleClassOops |
   classInstanceCount := IntegerKeyValueDictionary new.
   classInstanceCountAndInstances := IntegerKeyValueDictionary new.
@@ -16,7 +16,7 @@ scanBackup: backupPath sampleClasses: sampleClasses limit: limit
             sampleClassOops: sampleClassOops
             limit: limit
             from: logRecord ];
-    path: backupPath.
+    path: aPath.
   self clearScanner.
   self classOopToClassMap.
   self analyze

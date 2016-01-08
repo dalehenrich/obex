@@ -1,20 +1,32 @@
 obex view
 obexview
   "
-  obex view --detective 
+  obex view --detective=(reference|instances|spectro)
   obex view --limit=<sample-limit> --scan
   obex view --limit=<sample-limit>  --inventory=instances|bytes 
 "
 
   self
     getSubcommandOptsMixedLongShort:
-      {#('detective' nil #'none').
+      {#('detective' nil #'required').
       #('scan' nil #'none').
       #('limit' nil #'required').
       #('inventory' nil #'required')}.
   subOptions
     at: 'detective'
-    ifPresent: [ :ignored | self obexViewDective: self obexDataStoreRoot ]
+    ifPresent: [ :type | 
+      type = 'instances'
+        ifTrue: [ self obexViewInstancesDective: self obexDataStoreRoot ]
+        ifFalse: [ 
+          type = 'reference'
+            ifTrue: [ self obexViewReferenceDective: self obexDataStoreRoot ]
+            ifFalse: [ 
+              type = 'spectro'
+                ifTrue: [  ]
+                ifFalse: [ 
+                  self
+                    error:
+                      'Unknown detective type: ' , type printString , '. See man page for more info.' ] ] ] ]
     ifAbsent: [ 
       | limit |
       subOptions

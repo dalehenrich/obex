@@ -9,7 +9,7 @@ obexviewManPage
   obex view - Visualize object reference graphs and class instance counts
 
 SYNOPSIS
-  obex view --detective 
+  obex view --detective=(reference|instances|spectro)
   obex view --scan=<class-limit>
   obex view --inventory=instances|bytes [--limit=<sample-limit>] 
 
@@ -17,9 +17,23 @@ DESCRIPTION
 OPTIONS
 
 EXAMPLES
-  obex view --detective
+  obex view --detective=reference
   obex view --scan=20
   obex view --limit=20 --inventory=bytes
   obex view --limit=20 --inventory=instances
+
+  obex scan sample.dbf.gz
+  obex view --scan=20
+
+  obex instances --classes=3 sample.dbf.gz
+  obex view --detective=instances
+
+  obex calc --maxPaths=3 --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
+  obex view --detective=reference
+
+  obex inventory
+  obex view --limit=20 --inventory=instances
+  obex spectro --src=inventory --bytes --classes=3 
+  obex view --detective=spectro
 '.
   ^ manPage

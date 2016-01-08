@@ -1,5 +1,5 @@
 obex view
-obexViewDective: obexDataStore
+obexViewReferenceDective: obexDataStore
   self
     obexViewDective: obexDataStore referencePaths top
     initalNodes:

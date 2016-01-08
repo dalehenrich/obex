@@ -1,3 +1,3 @@
 analysis
-scanBackup: backupPath
-  self scanBackup: backupPath sampleClass: nil limit: nil
+scanBackup: aPath
+  self scanBackup: aPath sampleClass: nil limit: nil

@@ -1,0 +1,3 @@
+ston
+excludedInstVarNames
+  ^ #(#'samples' #'reifiedSamples')

@@ -10,11 +10,12 @@ obexinstancesManPage
 
 SYNOPSIS
   obex instances [--dir=<backup-directory>] [--backup] [--oops=<oop-limit>]
-                 --classes=<class-limit> --passes=<pass-limit> <backup-file-name>
+                 --classes=<class-limit>  <backup-file-name>
 
 DESCRIPTION
 
 EXAMPLES
-  obex instances --classes=3 --passes=0 sample.dbf.gz
+  obex instances --classes=3 sample.dbf.gz
+  obex view --detective=instances
 '.
   ^ manPage

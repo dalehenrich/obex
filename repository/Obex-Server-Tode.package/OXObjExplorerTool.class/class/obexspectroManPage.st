@@ -16,7 +16,8 @@ DESCRIPTION
 
 EXAMPLES
   obex inventory
+  obex view --limit=10 --inventory=instances
   obex spectro --src=inventory --bytes --classes=3 
-  obex view
+  obex view --detective=spectro
 '.
   ^ manPage

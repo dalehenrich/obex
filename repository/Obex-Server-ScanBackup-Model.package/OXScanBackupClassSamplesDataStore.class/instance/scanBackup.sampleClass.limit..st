@@ -1,3 +1,3 @@
 analysis
-scanBackup: backupPath sampleClass: sampleClass limit: limit
-  self scanBackup: backupPath sampleClasses: {sampleClass} limit: limit
+scanBackup: aPath sampleClass: sampleClass limit: limit
+  self scanBackup: aPath sampleClasses: {sampleClass} limit: limit
