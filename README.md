@@ -55,14 +55,14 @@
      obex view --scan=20
      ```
 
-   - **[Class Instance Count Histogram**](#class-instance-count-histogram): use ojbect inventory to create data for class instance counts; open class instances count histogram:
+   - [**Class Instance Count Histogram**](#class-instance-count-histogram): use ojbect inventory to create data for class instance counts; open class instances count histogram:
 
      ```
      obex inventory
      obex view --inventory=instances limit=10
      ```
 
-   - **[Class Bytes Count Histogram**](#class-byes-count-histogram): use ojbect inventory to create data for class byte counts; open class bytes count histogram:
+   - [**Class Bytes Count Histogram**](#class-byes-count-histogram): use ojbect inventory to create data for class byte counts; open class bytes count histogram:
 
      ```
      obex inventory
