@@ -84,7 +84,7 @@
 
 ###Class Bytes Count Histogram
 
-<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classBytess.png" />
+<img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classBytes.png" />
 
 ###Class Instance Counts based on selected set of instances
 
