@@ -62,7 +62,7 @@
      obex view --inventory=instances limit=10
      ```
 
-   - [**Class Bytes Count Histogram**](#class-byes-count-histogram): use ojbect inventory to create data for class byte counts; open class bytes count histogram:
+   - [**Class Bytes Count Histogram**](#class-bytes-count-histogram): use ojbect inventory to create data for class byte counts; open class bytes count histogram:
 
      ```
      obex inventory
