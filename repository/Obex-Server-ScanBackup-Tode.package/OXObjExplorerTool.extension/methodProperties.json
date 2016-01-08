@@ -1,7 +1,6 @@
 {
 	"class" : {
-		"obexinstancesManPage" : "dkh 01/01/2016 15:00",
-		"obexscanManPage" : "dkh 01/07/2016 11:17" },
+		 },
 	"instance" : {
 		"obexInstances:passes:classes:backupPath:" : "dkh 01/01/2016 14:35",
 		"obexinstances" : "dkh 01/02/2016 09:03",

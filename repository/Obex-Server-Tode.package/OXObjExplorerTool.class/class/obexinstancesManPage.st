@@ -1,4 +1,4 @@
-*obex-server-scanbackup-tode
+obex
 obexinstancesManPage
   | manPage |
   manPage := TDManPage
