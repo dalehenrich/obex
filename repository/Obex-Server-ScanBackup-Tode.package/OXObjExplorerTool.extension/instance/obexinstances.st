@@ -1,4 +1,4 @@
-obex
+*obex-server-scanbackup-tode
 obexinstances
   "
   obex instances [--dir=<backup-directory>] [--backup] [--oops=<oop-limit>]

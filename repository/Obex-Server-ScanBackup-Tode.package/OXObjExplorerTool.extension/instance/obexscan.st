@@ -1,4 +1,4 @@
-obex
+*obex-server-scanbackup-tode
 obexscan
   "
   obex scan [--dir=<backup-directory>] [--backup] <backup-file-name>

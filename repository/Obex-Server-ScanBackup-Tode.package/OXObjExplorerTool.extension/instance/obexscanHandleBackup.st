@@ -1,4 +1,4 @@
-obex
+*obex-server-scanbackup-tode
 obexscanHandleBackup
   | dir buTool backupPath |
   buTool := self topez toolInstanceFor: 'bu'.
