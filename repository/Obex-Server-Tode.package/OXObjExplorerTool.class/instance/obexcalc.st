@@ -1,4 +1,4 @@
-obex
+obex findAllRefs
 obexcalc
   "
   obex calc [--maxPaths=<max-paths>] --st=<st-expression> | oop... 
@@ -23,8 +23,11 @@ obexcalc
       (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
         asArray ].
   System commit.
-  limitArray := SystemRepository buildLimitSetForRefPathScan.
-  objects do: [ :each | limitArray remove: each ifAbsent: [  ] ].
+  limitArray := true
+    ifTrue: [ self obexMinLimitSetForRefPathScan ]
+    ifFalse: [ 
+      SystemRepository buildLimitSetForRefPathScan.
+      objects do: [ :each | limitArray remove: each ifAbsent: [  ] ] ].
   result := OXReferencePathDataStore new
     findAllReferencePathsToObjects: objects
     limitObjArray: limitArray
