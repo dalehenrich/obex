@@ -22,7 +22,7 @@ obexinventory
     waitForLock: 3
     pageBufSize: 8
     percentCpuActiveLimit: percentCpu
-    showHiddenClasses: true
+    showHiddenClasses: false
     aHiddenSet: 0
     listInstances: nil
     toFile: nil.

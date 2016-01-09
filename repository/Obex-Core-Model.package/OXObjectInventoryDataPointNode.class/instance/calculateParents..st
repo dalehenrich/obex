@@ -1,15 +1,21 @@
 private
 calculateParents: parentNodeType
-  | newParents dataStore classInstanceCountsAndInstances referencesResult referencesSet classInstanceMap classSamplesMap |
+  | newParents dataStore classInstanceCountsAndInstances referencesResult referencesSet classInstanceMap classSamplesMap sortedArray |
   dataStore := OXListReferencesDataStore new
-    maxThreads: self maxSessions;
-    maxCpuUsage: self percentCpu;
+    maxThreads: self maxThreads;
+    maxCpuUsage: self maxCpuUsage;
     yourself.
+  sortedArray := (dataPoint samples
+    collect: [ :each | Object _objectForOop: each ])
+    sorted: [ :a :b | a asOop < b asOop ].
+  System commit.
   referencesResult := SystemRepository
-    listReferences: dataPoint samples
-    withLimit: 0
-    withMaxThreads: self maxThreads
-    maxCpuUsage: self maxCpuUsage.
+    _listReferencesWithMaxThreads: self maxThreads
+    waitForLock: 60
+    pageBufSize: 8
+    percentCpuActiveLimit: self maxCpuUsage
+    targets: sortedArray
+    withLimit: 0.
   referencesSet := IdentitySet new.
   referencesResult do: [ :referenceAr | referencesSet addAll: referenceAr ].
   classInstanceMap := IntegerKeyValueDictionary new.
@@ -23,7 +29,9 @@ calculateParents: parentNodeType
       set := classSamplesMap at: classOop ifAbsentPut: [ IdentitySet new ].
       set add: inst asOop.
       System commit ].
-  dataStore classInstanceMap: classInstanceMap.
+  dataStore
+    classInstanceMap: classInstanceMap;
+    classInstanceCountInstanceMap: classSamplesMap.
   classInstanceCountsAndInstances := dataStore sortedClassInstanceCountList.
   classInstanceCountsAndInstances := classInstanceCountsAndInstances
     copyFrom: 1
@@ -38,4 +46,8 @@ calculateParents: parentNodeType
         dataSource: dataStore;
         yourself ].
   System commit.
+  {sortedArray.
+  referencesResult.
+  newParents.
+  dataStore} inspect.
   ^ newParents asArray

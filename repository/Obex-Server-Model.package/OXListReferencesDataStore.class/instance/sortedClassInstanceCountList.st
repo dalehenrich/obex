@@ -3,5 +3,5 @@ sortedClassInstanceCountList
   sortedClassInstanceCountList
     ifNil: [ 
       sortedClassInstanceCountList := self
-        sortClassInstanceCount: self objectInventory ].
+        sortClassInstanceCount: self classInstanceMap ].
   ^ sortedClassInstanceCountList

@@ -1,4 +1,5 @@
 initialization
 initialize
   super initialize.
-  objectInventory := IntegerKeyValueDictionary new
+  classInstanceMap := IntegerKeyValueDictionary new.
+  classInstanceCountInstanceMap := IntegerKeyValueDictionary new

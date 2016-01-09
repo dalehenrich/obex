@@ -1,9 +1,19 @@
 private
-sortClassInstanceCount: inventoryMap
+sortClassInstanceCount: classInstanceCountMap
   | sortedList |
   sortedList := SortedCollection
     sortBlock: [ :a :b | a instanceCount > b instanceCount ].
-  inventoryMap
-    keysAndValuesDo: [ :classOop :dataPoint | sortedList add: dataPoint ].
+  classInstanceCountMap
+    keysAndValuesDo: [ :classOop :instanceCount | 
+      | class |
+      class := Object _objectForOop: classOop.
+      class ifNil: [ class := classOop printString ].
+      sortedList
+        add:
+          (OXClassInstanceDataPoint new
+            className: class name;
+            instanceCount: instanceCount;
+            samples: (classInstanceCountInstanceMap at: classOop);
+            yourself) ].
   sortedList := sortedList asArray.
   ^ sortedList

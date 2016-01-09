@@ -40,6 +40,7 @@ obexspectro
         ifAbsent: [ self error: 'Unknown `src`: ' , arg printString , '. See man page for details' ] ]
     ifAbsent: [ self error: 'Required option `src` missing. See man page for details' ].
   srcDataStore := (self obexDataStoreRoot dataStores at: dataStoreKey) top.
+  srcDataStore parentLimit: classLimit.
   sortedClassList := subOptions
     at: 'bytes'
     ifPresent: [ :ignored | srcDataStore sortedClassByteCountList ]
