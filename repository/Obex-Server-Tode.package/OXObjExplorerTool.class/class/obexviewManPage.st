@@ -16,6 +16,8 @@ SYNOPSIS
 DESCRIPTION
 OPTIONS
 
+  Note: `--detective=spectro` only available in GemStone 3.4 and behond
+
 EXAMPLES
   obex view --detective=reference
   obex view --scan=20

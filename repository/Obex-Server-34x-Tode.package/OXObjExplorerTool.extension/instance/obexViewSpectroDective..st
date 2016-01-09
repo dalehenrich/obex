@@ -1,4 +1,4 @@
-*obex-server-scanbackup-tode
+*obex-server-34x-tode
 obexViewSpectroDective: obexDataStore
   | dataStore leaves classInstanceCountsAndInstances |
   dataStore := obexDataStore objectInventory top.

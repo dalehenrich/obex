@@ -48,4 +48,13 @@ baseline: spec
         group: 'Core' with: #('Obex-Server-Tode' 'Scan');
         group: 'Scan'
           with: #('Obex-Server-ScanBackup-Tode' 'Obex-Server-ScanBackup-Model');
+        yourself ].
+  spec
+    for: #(#'gs3.x')
+    do: [ 
+      spec
+        package: 'Obex-Server-Tode'
+          with: [ spec includes: #('Obex-Server-34x-Tode') ];
+        package: 'Obex-Server-34x-Tode'
+          with: [ spec requires: #('Obex-Server-Tode') ];
         yourself ]

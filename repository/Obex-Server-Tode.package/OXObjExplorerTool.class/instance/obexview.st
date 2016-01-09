@@ -22,7 +22,13 @@ obexview
             ifTrue: [ self obexViewReferenceDective: self obexDataStoreRoot ]
             ifFalse: [ 
               type = 'spectro'
-                ifTrue: [ self obexViewSpectroDective: self obexDataStoreRoot ]
+                ifTrue: [ 
+                  (self respondsTo: #'obexViewSpectroDective:')
+                    ifFalse: [ 
+                      self
+                        error:
+                          '--spectro option not available in the version of GemStone. See man page for more info.' ].
+                  self obexViewSpectroDective: self obexDataStoreRoot ]
                 ifFalse: [ 
                   self
                     error:

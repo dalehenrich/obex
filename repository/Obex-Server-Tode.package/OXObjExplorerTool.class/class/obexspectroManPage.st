@@ -6,7 +6,7 @@ obexspectroManPage
     sourceMethod: self name asString , '>>obexspectro'
     fromString:
       'NAME
-  obex spectro - Produce a class spectrograph - class instance count plus sample instances
+  obex spectro - Produce a class spectrograph - class instance count plus sample instances [V3.4 only]
 
 SYNOPSIS
   obex spectro  [--oops=<oop-limit>]  [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 

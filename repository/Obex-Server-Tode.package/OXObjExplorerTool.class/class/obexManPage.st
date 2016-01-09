@@ -18,7 +18,7 @@ DESCRIPTION
     instances Run a multi-scan class instance count analysis
     inventory GsObjectInventory analysis
     scan      Scan backup file to collect collect class instance counts
-    spectro   Produce a class spectrograph - class instance count plus sample instances
+    spectro   Produce a class spectrograph - class instance count plus sample instances [V3.4 only]
     view      Visualize object reference graphs and class instance counts
 
 OPTIONS

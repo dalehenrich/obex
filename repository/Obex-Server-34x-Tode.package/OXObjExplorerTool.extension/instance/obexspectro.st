@@ -1,4 +1,4 @@
-obex
+*obex-server-34x-tode
 obexspectro
   "
   obex spectro  [--oops=<oop-limit>]  [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
