@@ -1,7 +1,7 @@
 obex
 obexinventory
   "
-  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>]
+  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
 "
 
   | maxSessions percentCpu objInventory dataStore |
