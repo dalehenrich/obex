@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/10/2016 09:56",
 	"instvars" : [
 		 ],
-	"name" : "OXMetaclassReferenceNode",
+	"name" : "OXClassReferenceNode",
 	"pools" : [
 		 ],
 	"super" : "OXBehaviorReferenceNode",
