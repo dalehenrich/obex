@@ -3,4 +3,10 @@ TDStringLeafNode{#name:'thoughts',#contents:'dkh 1/9/2016 12:53
 
 a metclass instance is guaranteed to be a terminal since in the normal course of events there are no direct references to metaclass instances ... they are kept alive in GemStone as long as there is an instance of a metaclass kept alive, so for a OXRootNode that references a Metaclass instance youi should be able to add the destClass of the Metaclass instance to the graph and generate addutuinal reference paths  based on the references to the class .... either do this automagically or via menu item ... 
 
-add child refernce (inst var ref) to graph and find all reference paths to that node as part of refernce path data structures ...',#creationTime:DateAndTime['2016-01-09T12:53:34.4441249370575-08:00'],#modificationTime:DateAndTime['2016-01-09T12:59:26.6732819080352-08:00']}
+add child refernce (inst var ref) to graph and find all reference paths to that node as part of refernce path data structures ...
+
+dkh 1/9/2016 21:47
+------------------
+class reference in place, but not finding proper reference paths (or not properly updating the data structures ) .... if the oop is added in initial oop set I get the \"right\" answer ...
+
+Add an in-line inspect when calculating parents of the Metaclass node ...',#creationTime:DateAndTime['2016-01-09T12:53:34.4441249370575-08:00'],#modificationTime:DateAndTime['2016-01-09T21:52:58.8725020885467-08:00']}
