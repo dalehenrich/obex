@@ -53,6 +53,10 @@ baseline: spec
     for: #(#'gs3.x')
     do: [ 
       spec
+        package: 'Obex-Server-Model'
+          with: [ spec includes: #('Obex-Server-34x-Model') ];
+        package: 'Obex-Server-34x-Model'
+          with: [ spec requires: #('Obex-Server-Model') ];
         package: 'Obex-Server-Tode'
           with: [ spec includes: #('Obex-Server-34x-Tode') ];
         package: 'Obex-Server-34x-Tode'
