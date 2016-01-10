@@ -2,7 +2,8 @@
 	"class" : {
 		"minLimitSetForRefPathScan" : "dkh 01/09/2016 10:20" },
 	"instance" : {
-		"analyze" : "dkh 12/31/2015 18:54",
+		"analyze" : "dkh 01/09/2016 20:59",
+		"analyzeReferenceArray:node:" : "dkh 01/09/2016 20:58",
 		"classNameMap" : "dkh 12/31/2015 14:19",
 		"findAllReferencePathsToObjects:limitObjArray:printToLog:maxPaths:" : "dkh 01/08/2016 21:57",
 		"findAllReferencePathsToObjects:maxPaths:" : "dkh 12/31/2015 14:28",
