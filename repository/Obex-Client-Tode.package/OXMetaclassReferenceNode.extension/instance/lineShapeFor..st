@@ -5,5 +5,4 @@ lineShapeFor: builder
 		color: (Color red alpha: 0.5);
 		width: 3.
 	lineShape withShorterDistanceAttachPoint.
-	lineShape inverted.
 	^  lineShape

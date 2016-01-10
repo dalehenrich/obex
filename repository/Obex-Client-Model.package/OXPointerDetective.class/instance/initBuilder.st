@@ -4,7 +4,7 @@ initBuilder
 	builder view: self view.
 	lineShape := RTArrowedLine new
 		color: (Color lightGray alpha: 0.5);
-		width: 1.5.
+		width: 3.0.
 	lineShape withShorterDistanceAttachPoint.
 	lineShape inverted.
 	builder shape circle
