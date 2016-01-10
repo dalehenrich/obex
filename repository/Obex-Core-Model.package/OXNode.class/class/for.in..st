@@ -6,10 +6,7 @@ for: anObject in: aReferencePathDataStore
     ifTrue: [ theClassName := anObject name ]
     ifFalse: [ 
       theClassName := anObject class name.
-      anObject class == SymbolDictionary
-        ifTrue: [ 
-          nodeLabel := theClassName , '[' , anObject name printString , ']' , ', '
-            , anObject asOop printString ] ].
+      nodeLabel := self customNodeLabelFor: anObject theClassName: theClassName ].
   ^ self new
     oop: anObject asOop;
     className: theClassName;
