@@ -17,7 +17,7 @@ baseline: spec
     do: [ 
       spec
         package: 'Obex-Client-Model'
-          with: [ spec requires: #('Roassal2' 'Roassal2') ];
+          with: [ spec requires: #('Roassal2' 'Obex-Core-Model') ];
         package: 'Obex-Client-Tode'
           with: [ spec requires: #('Obex-Client-Model' 'Obex-Core-Tode') ];
         package: 'Roassal2' with: [ spec requires: #('Trachel') ];
