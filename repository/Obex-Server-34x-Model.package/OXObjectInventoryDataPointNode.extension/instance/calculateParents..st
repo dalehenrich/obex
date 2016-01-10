@@ -1,4 +1,4 @@
-private
+*obex-server-34x-model
 calculateParents: parentNodeType
   | newParents dataStore classInstanceCountsAndInstances referencesResult referencesSet classInstanceMap classSamplesMap sortedArray |
   dataStore := OXListReferencesDataStore new

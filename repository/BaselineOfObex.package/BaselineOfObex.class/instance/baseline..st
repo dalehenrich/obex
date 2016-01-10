@@ -50,7 +50,7 @@ baseline: spec
           with: #('Obex-Server-ScanBackup-Tode' 'Obex-Server-ScanBackup-Model');
         yourself ].
   spec
-    for: #(#'gs3.4.x')
+    for: #(#'gs3.x')
     do: [ 
       spec
         package: 'Obex-Server-Model'
