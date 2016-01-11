@@ -1,0 +1,18 @@
+{
+	"category" : "Obex-Server-34x-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/10/2016 15:05",
+	"instvars" : [
+		"searchResult",
+		"searchObjectMap",
+		"oopToNodeMap",
+		"searchNodeMap",
+		"classNameMap" ],
+	"name" : "OXRefPathParentsOfDataStore",
+	"pools" : [
+		 ],
+	"super" : "OXGenericDataStore",
+	"type" : "normal" }

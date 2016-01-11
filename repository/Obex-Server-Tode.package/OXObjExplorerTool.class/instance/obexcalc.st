@@ -7,8 +7,7 @@ obexcalc
   | objects maxPaths dataStore result limitArray |
   self
     getSubcommandOptsMixedLongShort:
-      {#('globalName' nil #'required').
-      #('st' nil #'required').
+      {#('st' nil #'required').
       #('maxPaths' nil #'required')}.
   subOptions
     at: 'maxPaths'
@@ -25,9 +24,8 @@ obexcalc
   System commit.
   limitArray := true
     ifTrue: [ self obexMinLimitSetForRefPathScan ]
-    ifFalse: [ 
-      SystemRepository buildLimitSetForRefPathScan.
-      objects do: [ :each | limitArray remove: each ifAbsent: [  ] ] ].
+    ifFalse: [ SystemRepository buildLimitSetForRefPathScan ].
+  objects do: [ :each | limitArray remove: each ifAbsent: [  ] ].
   result := OXReferencePathDataStore new
     findAllReferencePathsToObjects: objects
     limitObjArray: limitArray

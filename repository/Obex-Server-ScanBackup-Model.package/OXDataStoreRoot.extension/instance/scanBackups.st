@@ -1,3 +1,3 @@
-*obex-server-tode
+*obex-server-scanbackup-model
 scanBackups
   ^ self at: 'scanBackups'

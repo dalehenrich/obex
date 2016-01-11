@@ -1,3 +1,3 @@
-*obex-server-tode
+data stores
 objectInventory
   ^ self at: 'objectInventory'
