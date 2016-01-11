@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"minLimitSetForRefPathScan" : "dkh 01/10/2016 18:00" },
+	"instance" : {
+		"analyze" : "dkh 01/10/2016 18:02",
+		"calculateParentsOfOXBehaviorReferenceNode:" : "dkh 01/10/2016 18:18",
+		"calculateParentsOfOXClassReferenceNode:" : "dkh 01/10/2016 18:17",
+		"calculateParentsOfOXMetaclassReferenceNode:" : "dkh 01/10/2016 18:17",
+		"calculateParentsOfOXNode:" : "dkh 01/10/2016 18:11",
+		"calculateParentsOfOXReferenceNode:" : "dkh 01/10/2016 18:19",
+		"calculateParentsOfOXRootNode:" : "dkh 01/10/2016 18:19",
+		"calculateParentsOfOXSearchNode:" : "dkh 01/10/2016 18:19",
+		"classNameMap" : "dkh 01/10/2016 18:00",
+		"isCacheValid" : "dkh 01/10/2016 18:00",
+		"lookupNodeForObject:rootNode:" : "dkh 01/10/2016 18:00",
+		"oopToNodeMap" : "dkh 01/10/2016 18:00",
+		"searchNodeMap" : "dkh 01/10/2016 18:00",
+		"searchObjectMap" : "dkh 01/10/2016 18:05",
+		"searchObjects" : "dkh 01/10/2016 18:00",
+		"searchResult" : "dkh 01/10/2016 18:00",
+		"searchResult:" : "dkh 01/10/2016 18:00" } }

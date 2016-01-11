@@ -1,0 +1,3 @@
+node callbacks
+calculateParentsOfOXReferenceNode: anOXNode
+  self calculateParentsOfOXNode: anOXNode

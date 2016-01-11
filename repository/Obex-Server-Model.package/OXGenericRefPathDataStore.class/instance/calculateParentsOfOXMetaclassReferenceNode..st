@@ -1,0 +1,3 @@
+node callbacks
+calculateParentsOfOXMetaclassReferenceNode: anOXNode
+  self calculateParentsOfOXBehaviorReferenceNode: anOXNode

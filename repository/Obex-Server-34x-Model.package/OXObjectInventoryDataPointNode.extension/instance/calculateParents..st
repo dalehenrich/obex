@@ -1,7 +1,7 @@
 *obex-server-34x-model
 calculateParents: parentNodeType
   | newParents dataStore classInstanceCountsAndInstances referencesResult referencesSet classInstanceMap classSamplesMap sortedArray |
-  dataStore := OXListReferencesDataStore new
+  dataStore := OXObjectInventoryListReferencesDataStore new
     maxThreads: self maxThreads;
     maxCpuUsage: self maxCpuUsage;
     yourself.

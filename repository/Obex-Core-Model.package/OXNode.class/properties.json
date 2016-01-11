@@ -7,7 +7,6 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"className",
-		"referencePathDataStore",
 		"nodeLabel" ],
 	"name" : "OXNode",
 	"pools" : [

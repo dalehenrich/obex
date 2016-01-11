@@ -1,3 +1,3 @@
 private
 calculateParents
-  self dataSource calculateParentsFor: self
+  self dataSource calculateParentsOfOXBehaviorReferenceNode: self

@@ -1,0 +1,3 @@
+private
+calculateParents
+  self dataSource calculateParentsOfOXClassReferenceNode: self

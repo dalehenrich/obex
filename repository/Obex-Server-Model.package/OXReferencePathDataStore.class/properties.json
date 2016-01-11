@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"searchResult",
-		"searchObjectMap",
-		"oopToNodeMap",
-		"searchNodeMap",
-		"classNameMap" ],
+		 ],
 	"name" : "OXReferencePathDataStore",
 	"pools" : [
 		 ],
-	"super" : "OXGenericDataStore",
+	"super" : "OXGenericRefPathDataStore",
 	"type" : "normal" }

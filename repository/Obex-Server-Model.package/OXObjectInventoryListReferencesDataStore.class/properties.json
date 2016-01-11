@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/10/2016 17:56",
 	"instvars" : [
 		"classInstanceMap",
 		"classInstanceCountInstanceMap",
@@ -12,7 +12,7 @@
 		"sortedClassInstanceCountList",
 		"maxThreads",
 		"maxCpuUsage" ],
-	"name" : "OXListReferencesDataStore",
+	"name" : "OXObjectInventoryListReferencesDataStore",
 	"pools" : [
 		 ],
 	"super" : "OXGenericDataStore",

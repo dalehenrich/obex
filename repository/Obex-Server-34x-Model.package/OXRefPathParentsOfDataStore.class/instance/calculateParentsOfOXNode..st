@@ -1,5 +1,5 @@
 node callbacks
-calculateParentsFor: anOXNode
+calculateParentsOfOXNode: anOXNode
   | ds objects searchObject |
   System commit.
   searchObject := Object _objectForOop: anOXNode oop.

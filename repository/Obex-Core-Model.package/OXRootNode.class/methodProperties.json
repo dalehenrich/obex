@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"calculateParents" : "dkh 01/10/2016 18:14",
 		"isDone" : "dkh 12/31/2015 10:31",
 		"isLeaf" : "dkh 12/31/2015 10:31",
 		"isNonTerminal" : "dkh 12/31/2015 10:31",
