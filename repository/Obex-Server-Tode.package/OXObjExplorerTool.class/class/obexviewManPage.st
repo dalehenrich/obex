@@ -9,14 +9,14 @@ obexviewManPage
   obex view - Visualize object reference graphs and class instance counts
 
 SYNOPSIS
-  obex view --detective=(reference|instances|spectro)
+  obex view --detective=(reference|instances|spectro|parents)
   obex view --scan=<class-limit>
   obex view --inventory=instances|bytes [--limit=<sample-limit>] 
 
 DESCRIPTION
 OPTIONS
 
-  Note: `--detective=spectro` only available in GemStone 3.4 and behond
+  Note: `--detective=spectro` and `--detective=parents` available only in GemStone 3.4 and behond
 
 EXAMPLES
   obex view --detective=reference
@@ -32,6 +32,9 @@ EXAMPLES
 
   obex calc --maxPaths=3 --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
   obex view --detective=reference
+
+  obex parents --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
+  obex view --detective=parents
 
   obex inventory
   obex view --limit=20 --inventory=instances

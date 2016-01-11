@@ -1,9 +1,9 @@
 obex view
 obexview
   "
-  obex view --detective=(reference|instances|spectro)
-  obex view --limit=<sample-limit> --scan
-  obex view --limit=<sample-limit>  --inventory=instances|bytes 
+  obex view --detective=(reference|instances|spectro|parents)
+  obex view --scan=<class-limit>
+  obex view --inventory=instances|bytes [--limit=<sample-limit>] 
 "
 
   self
@@ -27,12 +27,21 @@ obexview
                     ifFalse: [ 
                       self
                         error:
-                          '--spectro option not available in the version of GemStone. See man page for more info.' ].
+                          '`spectro` option not available in the version of GemStone. See man page for more info.' ].
                   self obexViewSpectroDective: self obexDataStoreRoot ]
                 ifFalse: [ 
-                  self
-                    error:
-                      'Unknown detective type: ' , type printString , '. See man page for more info.' ] ] ] ]
+                  type = 'parents'
+                    ifTrue: [ 
+                      (self respondsTo: #'obexViewParentsDective:')
+                        ifFalse: [ 
+                          self
+                            error:
+                              '`parents` option not available in the version of GemStone. See man page for more info.' ].
+                      self obexViewParentsDective: self obexDataStoreRoot ]
+                    ifFalse: [ 
+                      self
+                        error:
+                          'Unknown detective type: ' , type printString , '. See man page for more info.' ] ] ] ] ]
     ifAbsent: [ 
       | limit |
       subOptions

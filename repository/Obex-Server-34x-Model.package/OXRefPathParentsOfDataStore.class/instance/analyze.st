@@ -6,10 +6,12 @@ analyze
     do: [ :searchObject | 
       | node |
       node := OXSearchNode for: searchObject in: self.
+      node parents: IdentitySet new.
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
-      (self searchObjectMap at: searchObject)
-        do: [ :parentArray | self analyzeReferenceArray: parentArray node: node ] ].
+      self
+        analyzeReferenceArray: (self searchObjectMap at: searchObject)
+        node: node ].
   classNameMap := StringKeyValueDictionary new.
   oopToNodeMap values
     do: [ :node | 

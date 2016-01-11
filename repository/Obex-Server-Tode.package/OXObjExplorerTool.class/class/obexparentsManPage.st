@@ -22,11 +22,11 @@ EXAMPLES
   obex setup
 
   obex parents --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
-  obex view --detective=reference
+  obex view --detective=parents
 
   obex parents 452261889
 
   obex parents 452261889
-  obex view --detective=parentss
+  obex view --detective=parents
 '.
   ^ manPage
