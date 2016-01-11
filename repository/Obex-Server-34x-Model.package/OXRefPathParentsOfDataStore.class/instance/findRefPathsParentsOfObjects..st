@@ -11,4 +11,5 @@ findRefPathsParentsOfObjects: objects
     do: [ :anObject | 
       | result |
       result := SystemRepository _refPathParentsOf: anObject.
-      self halt ]
+      self searchResult: result ].
+  self analyze

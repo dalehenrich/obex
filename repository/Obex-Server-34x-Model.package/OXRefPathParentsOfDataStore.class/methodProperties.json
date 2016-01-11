@@ -2,16 +2,16 @@
 	"class" : {
 		"minLimitSetForRefPathScan" : "dkh 01/10/2016 15:05" },
 	"instance" : {
-		"analyze" : "dkh 01/10/2016 15:05",
-		"analyzeReferenceArray:node:" : "dkh 01/10/2016 15:05",
-		"analyzeReferenceArray:node:nodeRef:" : "dkh 01/10/2016 15:05",
+		"analyze" : "dkh 01/10/2016 16:57",
+		"analyzeReferenceArray:node:" : "dkh 01/10/2016 17:23",
+		"calculateParentsFor:" : "dkh 01/10/2016 17:21",
 		"classNameMap" : "dkh 01/10/2016 15:05",
-		"findRefPathsParentsOfObjects:" : "dkh 01/10/2016 16:19",
+		"findRefPathsParentsOfObjects:" : "dkh 01/10/2016 17:16",
 		"isCacheValid" : "dkh 01/10/2016 15:05",
 		"lookupNodeForObject:rootNode:" : "dkh 01/10/2016 15:05",
 		"oopToNodeMap" : "dkh 01/10/2016 15:05",
 		"searchNodeMap" : "dkh 01/10/2016 15:05",
-		"searchObjectMap" : "dkh 01/10/2016 15:05",
+		"searchObjectMap" : "dkh 01/10/2016 16:46",
 		"searchObjects" : "dkh 01/10/2016 15:05",
 		"searchResult" : "dkh 01/10/2016 15:05",
 		"searchResult:" : "dkh 01/10/2016 15:05" } }

@@ -9,7 +9,7 @@ analyze
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
       (self searchObjectMap at: searchObject)
-        do: [ :ar | self analyzeReferenceArray: ar node: node ] ].
+        do: [ :parentArray | self analyzeReferenceArray: parentArray node: node ] ].
   classNameMap := StringKeyValueDictionary new.
   oopToNodeMap values
     do: [ :node | 

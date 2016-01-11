@@ -2,11 +2,9 @@ accessing
 searchObjectMap
   searchObjectMap
     ifNil: [ 
-      | map |
+      | map ar |
       map := IdentityKeyValueDictionary new.
-      self searchResult
-        do: [ :ar | 
-          (ar at: 2)
-            ifTrue: [ map at: (ar at: 1) put: (ar at: 3) ] ].
+      ar := self searchResult.
+      map at: (ar at: 1) put: (ar at: 4).
       searchObjectMap := TransientValue value: map ].
   ^ searchObjectMap value
