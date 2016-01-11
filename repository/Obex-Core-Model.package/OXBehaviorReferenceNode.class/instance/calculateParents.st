@@ -1,3 +1,3 @@
 private
 calculateParents
-  self referencePathDataStore calculateParentsFor: self
+  self dataSource calculateParentsFor: self

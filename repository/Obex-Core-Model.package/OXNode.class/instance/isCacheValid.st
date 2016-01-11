@@ -1,3 +1,3 @@
 testing
 isCacheValid
-  ^ self referencePathDataStore isCacheValid
+  ^ self dataSource isCacheValid

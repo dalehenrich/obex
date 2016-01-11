@@ -19,4 +19,4 @@ calculateParents: parentNodeType
         parentLimit: self parentLimit;
         dataSource: dataStore;
         yourself ].
-  ^ newParents asArray
+  parents := newParents asArray

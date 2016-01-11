@@ -2,13 +2,12 @@
 	"class" : {
 		"addSyntheticNodeFor:in:to:" : "dkh 01/10/2016 10:10",
 		"customNodeLabelFor:theClassName:" : "dkh 01/09/2016 10:11",
-		"for:in:" : "dkh 01/10/2016 10:10" },
+		"for:in:" : "dkh 01/10/2016 17:43" },
 	"instance" : {
 		"className" : "dkh 12/31/2015 10:30",
 		"className:" : "dkh 12/31/2015 10:30",
-		"excludedInstVarNames" : "dkh 01/01/2016 15:07",
 		"inspectOXObject:" : "dkh 01/01/2016 17:16",
-		"isCacheValid" : "dkh 01/01/2016 15:07",
+		"isCacheValid" : "dkh 01/10/2016 17:42",
 		"isClassReference" : "dkh 01/10/2016 09:56",
 		"isDone" : "dkh 12/31/2015 10:30",
 		"isLeaf" : "dkh 12/31/2015 10:30",
@@ -18,7 +17,5 @@
 		"nodeLabel" : "dkh 01/09/2016 09:52",
 		"nodeLabel:" : "dkh 01/09/2016 09:51",
 		"printOn:" : "dkh 12/31/2015 10:30",
-		"referencePathDataStore" : "dkh 01/01/2016 15:05",
-		"referencePathDataStore:" : "dkh 01/01/2016 15:06",
 		"stringLabel" : "dkh 01/09/2016 09:52",
 		"stringName" : "dkh 01/09/2016 09:52" } }

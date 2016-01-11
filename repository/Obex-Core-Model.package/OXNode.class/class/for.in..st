@@ -11,7 +11,7 @@ for: anObject in: aReferencePathDataStore
     oop: anObject asOop;
     className: theClassName;
     nodeLabel: nodeLabel;
-    referencePathDataStore: aReferencePathDataStore;
+    dataSource: aReferencePathDataStore;
     yourself.
   self addSyntheticNodeFor: anObject in: aReferencePathDataStore to: theNode.
   ^ theNode

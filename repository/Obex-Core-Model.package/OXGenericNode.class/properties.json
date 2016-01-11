@@ -11,7 +11,8 @@
 		"parents",
 		"clientElement",
 		"myOop",
-		"parentLimit" ],
+		"parentLimit",
+		"dataSource" ],
 	"name" : "OXGenericNode",
 	"pools" : [
 		 ],

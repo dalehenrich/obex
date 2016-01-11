@@ -2,6 +2,5 @@
 	"class" : {
 		"addSyntheticNodeFor:in:to:" : "dkh 01/10/2016 10:10" },
 	"instance" : {
-		"calculateParents" : "dkh 01/10/2016 17:11",
-		"isMetaclassReference" : "dkh 01/10/2016 10:03",
-		"parents" : "dkh 01/10/2016 09:55" } }
+		"calculateParents" : "dkh 01/10/2016 17:43",
+		"isMetaclassReference" : "dkh 01/10/2016 10:03" } }

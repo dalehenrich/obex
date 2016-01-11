@@ -1,4 +1,10 @@
 accessing
 parents
-	parents ifNil: [ parents := self clientElement ifNotNil: [ :ce | ce parentsFor: self ] ifNil: [ IdentitySet new ] ].
-	^ parents
+  parents
+    ifNil: [ 
+      self clientElement
+        ifNotNil: [ :ce | parents := ce parentsFor: self ]
+        ifNil: [ 
+          parents := IdentitySet new.
+          self calculateParents ] ].
+  ^ parents

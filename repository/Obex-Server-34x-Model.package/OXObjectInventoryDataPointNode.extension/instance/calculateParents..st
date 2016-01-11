@@ -50,4 +50,4 @@ calculateParents: parentNodeType
   referencesResult.
   newParents.
   dataStore} inspect.
-  ^ newParents asArray
+  parents := newParents asArray
