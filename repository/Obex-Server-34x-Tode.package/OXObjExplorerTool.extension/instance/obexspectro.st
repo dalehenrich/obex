@@ -30,7 +30,7 @@ obexspectro
   srcMap := Dictionary new
     at: 'inventory' put: 'objectInventory';
     at: 'scan' put: 'scanBackups';
-    at: 'spector' put: 'spectroph';
+    at: 'spectro' put: 'spectro';
     yourself.
   subOptions
     at: 'src'
