@@ -25,7 +25,7 @@ editStackBarPlotFrom: aGemStoneClient windowId: aWindowId
 			pt := dp perform: (sels at: first).
 			pad := WriteStream on: String new.
 			max - pt asString size timesRepeat: [ pad space ].
-			b add: {pt} title: dp className , ' ' , pad contents , pt asString ].
+			b add: {pt} title: dp label , ' ' , pad contents , pt asString ].
 	b barWidth: 500 height: 10.
 	b build.
 	g := RTGroup withAll: b view elements.
