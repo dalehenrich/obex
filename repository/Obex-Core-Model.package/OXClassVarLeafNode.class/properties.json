@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/12/2016 06:32",
+	"instvars" : [
+		 ],
+	"name" : "OXClassVarLeafNode",
+	"pools" : [
+		 ],
+	"super" : "OXStructuralLeafNode",
+	"type" : "normal" }

@@ -2,8 +2,7 @@
 	"class" : {
 		"addSyntheticNodeFor:in:to:" : "dkh 01/10/2016 10:10",
 		"customNodeLabelFor:theClassName:" : "dkh 01/09/2016 10:11",
-		"for:in:" : "dkh 01/10/2016 17:43",
-		"forOop:in:" : "dkh 01/11/2016 19:38" },
+		"for:in:" : "dkh 01/10/2016 17:43" },
 	"instance" : {
 		"calculateParents" : "dkh 01/10/2016 18:11",
 		"className" : "dkh 12/31/2015 10:30",

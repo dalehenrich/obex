@@ -4,9 +4,10 @@ lookupNodeForOop: referenceOop rootNode: createRootNode
     at: referenceOop
     ifPresent: [ :existingNode | existingNode ]
     ifAbsent: [ 
-      | referenceNode |
+      | referenceNode referenceObject |
+      referenceObject := Object _objectForOop: referenceOop.
       referenceNode := createRootNode
-        ifTrue: [ OXRootNode forOop: referenceOop in: self ]
-        ifFalse: [ OXReferenceNode forOop: referenceOop in: self ].
+        ifTrue: [ OXRootNode for: referenceObject in: self ]
+        ifFalse: [ OXReferenceNode for: referenceObject in: self ].
       oopToNodeMap at: referenceOop put: referenceNode.
       referenceNode ]
