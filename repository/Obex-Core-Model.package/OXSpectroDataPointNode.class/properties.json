@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 01/12/2016 11:23",
 	"instvars" : [
 		"sortKey" ],
-	"name" : "OXObjectInventoryDataPointNode",
+	"name" : "OXSpectroDataPointNode",
 	"pools" : [
 		 ],
 	"super" : "OXClassInstanceDataPointNode",

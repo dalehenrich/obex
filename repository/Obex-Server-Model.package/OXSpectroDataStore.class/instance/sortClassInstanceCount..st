@@ -7,10 +7,10 @@ sortClassInstanceCount: classInstanceCountMap
     keysAndValuesDo: [ :classOop :instanceCount | 
       | class |
       class := Object _objectForOop: classOop.
-      class ifNil: [ class := classOop printString ].
+      class ifNil: [ self halt ].
       sortedList
         add:
-          (OXClassInstanceDataPoint new
+          (OXObjectInventoryDataPoint new
             className: class name;
             classOop: classOop;
             instanceCount: instanceCount;

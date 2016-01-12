@@ -14,7 +14,7 @@ obexViewSpectro: obexDataStore sortKey: sortKey
     collect: [ :dp | 
       | label |
       label := dp theClassLabel , ', ' , (dp perform: sel) printString.
-      (OXObjectInventoryDataPointNode for: dp nodeType: #'leaf' label: label)
+      (OXSpectroDataPointNode for: dp nodeType: #'leaf' label: label)
         parentLimit: dataStore parentLimit;
         dataSource: dataStore;
         sortKey: sortKey;
