@@ -14,14 +14,14 @@ obexViewClassHistogram: dataStore sorted: sortedList label: label selector: sele
     timestamp;
     yourself.
   sorted := sortedList.
-  sorted isEmpty
-    ifTrue: [ self error: 'There are no elements in the ' , label ].
   regexPattern
     ifNotNil: [ 
       | findTool regex |
       findTool := self topez toolInstanceFor: 'find'.
       regex := findTool findRegex: regexPattern.
       sorted := sorted select: [ :each | regex search: each label ] ].
+  sorted isEmpty
+    ifTrue: [ self error: 'There are no elements in the ' , label ].
   viewLimit := limit min: sorted size.
   clientElement dataPoints: (sorted copyFrom: 1 to: viewLimit).
   self topez cacheClientElement: clientElement.

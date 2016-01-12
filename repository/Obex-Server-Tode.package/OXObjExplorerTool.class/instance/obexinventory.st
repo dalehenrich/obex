@@ -4,7 +4,7 @@ obexinventory
   obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
 "
 
-  | maxSessions percentCpu objInventory dataStore |
+  | maxSessions percentCpu objInventory dataStore classToOopMap |
   self
     getSubcommandOptsMixedLongShort:
       {#('max' nil #'required').
@@ -22,7 +22,7 @@ obexinventory
     waitForLock: 3
     pageBufSize: 8
     percentCpuActiveLimit: percentCpu
-    showHiddenClasses: false
+    showHiddenClasses: true
     aHiddenSet: 0
     listInstances: nil
     toFile: nil.
@@ -30,10 +30,12 @@ obexinventory
     maxThreads: maxSessions;
     maxCpuUsage: percentCpu;
     yourself.
+  classToOopMap := StringKeyValueDictionary new.
   objInventory entriesByCount
     do: [ :entry | 
       | clsOop ds |
       clsOop := entry theClass asOop.
+      (classToOopMap at: entry theClass name ifAbsentPut: [ {} ]) add: entry.
       ds := OXObjectInventoryDataPoint new
         className: entry theClass printString;
         classOop: clsOop;
@@ -42,4 +44,5 @@ obexinventory
         label;
         yourself.
       dataStore objectInventory at: clsOop put: ds ].
+  (classToOopMap values select: [ :each | each size ~~ 1 ]) inspect.
   self obexDataStoreRoot objectInventory push: dataStore

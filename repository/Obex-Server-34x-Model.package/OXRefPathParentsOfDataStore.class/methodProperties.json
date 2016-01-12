@@ -3,8 +3,8 @@
 		"minLimitSetForRefPathScan" : "dkh 01/10/2016 15:05" },
 	"instance" : {
 		"analyze" : "dkh 01/10/2016 21:12",
-		"analyzeReferenceArray:node:" : "dkh 01/10/2016 21:13",
-		"calculateParentsOfOXNode:" : "dkh 01/10/2016 21:04",
+		"analyzeReferenceArray:node:" : "dkh 01/11/2016 19:28",
+		"calculateParentsOfOXNode:" : "dkh 01/11/2016 19:20",
 		"findRefPathsParentsOfObjects:" : "dkh 01/10/2016 20:59",
 		"rawFindRefPathsParentsOfObjects:" : "dkh 01/10/2016 21:07",
 		"searchObjectMap" : "dkh 01/10/2016 20:29" } }
