@@ -9,9 +9,10 @@ obexviewManPage
   obex view - Visualize object reference graphs and class instance counts
 
 SYNOPSIS
-  obex view --detective=(reference|instances|spectro|parents)
-  obex view --scan=<class-limit>
-  obex view --inventory=instances|bytes [--limit=<sample-limit>] [--filter=<regex-pattern>]
+  obex view --detective=(reference|instances|parents)
+  obex view --spectro=instances|bytes --limit=<sample-limit>
+  obex view --scan --limit=<sample-limit>
+  obex view --inventory=instances|bytes --limit=<sample-limit> [--filter=<regex-pattern>]
 
 DESCRIPTION
 OPTIONS
@@ -20,7 +21,7 @@ OPTIONS
 
 EXAMPLES
   obex view --detective=reference
-  obex view --scan=20
+  obex view --scan --limit=20
   obex view --limit=20 --inventory=bytes
   obex view --limit=20 --inventory=instances
   obex view --limit=20 --inventory=instances --filter=^string
@@ -40,6 +41,6 @@ EXAMPLES
   obex inventory
   obex view --limit=20 --inventory=instances
   obex spectro --src=inventory --bytes --classes=3 
-  obex view --detective=spectro
+  obex view --limit=3 --spectro=instances 
 '.
   ^ manPage

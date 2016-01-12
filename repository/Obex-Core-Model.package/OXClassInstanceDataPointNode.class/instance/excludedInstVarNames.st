@@ -1,3 +1,3 @@
 ston
 excludedInstVarNames
-  ^ super excludedInstVarNames , #(#'dataPoint' #'dataSource')
+  ^ super excludedInstVarNames , #(#'dataPoint')
