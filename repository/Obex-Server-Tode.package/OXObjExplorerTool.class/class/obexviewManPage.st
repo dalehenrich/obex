@@ -11,7 +11,7 @@ obexviewManPage
 SYNOPSIS
   obex view --detective=(reference|instances|spectro|parents)
   obex view --scan=<class-limit>
-  obex view --inventory=instances|bytes [--limit=<sample-limit>] 
+  obex view --inventory=instances|bytes [--limit=<sample-limit>] [--filter=<regex-pattern>]
 
 DESCRIPTION
 OPTIONS
@@ -23,6 +23,7 @@ EXAMPLES
   obex view --scan=20
   obex view --limit=20 --inventory=bytes
   obex view --limit=20 --inventory=instances
+  obex view --limit=20 --inventory=instances --filter=^string
 
   obex scan sample.dbf.gz
   obex view --scan=20

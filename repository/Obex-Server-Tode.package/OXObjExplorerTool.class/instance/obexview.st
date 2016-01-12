@@ -3,13 +3,14 @@ obexview
   "
   obex view --detective=(reference|instances|spectro|parents)
   obex view --scan=<class-limit>
-  obex view --inventory=instances|bytes [--limit=<sample-limit>] 
+  obex view --inventory=instances|bytes [--limit=<sample-limit>] [--filter=<regex-pattern>]
 "
 
   self
     getSubcommandOptsMixedLongShort:
       {#('detective' nil #'required').
       #('scan' nil #'none').
+      #('filter' nil #'required').
       #('limit' nil #'required').
       #('inventory' nil #'required')}.
   subOptions
@@ -58,15 +59,26 @@ obexview
           subOptions
             at: 'inventory'
             ifPresent: [ :sortKey | 
+              | filter |
+              subOptions
+                at: 'filter'
+                ifPresent: [ :arg | filter := arg ]
+                ifAbsent: [ filter := nil ].
               sortKey = 'instances'
                 ifTrue: [ 
                   self
                     obexViewClassInstancesCount:
                       self obexDataStoreRoot objectInventory top
+                    filter: filter
                     limit: limit ]
                 ifFalse: [ 
                   sortKey = 'bytes'
-                    ifTrue: [ self obexViewBytesCount: self obexDataStoreRoot objectInventory top limit: limit ]
+                    ifTrue: [ 
+                      self
+                        obexViewBytesCount:
+                          self obexDataStoreRoot objectInventory top
+                        filter: filter
+                        limit: limit ]
                     ifFalse: [ 
                       self
                         error:
