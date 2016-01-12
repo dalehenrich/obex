@@ -12,6 +12,7 @@ sortClassInstanceCount: classInstanceCountMap
         add:
           (OXClassInstanceDataPoint new
             className: class name;
+            classOop: classOop;
             instanceCount: instanceCount;
             samples: (classInstanceCountInstanceMap at: classOop);
             yourself) ].

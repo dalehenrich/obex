@@ -1,3 +1,3 @@
 private
 calculateParents
-  self self calculateParents: #'internal'
+  self calculateParents: #'internal'

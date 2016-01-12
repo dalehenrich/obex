@@ -30,7 +30,7 @@ obexspectro
   srcMap := Dictionary new
     at: 'inventory' put: 'objectInventory';
     at: 'scan' put: 'scanBackups';
-    at: 'spectro' put: 'spectro';
+    at: 'spector' put: 'spectroph';
     yourself.
   subOptions
     at: 'src'
@@ -53,7 +53,7 @@ obexspectro
             error:
               'Required option `bytes | instances` missing. See man page for details' ] ].
   classArray := ((sortedClassList copyFrom: 1 to: classLimit)
-    collect: [ :dp | Smalltalk at: dp className ]) asArray.
+    collect: [ :dp | dp theClass ]) asArray.
   System commit.
   result := SystemRepository
     listInstancesToHiddenSet: classArray

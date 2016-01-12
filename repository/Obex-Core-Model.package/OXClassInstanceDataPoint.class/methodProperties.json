@@ -5,6 +5,8 @@
 		"classDefinition" : "dkh 01/08/2016 11:33",
 		"className" : "dkh 12/31/2015 19:33",
 		"className:" : "dkh 12/31/2015 19:33",
+		"classOop" : "dkh 01/11/2016 20:08",
+		"classOop:" : "dkh 01/11/2016 20:09",
 		"excludedInstVarNames" : "dkh 01/08/2016 11:12",
 		"instanceCount" : "dkh 12/31/2015 19:33",
 		"instanceCount:" : "dkh 12/31/2015 19:33",
@@ -15,4 +17,5 @@
 		"samples:" : "dkh 12/31/2015 19:33",
 		"stonInstVarNames" : "dkh 01/08/2016 11:12",
 		"stonOn:" : "dkh 01/08/2016 11:12",
-		"stonProcessSubObjects:" : "dkh 01/08/2016 11:12" } }
+		"stonProcessSubObjects:" : "dkh 01/08/2016 11:12",
+		"theClass" : "dkh 01/11/2016 20:10" } }
