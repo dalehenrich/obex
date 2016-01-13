@@ -4,7 +4,7 @@ obexinventory
   obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
 "
 
-  | maxSessions percentCpu objInventory dataStore |
+  | maxSessions percentCpu objInventory dataStore entries |
   self
     getSubcommandOptsMixedLongShort:
       {#('max' nil #'required').
@@ -30,7 +30,9 @@ obexinventory
     maxThreads: maxSessions;
     maxCpuUsage: percentCpu;
     yourself.
-  objInventory entriesByCount
+  entries := objInventory entriesByCount.
+  entries := entries copyFrom: entries size - 10 to: entries size.
+  entries
     do: [ :entry | 
       | clsOop ds |
       clsOop := entry theClass asOop.

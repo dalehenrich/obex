@@ -4,10 +4,10 @@ obexViewSpectro: obexDataStore sortKey: sortKey
   dataStore := obexDataStore objectInventory top.
   samples := sortKey = 'instances'
     ifTrue: [ 
-      sel := #'byteCount'.
+      sel := #'instanceCount'.
       dataStore sortedClassInstanceCountList ]
     ifFalse: [ 
-      sel := #'instanceCount'.
+      sel := #'byteCount'.
       dataStore sortedClassByteCountList ].
   samples := samples copyFrom: 1 to: (dataStore parentLimit min: samples size).
   leaves := samples

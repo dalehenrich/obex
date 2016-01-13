@@ -1,13 +1,13 @@
 *obex-server-34x-model
 calculateParents: parentNodeType
   | newParents dataStore list referencesResult referencesSet classInstanceMap classSamplesMap objects labelSelector listSelector parentsOfResult |
-  sortKey = self sortKey
+  self sortKey = 'instances'
     ifTrue: [ 
-      labelSelector := #'byteCount'.
-      listSelector := #'sortedClassByteCountList' ]
-    ifFalse: [ 
       labelSelector := #'instanceCount'.
-      listSelector := #'sortedClassInstanceCountList' ].
+      listSelector := #'sortedClassInstanceCountList' ]
+    ifFalse: [ 
+      labelSelector := #'byteCount'.
+      listSelector := #'sortedClassByteCountList' ].
   dataStore := OXSpectroDataStore new
     maxThreads: self maxThreads;
     maxCpuUsage: self maxCpuUsage;
@@ -27,7 +27,8 @@ calculateParents: parentNodeType
       (ar at: 3)
         ifTrue: [ 
           "more parents"
-          self halt ] ].
+          self halt ].
+      ar ].
   SystemRepository refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
