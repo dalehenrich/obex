@@ -31,7 +31,7 @@ obexinventory
     maxCpuUsage: percentCpu;
     yourself.
   entries := objInventory entriesByCount.
-  entries := entries copyFrom: entries size - 10 to: entries size.
+  entries := entries copyFrom: entries size - 100 to: entries size.
   entries
     do: [ :entry | 
       | clsOop ds |

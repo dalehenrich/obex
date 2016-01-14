@@ -1,6 +1,6 @@
 *obex-server-34x-model
 calculateParents: parentNodeType
-  | newParents dataStore list referencesResult referencesSet classInstanceMap classSamplesMap objects labelSelector listSelector parentsOfResult |
+  | newParents dataStore list referencesResult referencesSet classInstanceMap classSamplesMap objects labelSelector listSelector parentsOfResult processedOops |
   self sortKey = 'instances'
     ifTrue: [ 
       labelSelector := #'instanceCount'.
@@ -19,7 +19,9 @@ calculateParents: parentNodeType
     waitForLock: 3
     pageBufSize: 8
     percentCpuLimit: 90.
-  SystemRepository _refPathDoScanForParents: objects excludeParentRefs: #().
+  SystemRepository
+    _refPathDoScanForParents: objects asArray
+    excludeParentRefs: #().
   parentsOfResult := objects
     collect: [ :anObject | 
       | ar |
@@ -32,6 +34,7 @@ calculateParents: parentNodeType
   SystemRepository refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
+  processedOops := IdentitySet new.
   parentsOfResult
     do: [ :ar | 
       | parentOops parentClassOop parentPhysSize |
@@ -39,12 +42,16 @@ calculateParents: parentNodeType
       parentClassOop := ar at: 5.
       parentPhysSize := ar at: 6.
       1 to: parentOops size do: [ :index | 
-        | classOop cnt set |
-        classOop := parentClassOop at: index.
-        cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
-        classInstanceMap at: classOop put: cnt + 1.
-        set := classSamplesMap at: classOop ifAbsentPut: [ IdentitySet new ].
-        set add: (parentOops at: index) ].
+        | parentOop classOop cnt set |
+        parentOop := parentOops at: index.
+        (processedOops includes: parentOop)
+          ifFalse: [ 
+            classOop := parentClassOop at: index.
+            cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
+            classInstanceMap at: classOop put: cnt + 1.
+            set := classSamplesMap at: classOop ifAbsentPut: [ IdentitySet new ].
+            set add: (parentOops at: index).
+            processedOops add: parentOop ] ].
       System commit ].
   dataStore
     classInstanceMap: classInstanceMap;
