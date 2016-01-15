@@ -1,0 +1,15 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"simpleData",
+		"simpleLeaves" ],
+	"name" : "ObexTestResource",
+	"pools" : [
+		 ],
+	"super" : "TestResource",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ObexInventoryTestCase",
+	"pools" : [
+		 ],
+	"super" : "ObexGenericTestCase",
+	"type" : "normal" }

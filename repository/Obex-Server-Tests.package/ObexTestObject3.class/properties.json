@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ObexTestObject3",
+	"pools" : [
+		 ],
+	"super" : "ObexTestObject",
+	"type" : "normal" }

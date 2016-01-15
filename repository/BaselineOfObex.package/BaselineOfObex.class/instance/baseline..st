@@ -5,12 +5,22 @@ baseline: spec
     for: #'common'
     do: [ 
       spec
+        baseline: 'Tode'
+          with: [ 
+              spec
+                repository: 'github://dalehenrich/tode:dev/repository';
+                loads: 'GemStone Dev';
+                yourself ];
+        yourself.
+      spec
         package: 'Obex-Core-Model';
         package: 'Obex-Core-Tode' with: [ spec requires: #('Obex-Core-Model') ];
         yourself.
       spec
-        group: 'Core' with: #('Obex-Core-Model' 'Obex-Core-Tode');
+        group: 'Core' with: #('Obex-Core-Model' 'Obex-Core-Tode' 'Tode');
         group: 'default' with: #('Core');
+        group: 'Tests' with: #();
+        group: 'CI' with: #('Core' 'Tests');
         yourself ].
   spec
     for: #(#'pharo3.x' #'pharo4.x')
@@ -43,11 +53,14 @@ baseline: spec
           with: [ spec requires: #('Obex-Core-Tode') ];
         package: 'Obex-Server-ScanBackup-Model'
           with: [ spec requires: #('Obex-Server-Model' 'ScanBackup') ];
+        package: 'Obex-Server-Tests'
+          with: [ spec requires: #('Obex-Server-Tode') ];
         yourself.
       spec
         group: 'Core' with: #('Obex-Server-Tode' 'Scan');
         group: 'Scan'
           with: #('Obex-Server-ScanBackup-Tode' 'Obex-Server-ScanBackup-Model');
+        group: 'Tests' with: #('Obex-Server-Tests');
         yourself ].
   spec
     for: #(#'gs3.4.x')
@@ -61,4 +74,9 @@ baseline: spec
           with: [ spec includes: #('Obex-Server-34x-Tode') ];
         package: 'Obex-Server-34x-Tode'
           with: [ spec requires: #('Obex-Server-Tode') ];
+        package: 'Obex-Server-34x-Tests'
+          with: [ spec requires: #('Obex-Server-34x-Tode' 'Obex-Server-Tests') ];
+        yourself.
+      spec
+        group: 'Tests' with: #('Obex-Server-34x-Tests');
         yourself ]

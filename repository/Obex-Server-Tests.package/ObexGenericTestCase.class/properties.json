@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"oldDataStoreRoot" ],
+	"name" : "ObexGenericTestCase",
+	"pools" : [
+		 ],
+	"super" : "TDAbstractTopezTests",
+	"type" : "normal" }

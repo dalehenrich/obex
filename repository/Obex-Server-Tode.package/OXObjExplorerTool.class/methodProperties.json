@@ -21,6 +21,14 @@
 	"instance" : {
 		"obexClassesWithInstances" : "dkh 01/08/2016 18:51",
 		"obexDataStoreRoot" : "dkh 01/08/2016 07:30",
+		"obexDataStoreRoot:" : "dkh 01/14/2016 19:13",
+		"obexDefaultObjectInventoryMaxSessions" : "dkh 01/14/2016 18:10",
+		"obexDefaultObjectInventoryPercentCpu" : "dkh 01/14/2016 18:10",
+		"obexInventory:maxSessions:percentCpu:" : "dkh 01/14/2016 19:01",
+		"obexInventoryCollection:" : "dkh 01/14/2016 18:12",
+		"obexInventoryCollection:maxSessions:percentCpu:" : "dkh 01/14/2016 19:26",
+		"obexInventoryRepository" : "dkh 01/14/2016 18:11",
+		"obexInventoryRepository:percentCpu:" : "dkh 01/14/2016 17:53",
 		"obexMinLimitSetForRefPathScan" : "dkh 01/09/2016 10:22",
 		"obexObsoleteClasses" : "dkh 01/08/2016 18:31",
 		"obexObsoleteMetaclasses" : "dkh 01/08/2016 18:35",
@@ -34,6 +42,6 @@
 		"obexcalc" : "dkh 01/10/2016 15:15",
 		"obexclear" : "dkh 01/08/2016 07:30",
 		"obexdatastore" : "dkh 01/08/2016 06:27",
-		"obexinventory" : "dkh 01/14/2016 14:26",
+		"obexinventory" : "dkh 01/14/2016 18:11",
 		"obexorphans" : "dkh 01/08/2016 20:09",
 		"obexview" : "dkh 01/12/2016 10:57" } }

@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 01/14/2016 17:28",
+	"instvars" : [
+		 ],
+	"name" : "ObexTestObjectArray",
+	"pools" : [
+		 ],
+	"super" : "Array",
+	"type" : "variable" }

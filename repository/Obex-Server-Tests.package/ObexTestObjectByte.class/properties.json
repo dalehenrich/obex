@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ObexTestObjectByte",
+	"pools" : [
+		 ],
+	"super" : "ByteArray",
+	"type" : "bytes" }

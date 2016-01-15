@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-34x-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ObexSpectroTestCase",
+	"pools" : [
+		 ],
+	"super" : "ObexGenericTestCase",
+	"type" : "normal" }

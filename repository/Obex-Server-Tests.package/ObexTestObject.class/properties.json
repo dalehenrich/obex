@@ -1,0 +1,19 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		"cIVar1",
+		"cIVar2" ],
+	"classvars" : [
+		"cVar1",
+		"cVar2" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"slot1",
+		"slot2",
+		"slot3",
+		"slot4" ],
+	"name" : "ObexTestObject",
+	"pools" : [
+		 ],
+	"super" : "ObexTestObjectGeneric",
+	"type" : "normal" }
