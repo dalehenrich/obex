@@ -6,7 +6,6 @@ testSimple
   tool := self obexTool.
   tool obexInventoryCollection: leaves asArray.
   dataStore := tool obexDataStoreRoot objectInventory top.
-  dataStore inspect.
   byteCounts := dataStore sortedClassByteCountList.
   instanceCounts := dataStore sortedClassInstanceCountList.
   self

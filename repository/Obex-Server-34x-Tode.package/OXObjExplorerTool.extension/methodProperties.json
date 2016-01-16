@@ -2,8 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
+		"obexSpectro:srcDataStore:" : "dkh 01/15/2016 12:56",
+		"obexSpectro:srcDataStore:maxSession:persentCpu:" : "dkh 01/15/2016 14:32",
 		"obexViewParentsDective:" : "dkh 01/10/2016 18:34",
 		"obexViewSpectro:sortKey:" : "dkh 01/13/2016 11:56",
 		"obexparents" : "dkh 01/10/2016 15:34",
 		"obexsetup" : "dkh 01/10/2016 15:44",
-		"obexspectro" : "dkh 01/13/2016 11:44" } }
+		"obexspectro" : "dkh 01/15/2016 12:51" } }
