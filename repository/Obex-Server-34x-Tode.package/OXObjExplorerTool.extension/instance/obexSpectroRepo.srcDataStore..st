@@ -1,5 +1,5 @@
 *obex-server-34x-tode
-obexSpectro: classArray srcDataStore: srcDataStore
+obexSpectroRepo: classArray srcDataStore: srcDataStore
   self
     obexSpectroRepo: classArray
     srcDataStore: srcDataStore

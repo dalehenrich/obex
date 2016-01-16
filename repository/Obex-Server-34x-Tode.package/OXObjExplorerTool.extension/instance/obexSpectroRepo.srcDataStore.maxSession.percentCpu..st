@@ -1,5 +1,5 @@
 *obex-server-34x-tode
-obexSpectroRepo: classArray srcDataStore: srcDataStore maxSession: maxSessions persentCpu: percentCpu
+obexSpectroRepo: classArray srcDataStore: srcDataStore maxSession: maxSessions percentCpu: percentCpu
   | classOopToDataPointMap resultInstances |
   System commit.
   SystemRepository

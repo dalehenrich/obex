@@ -5,6 +5,8 @@ setUpSimpleData
   | ar obj |
   simpleData := ObexTestObject new.
   simpleLeaves := {}.
+  excludedParentsArray := {simpleLeaves.
+  self}.
   ar := ObexTestObjectArray new.
   1 to: 3 do: [ :index | 
     obj := ObexTestObjectByte withAll: {index}.

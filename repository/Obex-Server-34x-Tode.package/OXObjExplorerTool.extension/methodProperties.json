@@ -2,11 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"obexSpectro:srcDataStore:" : "dkh 01/15/2016 17:53",
-		"obexSpectroInstances:srcDataStore:" : "dkh 01/15/2016 18:25",
-		"obexSpectroRepo:srcDataStore:maxSession:persentCpu:" : "dkh 01/15/2016 17:56",
+		"obexSpectro:srcDataStore:" : "dkh 01/16/2016 09:57",
+		"obexSpectroInstances:excludedArray:srcDataStore:" : "dkh 01/16/2016 09:31",
+		"obexSpectroInstances:srcDataStore:" : "dkh 01/16/2016 09:32",
+		"obexSpectroRepo:srcDataStore:" : "dkh 01/16/2016 10:00",
+		"obexSpectroRepo:srcDataStore:maxSession:percentCpu:" : "dkh 01/16/2016 09:57",
 		"obexViewParentsDective:" : "dkh 01/10/2016 18:34",
-		"obexViewSpectro:sortKey:" : "dkh 01/13/2016 11:56",
+		"obexViewSpectro:sortKey:" : "dkh 01/16/2016 10:07",
+		"obexViewSpectroPrepareLeaves:sortKey:" : "dkh 01/16/2016 10:07",
 		"obexparents" : "dkh 01/10/2016 15:34",
 		"obexsetup" : "dkh 01/10/2016 15:44",
-		"obexspectro" : "dkh 01/15/2016 18:07" } }
+		"obexspectro" : "dkh 01/16/2016 09:57" } }

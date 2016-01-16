@@ -3,6 +3,7 @@
 		"for:nodeType:label:" : "dkh 01/12/2016 11:23" },
 	"instance" : {
 		"calculateParents" : "dkh 01/12/2016 11:23",
+		"exludedParentsArray" : "dkh 01/16/2016 09:25",
 		"maxCpuUsage" : "dkh 01/12/2016 11:23",
 		"maxThreads" : "dkh 01/12/2016 11:23",
 		"sortKey" : "dkh 01/12/2016 11:23",

@@ -20,6 +20,7 @@
 		"toolReadMe" : "dkh 12/31/2015 10:33" },
 	"instance" : {
 		"obexClassesWithInstances" : "dkh 01/08/2016 18:51",
+		"obexClear" : "dkh 01/16/2016 09:57",
 		"obexDataStoreRoot" : "dkh 01/08/2016 07:30",
 		"obexDataStoreRoot:" : "dkh 01/14/2016 19:13",
 		"obexDefaultObjectInventoryMaxSessions" : "dkh 01/14/2016 18:10",
@@ -40,7 +41,7 @@
 		"obexViewDective:initalNodes:" : "dkh 01/01/2016 15:43",
 		"obexViewReferenceDective:" : "dkh 01/08/2016 10:37",
 		"obexcalc" : "dkh 01/10/2016 15:15",
-		"obexclear" : "dkh 01/08/2016 07:30",
+		"obexclear" : "dkh 01/16/2016 09:57",
 		"obexdatastore" : "dkh 01/08/2016 06:27",
 		"obexinventory" : "dkh 01/14/2016 18:11",
 		"obexorphans" : "dkh 01/08/2016 20:09",

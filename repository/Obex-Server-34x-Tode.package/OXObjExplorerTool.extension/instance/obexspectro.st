@@ -58,4 +58,4 @@ obexspectro
     obexSpectroRepo: classArray
     srcDataStore: srcDataStore
     maxSession: maxSessions
-    persentCpu: percentCpu
+    percentCpu: percentCpu

@@ -1,11 +1,16 @@
 tests
 testSimple
-  | tool leaves srcDataStore |
+  | tool leaves srcDataStore excludedArray nodes |
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.
+  excludedArray := ObexTestResource current excludedParentsArray.
   System commit.
   tool := self obexTool.
   tool obexInventoryCollection: leaves asArray.
   srcDataStore := tool obexDataStoreRoot objectInventory top.
+  srcDataStore excludedArray: excludedArray.
   tool obexSpectroInstances: leaves srcDataStore: srcDataStore.
-  tool obexViewSpectro: tool obexDataStoreRoot sortKey: 'instances'
+  nodes := tool
+    obexViewSpectroPrepareLeaves: tool obexDataStoreRoot
+    sortKey: 'instances'.
+  nodes inspect
