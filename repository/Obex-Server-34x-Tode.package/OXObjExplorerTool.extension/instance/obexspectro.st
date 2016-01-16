@@ -55,7 +55,7 @@ obexspectro
   classArray := ((sortedClassList copyFrom: 1 to: classLimit)
     collect: [ :dp | dp theClass ]) asArray.
   self
-    obexSpectro: classArray
+    obexSpectroRepo: classArray
     srcDataStore: srcDataStore
     maxSession: maxSessions
     persentCpu: percentCpu

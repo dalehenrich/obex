@@ -15,5 +15,9 @@ obexSpectroInstances: instances srcDataStore: srcDataStore
       | dp |
       dp := classOopToDataPointMap at: classOop.
       dp
+        byteCount:
+            (samples
+                inject: 0
+                into: [ :sum :oop | sum + (Object _objectForOop: oop) physicalSizeOnDisk ]);
         instanceCount: samples size;
         samples: samples ]

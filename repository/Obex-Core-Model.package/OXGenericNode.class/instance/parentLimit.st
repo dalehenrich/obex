@@ -1,4 +1,4 @@
 accessing
 parentLimit
-
-   ^parentLimit
+  parentLimit ifNil: [ parentLimit := 3 ].
+  ^ parentLimit
