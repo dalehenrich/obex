@@ -21,7 +21,7 @@ calculateParents: parentNodeType
     percentCpuLimit: 90.
   SystemRepository
     _refPathDoScanForParents: objects asArray
-    excludeParentRefs: self exludedArray.
+    excludeParentRefs: self exludedParentsArray.
   parentsOfResult := objects
     collect: [ :anObject | 
       | ar |

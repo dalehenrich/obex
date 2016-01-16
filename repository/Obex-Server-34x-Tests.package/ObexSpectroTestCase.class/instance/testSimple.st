@@ -13,4 +13,5 @@ testSimple
   nodes := tool
     obexViewSpectroPrepareLeaves: tool obexDataStoreRoot
     sortKey: 'instances'.
-  nodes inspect
+  {leaves.
+  nodes} inspect

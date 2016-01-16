@@ -1,3 +1,3 @@
 accessing
 exludedParentsArray
-  ^ self dataSource exludedParentsArray
+  ^ self dataSource excludedArray

@@ -7,6 +7,7 @@ setUpSimpleData
   simpleLeaves := {}.
   excludedParentsArray := {simpleLeaves.
   self}.
+  excludedParentsArray add: excludedParentsArray.
   ar := ObexTestObjectArray new.
   1 to: 3 do: [ :index | 
     obj := ObexTestObjectByte withAll: {index}.
