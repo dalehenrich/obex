@@ -21,26 +21,20 @@ calculateParents: parentNodeType
     percentCpuLimit: 90.
   SystemRepository
     _refPathDoScanForParents: objects asArray
-    excludeParentRefs: self exludedParentsArray.
+    excludeParentRefs: self exludedParentsArray
+    onlySearchObjs: true.
   parentsOfResult := objects
-    collect: [ :anObject | 
-      | ar |
-      ar := (SystemRepository _refPathParentsOf: anObject) , {(anObject asOop)}.
-      (ar at: 3)
-        ifTrue: [ 
-          "more parents"
-          self halt ].
-      ar ].
+    collect: [ :anObject | SystemRepository _refPathParentsOf: anObject ].
   SystemRepository refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
   processedOops := IdentitySet new.
   parentsOfResult
-    do: [ :ar | 
+    do: [ :parentsInfo | 
       | parentOops parentClassOop parentPhysSize |
-      parentOops := ar at: 4.
-      parentClassOop := ar at: 5.
-      parentPhysSize := ar at: 6.
+      parentOops := parentsInfo parentOops.
+      parentClassOop := parentsInfo parentClassOops.
+      parentPhysSize := parentsInfo parentSizesInBytes.
       1 to: parentOops size do: [ :index | 
         | parentOop classOop cnt set |
         parentOop := parentOops at: index.

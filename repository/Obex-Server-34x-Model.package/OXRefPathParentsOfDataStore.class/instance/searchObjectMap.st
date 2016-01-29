@@ -4,6 +4,7 @@ searchObjectMap
     ifNil: [ 
       | map ar |
       map := IdentityKeyValueDictionary new.
-      self searchResult do: [ :ar | map at: (ar at: 1) put: (ar at: 4) ].
+      self searchResult
+        do: [ :parentsInfo | map at: parentsInfo target put: parentsInfo parentOops ].
       searchObjectMap := TransientValue value: map ].
   ^ searchObjectMap value

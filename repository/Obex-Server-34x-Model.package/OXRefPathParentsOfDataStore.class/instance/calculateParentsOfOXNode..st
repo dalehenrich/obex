@@ -6,4 +6,5 @@ calculateParentsOfOXNode: anOXNode
   objects := {searchObject}.
   results := self class new rawFindRefPathsParentsOfObjects: objects.
   self oopToNodeMap at: searchObject asOop put: anOXNode.
-  results do: [ :ar | self analyzeReferenceArray: (ar at: 4) node: anOXNode ]
+  results
+    do: [ :parentsInfo | self analyzeReferenceArray: parentsInfo parentOops node: anOXNode ]

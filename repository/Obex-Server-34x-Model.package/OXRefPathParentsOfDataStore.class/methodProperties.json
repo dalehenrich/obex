@@ -4,7 +4,7 @@
 	"instance" : {
 		"analyze" : "dkh 01/10/2016 21:12",
 		"analyzeReferenceArray:node:" : "dkh 01/11/2016 19:28",
-		"calculateParentsOfOXNode:" : "dkh 01/11/2016 19:20",
+		"calculateParentsOfOXNode:" : "dkh 01/27/2016 15:33",
 		"findRefPathsParentsOfObjects:" : "dkh 01/10/2016 20:59",
-		"rawFindRefPathsParentsOfObjects:" : "dkh 01/10/2016 21:07",
-		"searchObjectMap" : "dkh 01/10/2016 20:29" } }
+		"rawFindRefPathsParentsOfObjects:" : "dkh 01/27/2016 15:16",
+		"searchObjectMap" : "dkh 01/27/2016 15:44" } }
