@@ -10,7 +10,7 @@ analyze
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
       self
-        analyzeReferenceArray: (self searchObjectMap at: searchObject)
+        analyzeReferenceGsBitmap: (self searchObjectMap at: searchObject)
         node: node ].
   classNameMap := StringKeyValueDictionary new.
   oopToNodeMap values

@@ -7,4 +7,4 @@ calculateParentsOfOXNode: anOXNode
   results := self class new rawFindRefPathsParentsOfObjects: objects.
   self oopToNodeMap at: searchObject asOop put: anOXNode.
   results
-    do: [ :parentsInfo | self analyzeReferenceArray: parentsInfo parentOops node: anOXNode ]
+    do: [ :parentsInfo | self analyzeReferenceGsBitmap: parentsInfo parentOops node: anOXNode ]

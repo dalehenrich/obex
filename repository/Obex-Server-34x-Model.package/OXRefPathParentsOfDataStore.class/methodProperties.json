@@ -2,9 +2,9 @@
 	"class" : {
 		"minLimitSetForRefPathScan" : "dkh 01/10/2016 15:05" },
 	"instance" : {
-		"analyze" : "dkh 01/10/2016 21:12",
-		"analyzeReferenceArray:node:" : "dkh 01/11/2016 19:28",
-		"calculateParentsOfOXNode:" : "dkh 01/27/2016 15:33",
+		"analyze" : "dkh 03/10/2016 16:33",
+		"analyzeReferenceGsBitmap:node:" : "dkh 03/10/2016 16:32",
+		"calculateParentsOfOXNode:" : "dkh 03/10/2016 16:19",
 		"findRefPathsParentsOfObjects:" : "dkh 01/10/2016 20:59",
 		"rawFindRefPathsParentsOfObjects:" : "dkh 01/27/2016 15:16",
 		"searchObjectMap" : "dkh 01/27/2016 15:44" } }

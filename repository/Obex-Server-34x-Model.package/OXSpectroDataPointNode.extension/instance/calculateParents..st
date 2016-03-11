@@ -1,6 +1,6 @@
 *obex-server-34x-model
 calculateParents: parentNodeType
-  | newParents dataStore list referencesResult referencesSet classInstanceMap classSamplesMap objects labelSelector listSelector parentsOfResult processedOops |
+  | newParents dataStore list referencesResult referencesSet classInstanceMap classSamplesMap objects labelSelector listSelector parentsOfResult |
   self sortKey = 'instances'
     ifTrue: [ 
       labelSelector := #'instanceCount'.
@@ -28,24 +28,18 @@ calculateParents: parentNodeType
   SystemRepository refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
-  processedOops := IdentitySet new.
   parentsOfResult
     do: [ :parentsInfo | 
-      | parentOops parentClassOop parentPhysSize |
-      parentOops := parentsInfo parentOops.
-      parentClassOop := parentsInfo parentClassOops.
-      parentPhysSize := parentsInfo parentSizesInBytes.
-      1 to: parentOops size do: [ :index | 
-        | parentOop classOop cnt set |
-        parentOop := parentOops at: index.
-        (processedOops includes: parentOop)
-          ifFalse: [ 
-            classOop := parentClassOop at: index.
-            cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
-            classInstanceMap at: classOop put: cnt + 1.
-            set := classSamplesMap at: classOop ifAbsentPut: [ IdentitySet new ].
-            set add: (parentOops at: index).
-            processedOops add: parentOop ] ].
+      | parentOopsBitmap |
+      parentOopsBitmap := parentsInfo parentOops copy.
+      parentOopsBitmap
+        do: [ :parent | 
+          | classOop cnt set |
+          classOop := parent class asOop.
+          cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
+          classInstanceMap at: classOop put: cnt + 1.
+          set := classSamplesMap at: classOop ifAbsentPut: [ GsBitmap new ].
+          set add: parent ].
       System commit ].
   dataStore
     classInstanceMap: classInstanceMap;
