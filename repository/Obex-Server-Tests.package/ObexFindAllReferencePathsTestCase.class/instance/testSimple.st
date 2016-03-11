@@ -1,6 +1,6 @@
 tests
 testSimple
-  | tool leaves dataStore limitArray oopToNodeMap searchNodeMap refPathMap |
+  | tool leaves dataStore limitArray oopToNodeMap searchNodeMap refPathMap classNameMap instanceCountMap |
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.
   System commit.
@@ -16,16 +16,16 @@ testSimple
   refPathMap := Dictionary new
     at: #'ObexTestObjectByte'
       put:
-        #('ObexTestResource, [1::0]' 'ObexTestObject, [2::1]' 'ObexTestObjectArray, [3::1]' 'ObexTestObjectByte, [0::1]');
+        #('ObexTestResource, [1::0]' 'ObexTestObject, [4::1]' 'ObexTestObjectArray, [3::1]' 'ObexTestObjectByte, [0::1]');
     at: #'ObexTestObject1'
       put:
-        #('ObexTestResource, [1::0]' 'ObexTestObject, [2::1]' 'ObexTestObjectArray, [6::1]' 'ObexTestObject1, [0::1]');
+        #('ObexTestResource, [1::0]' 'ObexTestObject, [4::1]' 'ObexTestObjectArray, [1::1]' 'ObexTestObject1, [0::1]');
     at: #'ObexTestObject2'
       put:
-        #('ObexTestResource, [1::0]' 'ObexTestObject, [2::1]' 'ObexTestObjectArray, [6::1]' 'ObexTestObject2, [0::1]');
+        #('ObexTestResource, [1::0]' 'ObexTestObject, [4::1]' 'ObexTestObjectArray, [1::1]' 'ObexTestObjectArray, [2::1]' 'ObexTestObject2, [0::1]');
     at: #'ObexTestObject3'
       put:
-        #('ObexTestResource, [1::0]' 'ObexTestObject, [2::1]' 'ObexTestObjectArray, [6::1]' 'ObexTestObject3, [0::1]');
+        #('ObexTestResource, [1::0]' 'ObexTestObject, [4::1]' 'ObexTestObjectArray, [1::1]' 'ObexTestObjectArray, [1::1]' 'ObexTestObjectArray, [3::1]' 'ObexTestObject3, [0::1]');
     yourself.
   leaves
     do: [ :leaf | 
@@ -34,4 +34,15 @@ testSimple
       refPathPrintStrings := (searchNodeMap at: node) first
         collect: [ :each | each testPrintString ].
       self assert: (refPathMap at: node className) = refPathPrintStrings ].
-  self halt
+  classNameMap := dataStore classNameMap.
+  instanceCountMap := Dictionary new
+    at: #'ObexTestObject' put: 1;
+    at: #'ObexTestObject1' put: 1;
+    at: #'ObexTestObject2' put: 2;
+    at: #'ObexTestObject3' put: 3;
+    at: #'ObexTestObjectArray' put: 7;
+    at: #'ObexTestObjectByte' put: 3;
+    at: #'ObexTestResource' put: 1;
+    yourself.
+  classNameMap
+    keysAndValuesDo: [ :className :instances | self assert: (instanceCountMap at: className) = instances size ]
