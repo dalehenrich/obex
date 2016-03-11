@@ -12,7 +12,7 @@ calculateParents: parentNodeType
     maxThreads: self maxThreads;
     maxCpuUsage: self maxCpuUsage;
     yourself.
-  objects := dataPoint samples collect: [ :each | Object _objectForOop: each ].
+  objects := dataPoint samples value asArray.
   System commit.
   SystemRepository
     _refPathSetupScanWithMaxThreads: 1
@@ -20,7 +20,7 @@ calculateParents: parentNodeType
     pageBufSize: 8
     percentCpuLimit: 90.
   SystemRepository
-    _refPathDoScanForParents: objects asArray
+    _refPathDoScanForParents: objects
     excludeParentRefs: self exludedParentsArray
     onlySearchObjs: true.
   parentsOfResult := objects
@@ -38,7 +38,9 @@ calculateParents: parentNodeType
           classOop := parent class asOop.
           cnt := classInstanceMap at: classOop ifAbsentPut: [ 0 ].
           classInstanceMap at: classOop put: cnt + 1.
-          set := classSamplesMap at: classOop ifAbsentPut: [ GsBitmap new ].
+          set := (classSamplesMap
+            at: classOop
+            ifAbsentPut: [ TransientValue value: GsBitmap new ]) value.
           set add: parent ].
       System commit ].
   dataStore
