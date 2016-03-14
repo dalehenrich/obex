@@ -9,7 +9,7 @@ obexparentsManPage
   obex parents - Calculate reference path parents of given objects
 
 SYNOPSIS
-  obex parents --st=<st-expression> | oop... 
+  obex parents [--exclude=<st-expression>]  --st=<st-expression> | oop... 
 
 DESCRIPTION
   Repository>>findAllReferencePathsToObjects:
@@ -28,5 +28,8 @@ EXAMPLES
 
   obex parents 452261889
   obex view --detective=parents
+
+obex parents --st=`ObexTestResource current simpleLeaves` --exclude=`ObexTestResource current excludedParentsArray`
+obex view --detective=parents
 '.
   ^ manPage
