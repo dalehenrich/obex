@@ -1,9 +1,10 @@
 tests
 testSimple
   "
-  obex inventory
-  obex spectro --src=inventory --instances --classes=3 
-  obex view --limit=3 --spectro=instances 
+  obex inventory --st=`ObexTestResource current simpleObjects`
+  obex view --limit=100 --inventory=instances
+  obex spectro --src=inventory --bytes --classes=10 --exclude=`ObexTestResource current excludedParentsArray`
+  obex view --spectro=instances
 "
 
   | tool leaves srcDataStore excludedArray nodes |
