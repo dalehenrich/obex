@@ -9,7 +9,7 @@ obexparentsManPage
   obex parents - Calculate reference path parents of given objects
 
 SYNOPSIS
-  obex parents [--exclude=<st-expression>]  --st=<st-expression> | oop... 
+  obex parents [--exclude=<st-expression>] --st=<st-expression> | oop... 
 
 DESCRIPTION
   Repository>>findAllReferencePathsToObjects:

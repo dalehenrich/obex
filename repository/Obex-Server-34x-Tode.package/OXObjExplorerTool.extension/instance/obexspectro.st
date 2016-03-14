@@ -1,16 +1,18 @@
 *obex-server-34x-tode
 obexspectro
   "
-  obex spectro  [--oops=<oop-limit>]  [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
+  obex spectro  [--oops=<oop-limit>]  [--max=<max-sessions>] [--pct=<pct-cpu-limit>]
+                [--exclude=<st-expression>]  
                 [--src=(inventory|spectro|scan)] (--bytes|--instances) --classes=<class-limit> 
 "
 
-  | maxSessions percentCpu classLimit classArray srcMap dataStoreKey srcDataStore sortedClassList |
+  | maxSessions percentCpu classLimit classArray srcMap dataStoreKey srcDataStore sortedClassList excludeArray |
   self
     getSubcommandOptsMixedLongShort:
       {#('classes' nil #'required').
       #('src' nil #'required').
       #('classes' nil #'required').
+      #('exclude' nil #'required').
       #('bytes' nil #'none').
       #('instances' nil #'none').
       #('max' nil #'required').
@@ -39,8 +41,14 @@ obexspectro
         at: arg
         ifAbsent: [ self error: 'Unknown `src`: ' , arg printString , '. See man page for details' ] ]
     ifAbsent: [ self error: 'Required option `src` missing. See man page for details' ].
+  excludeArray := subOptions
+    at: 'exclude'
+    ifPresent: [ :expression | expression evaluate ]
+    ifAbsent: [ #() ].
   srcDataStore := (self obexDataStoreRoot dataStores at: dataStoreKey) top.
-  srcDataStore parentLimit: classLimit.
+  srcDataStore
+    parentLimit: classLimit;
+    excludedArray: excludeArray.
   sortedClassList := subOptions
     at: 'bytes'
     ifPresent: [ :ignored | srcDataStore sortedClassByteCountList ]
@@ -52,8 +60,10 @@ obexspectro
           self
             error:
               'Required option `bytes | instances` missing. See man page for details' ] ].
-  classArray := ((sortedClassList copyFrom: 1 to: classLimit)
-    collect: [ :dp | dp theClass ]) asArray.
+  classArray := ((sortedClassList
+    copyFrom: 1
+    to: (classLimit min: sortedClassList size)) collect: [ :dp | dp theClass ])
+    asArray.
   self
     obexSpectroRepo: classArray
     srcDataStore: srcDataStore
