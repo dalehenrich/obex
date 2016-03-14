@@ -20,7 +20,6 @@ DESCRIPTION
     orphans   Find references to instances of Metaclass3 that are not members of a ClassHistory
     parents   Calculate reference path parents of given objects [V3.4 only]
     scan      Scan backup file to collect collect class instance counts
-    setup     Set up for performing multi threaded scans of the repository [V3.4 only]
     spectro   Produce a class spectrograph - class instance count plus sample instances [V3.4 only]
     view      Visualize object reference graphs and class instance counts
 
@@ -46,6 +45,5 @@ EXAMPLES
     at: 'spectro' put: self obexspectroManPage;
     at: 'orphans' put: self obexorphansManPage;
     at: 'parents' put: self obexparentsManPage;
-    at: 'setup' put: self obexsetupManPage;
     yourself.
   ^ manPage

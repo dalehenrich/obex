@@ -1,5 +1,11 @@
 tests
 testSimple
+  "
+  obex inventory
+  obex view --limit=20 --inventory=instances
+  obex view --limit=20 --inventory=bytes
+"
+
   | tool leaves dataStore byteCounts instanceCounts |
   leaves := ObexTestResource current simpleLeaves.
   System commit.

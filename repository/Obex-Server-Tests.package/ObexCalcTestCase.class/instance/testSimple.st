@@ -1,5 +1,10 @@
 tests
 testSimple
+  "
+  obex calc 821761 15772161 24451841 25085953
+  obex view --detective=reference
+"
+
   | tool leaves dataStore limitArray oopToNodeMap searchNodeMap refPathMap classNameMap instanceCountMap |
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.

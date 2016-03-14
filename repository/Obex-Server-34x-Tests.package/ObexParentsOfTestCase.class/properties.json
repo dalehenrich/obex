@@ -1,13 +1,13 @@
 {
-	"category" : "Obex-Server-Tests",
+	"category" : "Obex-Server-34x-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 03/11/2016 10:50",
+	"commentStamp" : "dkh 03/14/2016 10:48",
 	"instvars" : [
 		 ],
-	"name" : "ObexFindAllReferencePathsTestCase",
+	"name" : "ObexParentsOfTestCase",
 	"pools" : [
 		 ],
 	"super" : "ObexGenericTestCase",

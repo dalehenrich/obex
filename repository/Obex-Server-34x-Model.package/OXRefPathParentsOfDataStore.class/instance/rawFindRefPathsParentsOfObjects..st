@@ -9,7 +9,7 @@ rawFindRefPathsParentsOfObjects: objects
     percentCpuLimit: 90.
   SystemRepository
     _refPathDoScanForParents: objects
-    excludeParentRefs: #()
+    excludeParentRefs: self excludedArray
     onlySearchObjs: true.
   result := objects
     collect: [ :anObject | SystemRepository _refPathParentsOf: anObject ].

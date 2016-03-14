@@ -9,6 +9,7 @@ calculateParents: parentNodeType
       labelSelector := #'byteCount'.
       listSelector := #'sortedClassByteCountList' ].
   dataStore := OXSpectroDataStore new
+    excludedArray: self exludedParentsArray;
     maxThreads: self maxThreads;
     maxCpuUsage: self maxCpuUsage;
     yourself.
