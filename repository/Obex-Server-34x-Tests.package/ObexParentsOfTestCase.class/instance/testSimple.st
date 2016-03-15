@@ -9,7 +9,7 @@ testSimple
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.
   System commit.
-  excludedArray := ObexTestResource current excludedParentsArray.
+  excludedArray := ObexTestResource current simpleDataExcludedParents.
   dataStore := OXRefPathParentsOfDataStore new
     excludedArray: excludedArray;
     findRefPathsParentsOfObjects: leaves;

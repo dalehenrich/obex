@@ -10,7 +10,7 @@ testSimple
   | tool leaves srcDataStore excludedArray nodes |
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.
-  excludedArray := ObexTestResource current excludedParentsArray.
+  excludedArray := ObexTestResource current simpleDataExcludedParents.
   System commit.
   tool := self obexTool.
   tool obexInventoryCollection: leaves asArray.

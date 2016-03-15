@@ -3,14 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"classVar" ],
 	"commentStamp" : "",
 	"instvars" : [
-		"simpleData",
-		"simpleLeaves",
-		"simpleDataExcludedParents" ],
-	"name" : "ObexTestResource",
+		 ],
+	"name" : "ObexTestOrphanClass1",
 	"pools" : [
 		 ],
-	"super" : "TestResource",
+	"super" : "Object",
 	"type" : "normal" }
