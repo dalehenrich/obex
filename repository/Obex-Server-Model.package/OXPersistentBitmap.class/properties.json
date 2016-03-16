@@ -1,0 +1,15 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"bitmap",
+		"oopSet" ],
+	"name" : "OXPersistentBitmap",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
