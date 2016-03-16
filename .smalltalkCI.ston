@@ -1,0 +1,7 @@
+SmalltalkCISpec {
+  #specName : 'Obex',
+  #testing: {
+    #projects : [ 'Obex' ],
+    #platforms : [ #gemstone]
+  }
+}

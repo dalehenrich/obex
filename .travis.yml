@@ -1,34 +1,12 @@
 language: smalltalk
-sudo: true
+sudo: false
 
 os:
   - linux
-  - osx
 
 smalltalk:
-  - GemStone-3.2.12
-  - GemStone-3.1.0.6
+  - GemStone-3.3.0
 
-env:
-  global:
-    - BASELINE="Obex"
-    - BASELINE_GROUP="CI"
-    - PACKAGES="repository"
-
-addons:
-  hosts:
-    - travis.dev
-
-# test obex install scripts for client and server
-#
 matrix:
-#  include:
-#    - language: generic
-#      sudo: true
-#      script:
-#        - bash # create a stone 
-#        - bash # create a client
-#        - bash # install server
-#        - bash # install client
   allow_failures:
-    - os: osx      # osx is more susceptible to api rate limit failures
+    - os: linux   # requires 3.4.0, but let's see how it goes
