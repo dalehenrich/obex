@@ -1,4 +1,4 @@
-accessing
+simple data
 simpleData
 
    ^simpleData

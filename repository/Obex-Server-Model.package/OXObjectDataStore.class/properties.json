@@ -1,14 +1,14 @@
 {
-	"category" : "Obex-Server-Tests",
+	"category" : "Obex-Server-Model",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"classVar" ],
+		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "ObexTestOrphanClass1",
+		"objects" ],
+	"name" : "OXObjectDataStore",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OXGenericDataStore",
 	"type" : "normal" }

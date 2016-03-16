@@ -5,4 +5,5 @@ setUp
   super setUp.
   self
     setUpSimpleData;
+    setUpOrphanClasses;
     yourself

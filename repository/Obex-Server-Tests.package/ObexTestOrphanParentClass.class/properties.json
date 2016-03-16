@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"classVar" ],
+	"commentStamp" : "dkh 03/16/2016 11:04",
+	"instvars" : [
+		 ],
+	"name" : "ObexTestOrphanParentClass",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
