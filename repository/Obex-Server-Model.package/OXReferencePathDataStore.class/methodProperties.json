@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"minLimitSetForRefPathScan" : "dkh 01/09/2016 10:20" },
+		 },
 	"instance" : {
 		"analyze" : "dkh 01/09/2016 20:59",
 		"analyzeReferenceArray:node:" : "dkh 01/10/2016 09:03",

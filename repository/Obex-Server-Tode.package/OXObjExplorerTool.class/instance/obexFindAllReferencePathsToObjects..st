@@ -3,4 +3,4 @@ obexFindAllReferencePathsToObjects: objects
   self
     obexFindAllReferencePathsToObjects: objects
     limitObjArray: self obexMinLimitSetForRefPathScan
-    maxPaths: self obexDefaultObjectInventoryMaxSessions
+    maxPaths: self obexDefaultMaxPaths

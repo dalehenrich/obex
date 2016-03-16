@@ -5,8 +5,8 @@ setUpSimpleData
   | arb ar2 ar3 obj |
   simpleData := ObexTestObject new.
   simpleLeaves := {}.
-  simpleDataExcludedParents := {simpleLeaves.
-  self}.
+  simpleDataExcludedParents := {self.
+  simpleLeaves}.
   simpleDataExcludedParents add: simpleDataExcludedParents.
   arb := ObexTestObjectArray new.
   simpleData slot1: arb.

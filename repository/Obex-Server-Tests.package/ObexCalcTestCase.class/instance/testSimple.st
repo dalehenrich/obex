@@ -9,9 +9,12 @@ testSimple
   PersistentRoot := ObexTestResource current.
   leaves := PersistentRoot simpleLeaves.
   System commit.
+  [ 
+  PersistentRoot simpleLeaves: #().
+  System commit.
   tool := self obexTool.
   limitArray := tool obexMinLimitSetForRefPathScan.
-  limitArray add: PersistentRoot.
+  limitArray add: ObexTestResource current.
   tool
     obexFindAllReferencePathsToObjects: leaves asArray
     limitObjArray: limitArray.
@@ -50,4 +53,5 @@ testSimple
     at: #'ObexTestResource' put: 1;
     yourself.
   classNameMap
-    keysAndValuesDo: [ :className :instances | self assert: (instanceCountMap at: className) = instances size ]
+    keysAndValuesDo: [ :className :instances | self assert: (instanceCountMap at: className) = instances size ] ]
+    ensure: [ PersistentRoot simpleLeaves: leaves ]

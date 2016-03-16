@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"minLimitSetForRefPathScan" : "dkh 01/10/2016 15:05" },
+		 },
 	"instance" : {
 		"analyze" : "dkh 03/10/2016 16:33",
 		"analyzeReferenceGsBitmap:node:" : "dkh 03/10/2016 16:32",
