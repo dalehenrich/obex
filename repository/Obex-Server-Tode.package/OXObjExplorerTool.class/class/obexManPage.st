@@ -24,6 +24,7 @@ DESCRIPTION
 
   Data Analysis:
     inventory  Produce an object inventory of given data source: instance and byte counts by class
+    refPaths   Produce reference paths to objects in given data source
     parents    Produce parent references to objects in given data source
     spectro    Produce an object inventory that includes sample instances by class as well as instance and byte counts
 

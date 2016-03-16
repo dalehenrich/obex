@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXRefPathParentsOfDataStore",
+	"pools" : [
+		 ],
+	"super" : "OXGenericRefPathDataStore",
+	"type" : "normal" }
