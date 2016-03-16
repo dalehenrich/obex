@@ -38,7 +38,7 @@ baseline: spec
         group: 'Core' with: #('Obex-Client-Model' 'Obex-Client-Tode');
         yourself ].
   spec
-    for: #(#'gs3.4.x')
+    for: #(#'gs3.3.x' #'gs3.4.x')
     do: [ 
       spec
         package: 'Obex-Server-Tode'

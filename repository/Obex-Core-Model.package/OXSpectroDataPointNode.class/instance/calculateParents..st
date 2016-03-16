@@ -32,7 +32,7 @@ calculateParents: parentNodeType
   parentsOfResult
     do: [ :parentsInfo | 
       | parentOopsBitmap |
-      parentOopsBitmap := parentsInfo parentOops copy.
+      parentOopsBitmap := parentsInfo parentOops.
       parentOopsBitmap
         do: [ :parent | 
           | classOop cnt set |

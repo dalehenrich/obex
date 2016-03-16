@@ -3,6 +3,6 @@ SmalltalkCISpec {
   #testing: {
     #projects : [ 'Obex' ],
     #directory : 'repository',
-    #platforms : [ #gemstone]
+    #platforms : [ #gemstone ]
   }
 }

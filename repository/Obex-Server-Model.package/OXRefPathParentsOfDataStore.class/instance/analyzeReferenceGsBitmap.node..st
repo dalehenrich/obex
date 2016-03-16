@@ -1,6 +1,6 @@
 analysis
 analyzeReferenceGsBitmap: aGsBitmap node: node
-  aGsBitmap copy
+  aGsBitmap
     doAsOops: [ :referenceOop | 
       | theNode |
       theNode := self lookupNodeForOop: referenceOop rootNode: false.
