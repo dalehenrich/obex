@@ -32,7 +32,7 @@ obexspectro
   srcMap := Dictionary new
     at: 'inventory' put: 'objectInventory';
     at: 'scan' put: 'scanBackups';
-    at: 'spector' put: 'spectroph';
+    at: 'spectro' put: 'spectro';
     yourself.
   subOptions
     at: 'src'
@@ -45,7 +45,8 @@ obexspectro
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ #() ].
-  srcDataStore := (self obexDataStoreRoot dataStores at: dataStoreKey) top.
+  srcDataStore := (self obexDataStoreRoot dataStores
+    perform: dataStoreKey asSymbol) top.
   srcDataStore
     parentLimit: classLimit;
     excludedArray: excludeArray.

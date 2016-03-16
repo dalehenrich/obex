@@ -1,4 +1,0 @@
-Accessing
-recordId
-
-	^recordId.

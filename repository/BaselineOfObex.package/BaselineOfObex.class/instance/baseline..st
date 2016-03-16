@@ -41,25 +41,18 @@ baseline: spec
     for: #(#'gs3.x')
     do: [ 
       spec
-        package: 'ScanBackup';
         package: 'Obex-Server-Tode'
-          with: [ spec requires: #('Obex-Server-Model') ];
-        package: 'Obex-Server-ScanBackup-Tode'
           with: [ 
               spec
                 postLoadDoIt: #'initializeTools';
-                requires: #('Obex-Server-Tode' 'Obex-Server-ScanBackup-Model') ];
+                requires: #('Obex-Server-Model') ];
         package: 'Obex-Server-Model'
           with: [ spec requires: #('Obex-Core-Tode') ];
-        package: 'Obex-Server-ScanBackup-Model'
-          with: [ spec requires: #('Obex-Server-Model' 'ScanBackup') ];
         package: 'Obex-Server-Tests'
           with: [ spec requires: #('Obex-Server-Tode') ];
         yourself.
       spec
-        group: 'Core' with: #('Obex-Server-Tode' 'Scan');
-        group: 'Scan'
-          with: #('Obex-Server-ScanBackup-Tode' 'Obex-Server-ScanBackup-Model');
+        group: 'Core' with: #('Obex-Server-Tode');
         group: 'Tests' with: #('Obex-Server-Tests');
         yourself ].
   spec

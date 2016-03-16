@@ -1,4 +1,0 @@
-Accessing
-recordSize
-
-	^header recordSize.

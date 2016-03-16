@@ -8,42 +8,37 @@ obexManPage
   obex - Roassal-based tool for analyzing object reference paths
 
 SYNOPSIS
-  obex [--help] [--dataStore=<data-store-name>] <command> [<options>]
+  obex [--help] <command> [<options>]
 
 DESCRIPTION
-  Commands:
-    calc      Calculate reference paths to given object (Repository>>findAllReferencePathsToObjects:)
-    clear     Clear dataStores
-    datastore Return the current dataStore
-    instances Run a multi-scan class instance count analysis
-    inventory GsObjectInventory analysis
-    orphans   Find references to instances of Metaclass3 that are not members of a ClassHistory
-    parents   Calculate reference path parents of given objects [V3.4 only]
-    scan      Scan backup file to collect collect class instance counts
-    spectro   Produce a class spectrograph - class instance count plus sample instances [V3.4 only]
-    view      Visualize object reference graphs and class instance counts
+  Data Sources:
+    oops       New object store derived frin list of oops
+    st         New object store derived from evaluating a Smalltalk expression
+    bitmap     New object store derived from set of bitmap oops
+    orphans    New object store derived from orphaned class analysis
+    instances  New object store derived from instances of classes
 
+  Data Manipulation:
+    datasource New object store derived from a given data store
+    algebra    New object store derived via set algebra on given object stores
+
+  Data Analysis:
+    inventory  Produce an object inventory of given data source: instance and byte counts by class
+    parents    Produce parent references to objects in given data source
+    spectro    Produce an object inventory that includes sample instances by class as well as instance and byte counts
+
+  Visualization:
+    view       Visualize results of data analysis
+
+  Utility
+    clear      Clear all dataStores
 OPTIONS
   --help [command]
     Bring up this man page or a man page for a subCommand.
  
-  --dataStore=<data-store-name>
-    Specify that the named data store be used for the operation
-
 EXAMPLES
   obex --help
 
 '.
-  manPage subCommands
-    at: 'calc' put: self obexcalcManPage;
-    at: 'view' put: self obexviewManPage;
-    at: 'clear' put: self obexclearManPage;
-    at: 'scan' put: self obexscanManPage;
-    at: 'datastore' put: self obexdatastoreManPage;
-    at: 'instances' put: self obexinstancesManPage;
-    at: 'inventory' put: self obexinventoryManPage;
-    at: 'spectro' put: self obexspectroManPage;
-    at: 'orphans' put: self obexorphansManPage;
-    at: 'parents' put: self obexparentsManPage;
-    yourself.
+  manPage subCommands yourself.
   ^ manPage

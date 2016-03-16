@@ -1,4 +1,0 @@
-objects
-processClass
-
-	self halt.

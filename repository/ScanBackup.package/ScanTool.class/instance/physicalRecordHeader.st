@@ -1,4 +1,0 @@
-other
-physicalRecordHeader
-
-	self subclassResponsibility.

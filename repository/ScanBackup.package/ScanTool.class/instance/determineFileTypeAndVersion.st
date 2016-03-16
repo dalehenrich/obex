@@ -1,4 +1,0 @@
-other
-determineFileTypeAndVersion
-
-	self subclassResponsibility.

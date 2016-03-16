@@ -1,4 +1,0 @@
-other
-processByteRegion
-
-	self halt.

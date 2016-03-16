@@ -1,4 +1,0 @@
-other
-processSelectiveAbort
-
-	self halt.

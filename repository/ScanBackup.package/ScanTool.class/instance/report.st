@@ -1,4 +1,0 @@
-other
-report
-
-	self subclassResponsibility.

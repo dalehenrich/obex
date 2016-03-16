@@ -1,4 +1,0 @@
-other
-logRootRecordClass
-
-	self subclassResponsibility.
