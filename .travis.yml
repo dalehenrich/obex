@@ -10,3 +10,6 @@ smalltalk:
 matrix:
   allow_failures:
     - os: linux   # requires 3.4.0, but let's see how it goes
+
+script:
+  - ./run.sh --debug
