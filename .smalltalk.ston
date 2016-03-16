@@ -2,6 +2,7 @@ SmalltalkCISpec {
   #specName : 'Obex',
   #testing: {
     #projects : [ 'Obex' ],
+    #directory : 'repository',
     #platforms : [ #gemstone]
   }
 }
