@@ -12,4 +12,4 @@ matrix:
     - os: linux   # requires 3.4.0, but let's see how it goes
 
 script:
-  - $SMALLTALK_CI_HOME/run.sh --debug
+  - $SMALLTALK_CI_HOME/run.sh # --debug
