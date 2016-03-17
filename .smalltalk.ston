@@ -1,8 +1,13 @@
 SmalltalkCISpec {
   #specName : 'Obex',
-  #testing: {
-    #projects : [ 'Obex' ],
-    #directory : 'repository',
-    #platforms : [ #gemstone ]
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Obex',
+      #directory : 'repository',
+      #platforms : [ #gemstone ]
+    }
+  ],
+  #testing : {
+    #projects : [ 'Obex' ]
   }
 }
