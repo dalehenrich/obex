@@ -3,6 +3,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Obex',
+      #load : [ 'CI' ],
       #directory : 'repository',
       #onWarningLog : true,
       #platforms : [ #gemstone ]

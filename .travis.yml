@@ -7,10 +7,6 @@ os:
 smalltalk:
   - GemStone-3.3.0
 
-matrix:
-  allow_failures:
-    - os: linux   # requires 3.4.0, but let's see how it goes
-
 script:
   - $SMALLTALK_CI_HOME/run.sh # --debug
 
