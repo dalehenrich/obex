@@ -6,6 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"dataStoreName",
 		"summary",
 		"parentLimit",
 		"excludedArray" ],

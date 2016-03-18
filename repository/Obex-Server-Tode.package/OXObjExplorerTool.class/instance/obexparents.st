@@ -26,4 +26,4 @@ obexparents
     excludedArray: excludeArray;
     findRefPathsParentsOfObjects: objects;
     yourself.
-  self obexDataStoreRoot parentsOf push: dataStore
+  dataStore pushOnStack: #'parentsOf' in: self obexDataStoreRoot

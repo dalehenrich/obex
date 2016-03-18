@@ -1,3 +1,3 @@
-data stores
+data store stacks
 objectInventory
-  ^ self at: 'objectInventory'
+  ^ self dataStoreStackAt: 'objectInventory'

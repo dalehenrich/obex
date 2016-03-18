@@ -1,3 +1,3 @@
 accessing
 clear
-  dataStores := nil
+  namedDataStores := dataStores := nil

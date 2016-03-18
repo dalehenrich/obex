@@ -6,4 +6,4 @@ obexFindAllReferencePathsToObjects: objects limitObjArray: limitArray maxPaths: 
     limitObjArray: limitArray
     printToLog: false
     maxPaths: maxPaths.
-  self obexDataStoreRoot referencePaths push: result
+  result pushOnStack: #'referencePaths' in: self obexDataStoreRoot

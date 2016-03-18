@@ -1,3 +1,3 @@
-data stores
+data store stacks
 parentsOf
-  ^ self at: 'parentsOf'
+  ^ self dataStoreStackAt: 'parentsOf'

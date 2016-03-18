@@ -12,4 +12,4 @@ script:
 
 cache:
   directories:
-    - $SMALLTALK_CI_HOME/_cache
+    - $SMALLTALK_CI_CACHE

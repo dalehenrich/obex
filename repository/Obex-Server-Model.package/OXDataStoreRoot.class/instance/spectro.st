@@ -1,3 +1,3 @@
-data stores
+data store stacks
 spectro
-  ^ self at: 'spectro'
+  ^ self dataStoreStackAt: 'spectro'

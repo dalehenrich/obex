@@ -12,7 +12,9 @@ SYNOPSIS
 
 DESCRIPTION
   Data Sources:
-    oops       New object store derived frin list of oops
+    objects    New object store derived from lists of objects
+
+    oops       New object store derived from list of oops
     st         New object store derived from evaluating a Smalltalk expression
     bitmap     New object store derived from set of bitmap oops
     orphans    New object store derived from orphaned class analysis

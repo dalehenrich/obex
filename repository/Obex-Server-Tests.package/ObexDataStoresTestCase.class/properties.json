@@ -1,15 +1,14 @@
 {
-	"category" : "Obex-Server-Model",
+	"category" : "Obex-Server-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"dataStores",
-		"namedDataStores" ],
-	"name" : "OXDataStoreRoot",
+		 ],
+	"name" : "ObexDataStoresTestCase",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "ObexGenericTestCase",
 	"type" : "normal" }

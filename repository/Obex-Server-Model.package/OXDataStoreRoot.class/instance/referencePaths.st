@@ -1,3 +1,3 @@
-data stores
+data store stacks
 referencePaths
-  ^ self at: 'referencePaths'
+  ^ self dataStoreStackAt: 'referencePaths'
