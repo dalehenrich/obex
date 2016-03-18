@@ -13,3 +13,7 @@ matrix:
 
 script:
   - $SMALLTALK_CI_HOME/run.sh # --debug
+
+cache:
+  directories:
+    - $SMALLTALK_CI_HOME/_cache
