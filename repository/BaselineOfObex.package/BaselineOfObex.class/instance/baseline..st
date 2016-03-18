@@ -54,4 +54,13 @@ baseline: spec
       spec
         group: 'Core' with: #('Obex-Server-Tode');
         group: 'Tests' with: #('Obex-Server-Tests');
+        yourself ].
+  spec
+    for: #(#'gs3.4.x')
+    do: [ 
+      spec
+        package: 'Obex-Server-Tests'
+          with: [ spec includes: #('Obex-Server-34x-Tests') ];
+        package: 'Obex-Server-34x-Tests'
+          with: [ spec requires: #('Obex-Server-Tests') ];
         yourself ]

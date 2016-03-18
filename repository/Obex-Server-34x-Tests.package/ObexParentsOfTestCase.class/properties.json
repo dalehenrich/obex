@@ -1,10 +1,10 @@
 {
-	"category" : "Obex-Server-Tests",
+	"category" : "Obex-Server-34x-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 03/14/2016 10:48",
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
 	"name" : "ObexParentsOfTestCase",
