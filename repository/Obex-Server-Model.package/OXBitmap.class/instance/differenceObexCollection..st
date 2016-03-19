@@ -1,0 +1,3 @@
+double dispatching
+differenceObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection differenceObexBitmap: self

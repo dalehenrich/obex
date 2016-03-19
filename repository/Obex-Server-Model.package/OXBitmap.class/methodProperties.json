@@ -2,6 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
+		"_collection:" : "dkh 03/19/2016 12:25",
 		"asArrayOfOops" : "dkh 03/19/2016 08:53",
+		"copyFromObexBitmap:" : "dkh 03/19/2016 12:04",
+		"copyIntoObexCollection:" : "dkh 03/19/2016 12:00",
+		"differenceObexBitmap:" : "dkh 03/19/2016 12:25",
+		"differenceObexCollection:" : "dkh 03/19/2016 12:19",
 		"doAsOops:" : "dkh 03/19/2016 08:54",
-		"initialize" : "dkh 03/18/2016 16:55" } }
+		"equalsObexBitmap:" : "dkh 03/19/2016 12:43",
+		"equalsObexCollection:" : "dkh 03/19/2016 12:41",
+		"initialize" : "dkh 03/18/2016 16:55",
+		"intersectionObexBitmap:" : "dkh 03/19/2016 12:45",
+		"intersectionObexCollection:" : "dkh 03/19/2016 12:44" } }

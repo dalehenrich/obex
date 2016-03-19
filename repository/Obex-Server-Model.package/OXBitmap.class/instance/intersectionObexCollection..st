@@ -1,0 +1,3 @@
+double dispatching
+intersectionObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection intersectionObexBitmap: self
