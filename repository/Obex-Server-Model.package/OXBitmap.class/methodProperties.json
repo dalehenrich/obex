@@ -2,6 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"copyFromObjectCollection:" : "dkh 03/18/2016 17:08",
-		"copyFromOopCollection:" : "dkh 03/18/2016 17:09",
+		"asArrayOfOops" : "dkh 03/19/2016 08:53",
+		"doAsOops:" : "dkh 03/19/2016 08:54",
 		"initialize" : "dkh 03/18/2016 16:55" } }

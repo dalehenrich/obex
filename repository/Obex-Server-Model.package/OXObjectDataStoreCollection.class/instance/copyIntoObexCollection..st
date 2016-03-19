@@ -1,0 +1,3 @@
+double dispatching
+copyIntoObexCollection: anOXObjectDataStoreCollection
+  self subclassResponsibility

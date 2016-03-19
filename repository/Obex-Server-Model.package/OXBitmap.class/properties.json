@@ -10,5 +10,5 @@
 	"name" : "OXBitmap",
 	"pools" : [
 		 ],
-	"super" : "OXGenericOopCollection",
+	"super" : "OXGenericObjectCollection",
 	"type" : "normal" }

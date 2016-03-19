@@ -1,4 +1,4 @@
 double dispatching
 copyFromObjectCollection: aCollection
-  self addAll: aCollection.
+  _collection addAll: aCollection.
   ^ self

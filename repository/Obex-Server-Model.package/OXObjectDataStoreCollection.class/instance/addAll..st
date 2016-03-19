@@ -1,3 +1,3 @@
 updating
 addAll: anOXGenericObjectCollection
-  self subclassResponsibility
+  anOXGenericObjectCollection copyIntoObexCollection: self

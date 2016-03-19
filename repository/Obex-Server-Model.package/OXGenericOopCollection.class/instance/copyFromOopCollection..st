@@ -1,4 +1,4 @@
 double dispatching
 copyFromOopCollection: aCollection
-  self addAll aCollection.
+  _collection addAll aCollection.
   ^ self
