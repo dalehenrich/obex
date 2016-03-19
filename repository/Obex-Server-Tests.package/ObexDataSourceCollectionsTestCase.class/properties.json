@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 03/19/2016 14:32",
 	"instvars" : [
 		 ],
-	"name" : "ObexDataStoreCollectionsTestCase",
+	"name" : "ObexDataSourceCollectionsTestCase",
 	"pools" : [
 		 ],
-	"super" : "ObexGenericDataStoreCollectionsTestCase",
+	"super" : "ObexGenericDataSourceCollectionsTestCase",
 	"type" : "normal" }

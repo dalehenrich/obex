@@ -10,5 +10,5 @@
 	"name" : "OXGenericOopCollection",
 	"pools" : [
 		 ],
-	"super" : "OXObjectDataStoreCollection",
+	"super" : "OXObjectDataSourceCollection",
 	"type" : "normal" }

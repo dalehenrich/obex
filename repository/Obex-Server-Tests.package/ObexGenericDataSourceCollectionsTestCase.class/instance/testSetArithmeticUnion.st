@@ -15,8 +15,8 @@ testSetArithmeticUnion
         do: [ :coll2 | 
           | union |
           union := coll1 union: coll2.
-          self assert: (union isKindOf: OXObjectDataStoreCollection).
+          self assert: (union isKindOf: OXObjectDataSourceCollection).
           self assert: (union equals: baseUnion).
           union := coll2 union: coll1.
-          self assert: (union isKindOf: OXObjectDataStoreCollection).
+          self assert: (union isKindOf: OXObjectDataSourceCollection).
           self assert: (union equals: baseUnion) ] ]

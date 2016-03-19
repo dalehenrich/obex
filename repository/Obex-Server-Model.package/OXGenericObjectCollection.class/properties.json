@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 03/18/2016 16:22",
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
 	"name" : "OXGenericObjectCollection",
 	"pools" : [
 		 ],
-	"super" : "OXObjectDataStoreCollection",
+	"super" : "OXObjectDataSourceCollection",
 	"type" : "normal" }

@@ -6,7 +6,7 @@ obexobjects
 
   "browse method --spec `OXObjExplorerTool class>>obexobjectsManPage`"
 
-  | objects collection |
+  | dataSource objects |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
@@ -20,7 +20,7 @@ obexobjects
         ifTrue: [ self error: 'Missing required argument(s) oops. See man page for details.' ].
       (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
         asArray ].
-  collection := subOptions
+  dataSource := subOptions
     at: 'type'
     ifPresent: [ :type | 
       type = 'array'
@@ -40,4 +40,8 @@ obexobjects
                         ifFalse: [ 
                           type = 'asis'
                             ifTrue: [ objects ]
-                            ifFalse: [ self error: 'Unknown type: ' , type printString ] ] ] ] ] ] ]
+                            ifFalse: [ self error: 'Unknown type: ' , type printString ] ] ] ] ] ] ].
+  ^ subOptions
+    at: 'name'
+    ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]
+    ifAbsent: [ self obexAddDataSource: dataSource ]
