@@ -3,4 +3,5 @@
 		 },
 	"instance" : {
 		"copyIntoObexCollection:" : "dkh 03/19/2016 12:09",
-		"initialize" : "dkh 03/18/2016 16:54" } }
+		"initialize" : "dkh 03/18/2016 16:54",
+		"removeAllFromObexCollection:" : "dkh 03/19/2016 13:24" } }

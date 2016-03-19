@@ -1,0 +1,3 @@
+double dispatching
+removeAllFromObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection removeAllObexBitmap: self

@@ -39,10 +39,13 @@
 		"remove:" : "dkh 03/18/2016 16:28",
 		"removeAll:" : "dkh 03/19/2016 13:08",
 		"removeAllFromObexCollection:" : "dkh 03/19/2016 13:09",
+		"removeAllObexBitmap:" : "dkh 03/19/2016 13:19",
+		"removeAllObexObjectArray:" : "dkh 03/19/2016 13:25",
 		"removeAllObexObjectCollection:" : "dkh 03/19/2016 13:13",
 		"removeAllObexOopCollection:" : "dkh 03/19/2016 13:14",
 		"size" : "dkh 03/18/2016 16:22",
 		"union:" : "dkh 03/19/2016 11:46",
+		"unionObexBitmap:" : "dkh 03/19/2016 13:30",
 		"unionObexCollection:" : "dkh 03/19/2016 11:46",
 		"unionObexObjectCollection:" : "dkh 03/19/2016 11:51",
 		"unionObexOopCollection:" : "dkh 03/19/2016 11:51" } }

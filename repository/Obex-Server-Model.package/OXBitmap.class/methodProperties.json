@@ -13,4 +13,8 @@
 		"equalsObexCollection:" : "dkh 03/19/2016 12:41",
 		"initialize" : "dkh 03/18/2016 16:55",
 		"intersectionObexBitmap:" : "dkh 03/19/2016 12:51",
-		"intersectionObexCollection:" : "dkh 03/19/2016 12:44" } }
+		"intersectionObexCollection:" : "dkh 03/19/2016 12:44",
+		"removeAllFromObexCollection:" : "dkh 03/19/2016 13:18",
+		"removeAllObexBitmap:" : "dkh 03/19/2016 13:19",
+		"unionObexBitmap:" : "dkh 03/19/2016 13:30",
+		"unionObexCollection:" : "dkh 03/19/2016 13:29" } }
