@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"_collection:" : "dkh 03/19/2016 12:25",
+		"add:" : "dkh 03/19/2016 14:06",
 		"asArrayOfOops" : "dkh 03/19/2016 08:53",
 		"copyFromObexBitmap:" : "dkh 03/19/2016 12:04",
 		"copyIntoObexCollection:" : "dkh 03/19/2016 12:00",
@@ -14,6 +14,7 @@
 		"initialize" : "dkh 03/18/2016 16:55",
 		"intersectionObexBitmap:" : "dkh 03/19/2016 12:51",
 		"intersectionObexCollection:" : "dkh 03/19/2016 12:44",
+		"remove:" : "dkh 03/19/2016 14:07",
 		"removeAllFromObexCollection:" : "dkh 03/19/2016 13:18",
 		"removeAllObexBitmap:" : "dkh 03/19/2016 13:19",
 		"unionObexBitmap:" : "dkh 03/19/2016 13:30",

@@ -15,6 +15,8 @@ testSetArithmeticIntersection
         do: [ :coll2 | 
           | intersection |
           intersection := coll1 intersection: coll2.
+          self assert: (intersection isKindOf: OXObjectDataStoreCollection).
           self assert: (intersection equals: baseCollection1).
           intersection := coll2 intersection: coll1.
+          self assert: (intersection isKindOf: OXObjectDataStoreCollection).
           self assert: (intersection equals: baseCollection1) ] ]

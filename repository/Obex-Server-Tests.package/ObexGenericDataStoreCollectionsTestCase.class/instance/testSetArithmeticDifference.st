@@ -15,6 +15,8 @@ testSetArithmeticDifference
         do: [ :coll2 | 
           | difference |
           difference := coll1 difference: coll2.
+          self assert: (difference isKindOf: OXObjectDataStoreCollection).
           self assert: difference isEmpty.
           difference := coll2 difference: coll1.
+          self assert: (difference isKindOf: OXObjectDataStoreCollection).
           self assert: (difference equals: baseCollection2) ] ]

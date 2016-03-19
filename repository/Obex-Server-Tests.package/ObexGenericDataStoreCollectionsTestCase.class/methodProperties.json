@@ -6,11 +6,12 @@
 		"createClassInstancesFrom:" : "dkh 03/19/2016 09:10",
 		"objectClassesAndCollectionClasses" : "dkh 03/19/2016 09:18",
 		"oopClassesAndCollectionClasses" : "dkh 03/19/2016 09:19",
-		"testCopying" : "dkh 03/19/2016 10:03",
+		"testAccessing" : "dkh 03/19/2016 14:16",
+		"testCopying" : "dkh 03/19/2016 13:37",
 		"testCreation" : "dkh 03/18/2016 16:44",
 		"testEnumeration" : "dkh 03/19/2016 10:18",
-		"testSetArithmeticDifference" : "dkh 03/19/2016 11:40",
-		"testSetArithmeticIntersection" : "dkh 03/19/2016 11:44",
-		"testSetArithmeticUnion" : "dkh 03/19/2016 11:50",
+		"testSetArithmeticDifference" : "dkh 03/19/2016 13:38",
+		"testSetArithmeticIntersection" : "dkh 03/19/2016 13:38",
+		"testSetArithmeticUnion" : "dkh 03/19/2016 13:38",
 		"testTesting" : "dkh 03/19/2016 10:17",
-		"testUpdating" : "dkh 03/19/2016 10:22" } }
+		"testUpdating" : "dkh 03/19/2016 14:00" } }

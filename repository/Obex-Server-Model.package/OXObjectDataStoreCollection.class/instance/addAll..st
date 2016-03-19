@@ -1,3 +1,4 @@
 updating
 addAll: anOXGenericObjectCollection
-  anOXGenericObjectCollection copyIntoObexCollection: self
+  anOXGenericObjectCollection copyIntoObexCollection: self.
+  ^ anOXGenericObjectCollection

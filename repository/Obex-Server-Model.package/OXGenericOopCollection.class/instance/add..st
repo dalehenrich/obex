@@ -1,3 +1,4 @@
 updating
 add: anObj
-  ^ _collection add: anObj asOop
+  _collection add: anObj asOop.
+  ^ anObj

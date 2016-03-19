@@ -8,5 +8,8 @@ testCopying
     do: [ :coll1 | 
       collections
         do: [ :coll2 | 
-          self assert: (coll1 copy equals: coll2).
+          | copy |
+          copy := coll1 copy.
+          self assert: (copy isKindOf: OXObjectDataStoreCollection).
+          self assert: (copy equals: coll2).
           self assert: (coll1 equals: coll2) ] ]

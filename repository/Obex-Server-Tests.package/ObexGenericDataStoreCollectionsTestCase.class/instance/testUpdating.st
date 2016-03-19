@@ -7,17 +7,23 @@ testUpdating
   newObj := Object new.
   collections
     do: [ :coll | 
-      coll add: newObj.
+      | obj |
+      obj := coll add: newObj.
+      self assert: obj == newObj.
       self assert: (coll includes: newObj).
-      coll remove: newObj.
+      obj := coll remove: newObj.
+      self assert: obj == newObj.
       self deny: (coll includes: newObj) ].
   newCollection := {(Object new)}.
   newObj := newCollection at: 1.
   collections
     do: [ :coll | 
-      coll addAll: newCollection.
+      | ans |
+      ans := coll addAll: newCollection.
+      self assert: ans == newCollection.
       self assert: (coll includes: newObj).
-      coll removeAll: newCollection.
+      ans := coll removeAll: newCollection.
+      self assert: ans == newCollection.
       self deny: (coll includes: newObj) ].
   baseCollection := {(Object new).
   (Object new)}.
