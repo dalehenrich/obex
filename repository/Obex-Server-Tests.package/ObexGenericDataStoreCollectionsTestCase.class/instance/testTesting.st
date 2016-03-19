@@ -9,7 +9,8 @@ testTesting
   collections := self createClassInstancesFrom: baseCollection.
   obj := baseCollection at: 1.
   collections
-    do: [ :coll | 
-      self assert: coll size = 2.
-      self assert: (coll includes: obj).
-      self assert: (coll equals: baseCollection) ]
+    do: [ :coll1 | 
+      self assert: coll1 size = 2.
+      self assert: (coll1 includes: obj).
+      self assert: (coll1 equals: baseCollection).
+      collections do: [ :coll2 | self assert: (coll1 equals: coll2) ] ]

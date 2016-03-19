@@ -1,4 +1,4 @@
 double dispatching
 copyFromObexOopCollection: aCollection
-  aCollection do: [ :each | self add: (Object _objectForOop: each) ].
+  aCollection do: [ :each | self add: each ].
   ^ self

@@ -4,6 +4,6 @@ equalsObexOopCollection: aCollection
     ifFalse: [ ^ false ].
   self
     do: [ :each | 
-      (aCollection includes: each asOop)
+      (aCollection includes: each)
         ifFalse: [ ^ false ] ].
   ^ true
