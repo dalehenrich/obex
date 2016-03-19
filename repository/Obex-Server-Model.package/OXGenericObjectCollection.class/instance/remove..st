@@ -1,3 +1,3 @@
 updating
 remove: anObj
-  ^ _collection remove: anObj
+  ^ self _collection remove: anObj

@@ -1,3 +1,3 @@
 testing
 includes: anObj
-  ^ _collection includes: anObj
+  ^ self _collection includes: anObj

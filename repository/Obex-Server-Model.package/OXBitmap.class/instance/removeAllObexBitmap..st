@@ -1,4 +1,4 @@
 double dispatching
 removeAllObexBitmap: anObexBitmap
-  _collection removeAll: anObexBitmap _collection.
+  self _collection removeAll: anObexBitmap _collection.
   ^ self

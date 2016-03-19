@@ -4,5 +4,5 @@ obexAddDataSource: dataSource named: aStringOrNil
   dataStore := OXObjectDataStore new
     objects: dataSource;
     yourself.
-  aStringOrNil ifNotNIl: [ dataStore dataStoreName: aStringOrNil ].
+  aStringOrNil ifNotNil: [ dataStore dataStoreName: aStringOrNil ].
   ^ dataStore pushOnStack: #'objects' in: self obexDataStoreRoot

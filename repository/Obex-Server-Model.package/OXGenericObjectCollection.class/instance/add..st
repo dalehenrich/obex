@@ -1,3 +1,3 @@
 updating
 add: anObj
-  ^ _collection add: anObj
+  ^ self _collection add: anObj

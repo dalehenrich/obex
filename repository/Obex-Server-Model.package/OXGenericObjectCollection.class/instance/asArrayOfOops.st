@@ -2,4 +2,4 @@ accessing
 asArrayOfOops
   "array of oops"
 
-  ^ (_collection collect: [ :each | each asOop ]) asArray
+  ^ (self _collection collect: [ :each | each asOop ]) asArray

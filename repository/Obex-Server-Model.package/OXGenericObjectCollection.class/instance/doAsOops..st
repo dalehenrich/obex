@@ -2,4 +2,4 @@ enumerating
 doAsOops: aBlock
   "enumerate as oops"
 
-  ^ _collection do: [ :each | aBlock value: each asOop ]
+  ^ self _collection do: [ :each | aBlock value: each asOop ]

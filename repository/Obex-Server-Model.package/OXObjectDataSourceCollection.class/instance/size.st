@@ -1,3 +1,3 @@
 testing
 size
-  ^ _collection size
+  ^ self _collection size

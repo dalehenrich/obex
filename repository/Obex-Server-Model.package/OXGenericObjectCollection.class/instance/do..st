@@ -2,4 +2,4 @@ enumerating
 do: aBlock
   "enumerate as objects"
 
-  ^ _collection do: aBlock
+  ^ self _collection do: aBlock

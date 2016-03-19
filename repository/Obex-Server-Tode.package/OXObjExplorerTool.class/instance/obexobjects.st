@@ -20,6 +20,11 @@ obexobjects
         ifTrue: [ self error: 'Missing required argument(s) oops. See man page for details.' ].
       (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
         asArray ].
+  subOptions
+    at: 'type'
+    ifAbsent: [ 
+      "default type"
+      subOptions at: 'type' put: 'bitmap' ].
   dataSource := subOptions
     at: 'type'
     ifPresent: [ :type | 
@@ -36,7 +41,11 @@ obexobjects
                     ifTrue: [ OXOopIdentitySet from: objects ]
                     ifFalse: [ 
                       type = 'bitmap'
-                        ifTrue: [ OXBitmap from: objects ]
+                        ifTrue: [ 
+                          Smalltalk
+                            at: #'GsBitmap'
+                            ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
+                          OXBitmap from: objects ]
                         ifFalse: [ 
                           type = 'asis'
                             ifTrue: [ objects ]
