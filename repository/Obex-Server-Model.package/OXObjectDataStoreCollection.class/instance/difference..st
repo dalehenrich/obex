@@ -1,0 +1,2 @@
+set arithmetic
+difference: anOXGenericObjectCollection

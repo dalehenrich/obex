@@ -1,3 +1,3 @@
-obex inventory
+defaults
 obexDefaultObjectInventoryPercentCpu
-  ^ 90
+  ^ MaxPercentCPU

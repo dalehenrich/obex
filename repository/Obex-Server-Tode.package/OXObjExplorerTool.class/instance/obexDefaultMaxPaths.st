@@ -1,3 +1,3 @@
-obex inventory
+defaults
 obexDefaultMaxPaths
-  ^ 32
+  ^ MaxPaths

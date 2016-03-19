@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-34x-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 03/18/2016 16:45",
+	"instvars" : [
+		 ],
+	"name" : "Obex34DataStoreCollectionsTestCase",
+	"pools" : [
+		 ],
+	"super" : "ObexGenericDataStoreCollectionsTestCase",
+	"type" : "normal" }

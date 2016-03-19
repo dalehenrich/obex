@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"add:" : "dkh 03/18/2016 16:29",
+		"asArray" : "dkh 03/18/2016 16:31",
+		"asArrayOfOops" : "dkh 03/18/2016 16:31",
+		"copyFromOopCollection:" : "dkh 03/18/2016 17:05",
+		"do:" : "dkh 03/18/2016 16:33",
+		"doAsOops:" : "dkh 03/18/2016 16:32",
+		"includes:" : "dkh 03/18/2016 16:34",
+		"remove:" : "dkh 03/18/2016 16:35" } }

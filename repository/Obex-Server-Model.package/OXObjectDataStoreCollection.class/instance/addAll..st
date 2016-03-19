@@ -1,0 +1,3 @@
+updating
+addAll: anOXGenericObjectCollection
+  self subclassResponsibility

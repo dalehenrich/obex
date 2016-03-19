@@ -1,0 +1,2 @@
+set arithmetic
+intersect: anOXGenericObjectCollection

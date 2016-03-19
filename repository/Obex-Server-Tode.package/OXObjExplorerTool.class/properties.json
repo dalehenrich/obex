@@ -3,7 +3,9 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"MaxPaths",
+		"MaxPercentCPU",
+		"MaxSessions" ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],

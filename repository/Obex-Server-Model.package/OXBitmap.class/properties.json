@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"bitmap",
-		"oopSet" ],
-	"name" : "OXPersistentBitmap",
+		 ],
+	"name" : "OXBitmap",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OXGenericOopCollection",
 	"type" : "normal" }

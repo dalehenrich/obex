@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"from:" : "dkh 03/18/2016 16:53" },
+	"instance" : {
+		"*" : "dkh 03/18/2016 16:22",
+		"+" : "dkh 03/18/2016 16:22",
+		"-" : "dkh 03/18/2016 16:22",
+		"_collection" : "dkh 03/18/2016 16:22",
+		"add:" : "dkh 03/18/2016 16:27",
+		"addAll:" : "dkh 03/18/2016 16:28",
+		"asArray" : "dkh 03/18/2016 16:22",
+		"asArrayOfOops" : "dkh 03/18/2016 16:22",
+		"copyFromObjectCollection:" : "dkh 03/18/2016 17:03",
+		"copyFromOopCollection:" : "dkh 03/18/2016 17:06",
+		"difference:" : "dkh 03/18/2016 16:22",
+		"do:" : "dkh 03/18/2016 16:22",
+		"doAsOops:" : "dkh 03/18/2016 16:26",
+		"equals:" : "dkh 03/18/2016 16:22",
+		"includes:" : "dkh 03/18/2016 16:27",
+		"intersect:" : "dkh 03/18/2016 16:22",
+		"isEmpty" : "dkh 03/18/2016 16:22",
+		"postCopy" : "dkh 03/18/2016 16:22",
+		"remove:" : "dkh 03/18/2016 16:28",
+		"removeAll:" : "dkh 03/18/2016 16:22",
+		"size" : "dkh 03/18/2016 16:22",
+		"union:" : "dkh 03/18/2016 16:22" } }

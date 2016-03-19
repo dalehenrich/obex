@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OXObjectIdentitySet",
+	"pools" : [
+		 ],
+	"super" : "OXGenericObjectCollection",
+	"type" : "normal" }

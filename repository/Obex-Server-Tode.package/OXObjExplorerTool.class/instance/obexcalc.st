@@ -18,7 +18,7 @@ obexcalc
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
       subArguments isEmpty
-        ifTrue: [ self error: 'Missing required argument(s) <oop. See man page for details.' ].
+        ifTrue: [ self error: 'Missing required argument(s) oop. See man page for details.' ].
       (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
         asArray ].
   System commit.

@@ -1,3 +1,3 @@
-obex inventory
+defaults
 obexDefaultObjectInventoryMaxSessions
-  ^ 1
+  ^ MaxSessions

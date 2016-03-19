@@ -1,0 +1,3 @@
+repository settings
+maxPercentCPU
+  ^ MaxPercentCPU
