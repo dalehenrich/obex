@@ -1,0 +1,3 @@
+double dispatching
+equalsObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection equalsObexOopCollection: self

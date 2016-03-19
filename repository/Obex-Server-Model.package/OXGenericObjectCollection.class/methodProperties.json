@@ -5,9 +5,12 @@
 		"add:" : "dkh 03/18/2016 16:28",
 		"asArray" : "dkh 03/18/2016 16:24",
 		"asArrayOfOops" : "dkh 03/18/2016 16:31",
-		"copyFromObjectCollection:" : "dkh 03/19/2016 09:01",
-		"copyIntoObexCollection:" : "dkh 03/19/2016 08:57",
+		"copyFromObexObjectCollection:" : "dkh 03/19/2016 09:35",
+		"copyIntoObexCollection:" : "dkh 03/19/2016 09:36",
 		"do:" : "dkh 03/18/2016 16:33",
 		"doAsOops:" : "dkh 03/18/2016 16:33",
+		"equalsObexCollection:" : "dkh 03/19/2016 09:35",
 		"includes:" : "dkh 03/18/2016 16:27",
-		"remove:" : "dkh 03/18/2016 16:29" } }
+		"remove:" : "dkh 03/18/2016 16:29",
+		"removeFromObexCollection:" : "dkh 03/19/2016 09:52",
+		"removeFromObexObjectCollection:" : "dkh 03/19/2016 09:55" } }

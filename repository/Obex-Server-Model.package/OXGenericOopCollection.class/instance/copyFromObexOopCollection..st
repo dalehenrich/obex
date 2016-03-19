@@ -1,4 +1,4 @@
 double dispatching
-copyFromObjectCollection: aCollection
+copyFromObexOopCollection: aCollection
   _collection addAll: aCollection.
   ^ self

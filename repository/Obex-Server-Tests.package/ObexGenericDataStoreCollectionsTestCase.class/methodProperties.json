@@ -2,5 +2,11 @@
 	"class" : {
 		"isAbstract" : "dkh 03/18/2016 16:46" },
 	"instance" : {
-		"classesAndCollectionClasses" : "dkh 03/18/2016 16:48",
-		"testCreation" : "dkh 03/18/2016 16:44" } }
+		"classesAndCollectionClasses" : "dkh 03/19/2016 09:19",
+		"createClassInstancesFrom:" : "dkh 03/19/2016 09:10",
+		"objectClassesAndCollectionClasses" : "dkh 03/19/2016 09:18",
+		"oopClassesAndCollectionClasses" : "dkh 03/19/2016 09:19",
+		"testBasics" : "dkh 03/19/2016 09:15",
+		"testCreation" : "dkh 03/18/2016 16:44",
+		"testTesting" : "dkh 03/19/2016 09:31",
+		"testUpdating" : "dkh 03/19/2016 09:24" } }

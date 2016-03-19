@@ -1,3 +1,3 @@
 double dispatching
 copyIntoObexCollection: anOXObjectDataStoreCollection
-  ^ anOXObjectDataStoreCollection copyFromOopCollection: self
+  ^ anOXObjectDataStoreCollection copyFromObexOopCollection: self

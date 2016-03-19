@@ -1,3 +1,3 @@
 *obex-server-model
 copyIntoObexCollection: anOXObjectDataStoreCollection
-  ^ anOXObjectDataStoreCollection copyFromObjectCollection: self
+  ^ anOXObjectDataStoreCollection copyFromObexObjectCollection: self

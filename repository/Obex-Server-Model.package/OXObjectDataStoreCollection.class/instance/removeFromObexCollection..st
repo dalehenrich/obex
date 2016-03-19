@@ -1,0 +1,3 @@
+double dispatching
+removeFromObexCollection: anOXObjectDataStoreCollection
+  self subclassResponsibility

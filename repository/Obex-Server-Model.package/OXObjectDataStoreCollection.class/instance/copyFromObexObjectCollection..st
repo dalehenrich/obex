@@ -1,4 +1,4 @@
 double dispatching
-copyFromObjectCollection: aCollection
+copyFromObexObjectCollection: aCollection
   aCollection do: [ :each | self add: each ].
   ^ self
