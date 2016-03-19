@@ -1,0 +1,3 @@
+*obex-server-model
+removeAllFromObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection removeAllObexObjectCollection: self

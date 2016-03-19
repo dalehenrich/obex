@@ -1,4 +1,4 @@
 double dispatching
-removeFromObexOopCollection: aCollection
+removeAllObexOopCollection: aCollection
   aCollection do: [ :each | self remove: each ].
   ^ self

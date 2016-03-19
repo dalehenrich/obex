@@ -1,3 +1,3 @@
 updating
 removeAll: anOXGenericObjectCollection
-  anOXGenericObjectCollection removeFromObexCollection: self
+  anOXGenericObjectCollection removeAllFromObexCollection: self

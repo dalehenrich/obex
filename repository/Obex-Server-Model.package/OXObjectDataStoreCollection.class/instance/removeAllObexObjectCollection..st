@@ -1,4 +1,4 @@
 double dispatching
-removeFromObexObjectCollection: aCollection
+removeAllObexObjectCollection: aCollection
   aCollection do: [ :each | self remove: each ].
   ^ self
