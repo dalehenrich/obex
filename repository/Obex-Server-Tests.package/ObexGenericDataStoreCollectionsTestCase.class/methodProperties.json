@@ -9,5 +9,8 @@
 		"testCopying" : "dkh 03/19/2016 10:03",
 		"testCreation" : "dkh 03/18/2016 16:44",
 		"testEnumeration" : "dkh 03/19/2016 10:18",
+		"testSetArithmeticDifference" : "dkh 03/19/2016 11:40",
+		"testSetArithmeticIntersection" : "dkh 03/19/2016 11:44",
+		"testSetArithmeticUnion" : "dkh 03/19/2016 11:50",
 		"testTesting" : "dkh 03/19/2016 10:17",
 		"testUpdating" : "dkh 03/19/2016 10:22" } }

@@ -1,0 +1,3 @@
+*obex-server-model
+intersectionObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection intersectionObexObjectCollection: self

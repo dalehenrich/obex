@@ -1,0 +1,3 @@
+*obex-server-model
+differenceObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection differenceObexObjectCollection: self

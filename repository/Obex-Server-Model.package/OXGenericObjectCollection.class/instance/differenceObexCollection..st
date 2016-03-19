@@ -1,0 +1,3 @@
+double dispatching
+differenceObexCollection: anOXObjectDataStoreCollection
+  ^ anOXObjectDataStoreCollection differenceObexObjectCollection: self
