@@ -11,4 +11,5 @@ testObexObjectsBitmapCommand
     evaluateCommandString: 'obex objects --type=bitmap ' , oop printString;
     evaluateCommandString:
         'obex objects --name=`hello world` --type=bitmap ' , oop printString;
+    evaluateCommandString: 'eval `{Object new}`; obex objects; obex objects';
     yourself

@@ -15,5 +15,6 @@ testObexObjectsCommand
     evaluateCommandString: 'obex objects --type=asis ' , oop printString;
     evaluateCommandString:
         'obex objects --name=`hello world` --type=set ' , oop printString;
-    evaluateCommandString: 'eval `{Object new}`; obex objects; obex objects';
+    evaluateCommandString:
+        'eval `{Object new}`; obex objects --type=array; obex objects --type=oopArray';
     yourself
