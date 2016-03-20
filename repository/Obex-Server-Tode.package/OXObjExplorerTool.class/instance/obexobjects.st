@@ -16,9 +16,15 @@ obexobjects
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
-      subArguments isEmpty
-        ifTrue: [ self error: 'Missing required argument(s) oops. See man page for details.' ].
-      (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
+      (subArguments isEmpty
+        ifTrue: [ 
+          objIn isObexDataStore
+            ifTrue: [ objIn objects ]
+            ifFalse: [ 
+              objIn isCollection
+                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
+              objIn ] ]
+        ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ])
         asArray ].
   subOptions
     at: 'type'

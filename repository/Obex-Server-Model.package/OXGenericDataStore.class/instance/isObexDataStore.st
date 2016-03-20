@@ -1,0 +1,3 @@
+testing
+isObexDataStore
+  ^ true
