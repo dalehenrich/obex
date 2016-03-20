@@ -14,8 +14,8 @@ DESCRIPTION
   Data Sources:
     objects      New object store derived from lists of objects
     instances    New object store derived from instances of classes
-
     connectedTo  New object store derived from objects reachable from given objects
+
     orphans      New object store derived from orphaned class analysis
     objSecPolicy New object store derived from objects in given ObjectSecurityPolicies
     references   New object store derived from objects referencing given objects
@@ -50,5 +50,6 @@ EXAMPLES
   manPage subCommands
     at: 'objects' put: self obexobjectsManPage;
     at: 'instances' put: self obexinstancesManPage;
+    at: 'connectedTo' put: self obexconnectedToManPage;
     yourself.
   ^ manPage

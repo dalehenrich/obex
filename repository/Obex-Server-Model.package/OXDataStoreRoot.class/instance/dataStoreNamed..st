@@ -1,3 +1,3 @@
 accessing
-dataStoreStackNamed: dataStoreName
+dataStoreNamed: dataStoreName
   ^ self namedDataStores at: dataStoreName
