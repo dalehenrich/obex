@@ -10,7 +10,7 @@ obexconnectedToManPage
 
 SYNOPSIS
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
-                 --dataSource=<dataStore-name> | --st=<st-expression> | oop...
+                   [--dataSource=<dataStore-name> | --st=<st-expression> | oop...]
 
 DESCRIPTION
   The `object connectedTo` command creates a new data source by finding objects reachable from the 

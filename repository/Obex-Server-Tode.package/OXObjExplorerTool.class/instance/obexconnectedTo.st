@@ -2,7 +2,7 @@ obex data sources
 obexconnectedTo
   "
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
-                 --dataSource=<dataStore-name> | --st=<st-expression> | oop...
+                   [--dataSource=<dataStore-name> | --st=<st-expression> | oop...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexconnectedToManPage`"
