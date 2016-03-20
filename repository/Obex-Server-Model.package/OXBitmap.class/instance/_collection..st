@@ -1,4 +1,4 @@
-accessing
+private
 _collection: _bitmap
   _collection
     ifNil: [ _collection := TransientValue value: _bitmap ]

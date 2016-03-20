@@ -1,3 +1,4 @@
 copying
 postCopy
-  _collection := _collection copy
+  super postCopy.
+  _persistentOopArray := nil
