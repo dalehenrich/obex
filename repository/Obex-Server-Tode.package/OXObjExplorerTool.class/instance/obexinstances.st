@@ -2,7 +2,7 @@ obex data sources
 obexinstances
   "
   obex instances [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
-                 --st=<st-expression> | className...
+                 [--st=<st-expression> | className...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexinstancesManPage`"
@@ -17,10 +17,16 @@ obexinstances
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
-      subArguments isEmpty
-        ifTrue: [ self error: 'Missing required argument(s) oops. See man page for details.' ].
-      (subArguments collect: [ :className | Smalltalk at: className ]) asArray ].
+      (subArguments isEmpty
+        ifTrue: [ 
+          objIn isCollection
+            ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
+          objIn ]
+        ifFalse: [ subArguments collect: [ :className | Smalltalk at: className ] ])
+        asArray ].
   classes := classes reject: [ :class | class isBehavior not ].
+  classes isEmpty
+    ifTrue: [ self error: 'No classes in list. See man page for details.' ].
   subOptions
     at: 'type'
     ifAbsent: [ 

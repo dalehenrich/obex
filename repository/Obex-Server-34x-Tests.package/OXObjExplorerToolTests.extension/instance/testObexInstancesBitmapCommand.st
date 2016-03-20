@@ -10,4 +10,6 @@ testObexInstancesBitmapCommand
         'obex instances --type=bitmap ObexTestObject ObexTestObjectArray';
     evaluateCommandString:
         'obex instances --name=`hello world` --type=bitmap ObexTestObject ObexTestObjectArray';
+    evaluateCommandString:
+        'eval `{ObexTestObject. ObexTestObjectArray}`; obex instances';
     yourself

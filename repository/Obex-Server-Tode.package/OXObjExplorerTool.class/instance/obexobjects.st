@@ -1,7 +1,8 @@
 obex data sources
 obexobjects
   "
-  obex objects [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap|asis] --st=<st-expression> | oop... 
+  obex objects [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap|asis]
+               [--st=<st-expression> | oop...] 
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexobjectsManPage`"

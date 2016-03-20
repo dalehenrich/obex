@@ -12,4 +12,6 @@ testObexInstancesCommand
         'obex instances --type=oopArray ObexTestObject ObexTestObjectArray';
     evaluateCommandString:
         'obex instances --name=`hello world` --type=array ObexTestObject ObexTestObjectArray';
+    evaluateCommandString:
+        'eval `{ObexTestObject. ObexTestObjectArray}`; obex instances --type=oopArray';
     yourself
