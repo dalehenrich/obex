@@ -1,0 +1,3 @@
+defaults
+defaultMaxSessions
+  ^ MaxSessions

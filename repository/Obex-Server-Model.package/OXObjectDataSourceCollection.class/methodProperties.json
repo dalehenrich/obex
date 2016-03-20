@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"from:" : "dkh 03/19/2016 14:31" },
+		"from:" : "dkh 03/19/2016 14:31",
+		"listInstances:withMaxSessions:maxCpuUsage:" : "dkh 03/19/2016 17:40" },
 	"instance" : {
 		"*" : "dkh 03/19/2016 14:31",
 		"+" : "dkh 03/19/2016 14:31",

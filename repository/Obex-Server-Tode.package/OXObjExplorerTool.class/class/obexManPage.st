@@ -12,26 +12,32 @@ SYNOPSIS
 
 DESCRIPTION
   Data Sources:
-    objects    New object store derived from lists of objects
-    orphans    New object store derived from orphaned class analysis
-    instances  New object store derived from instances of classes
+    objects      New object store derived from lists of objects
+    instances    New object store derived from instances of classes
+
+    connectedTo  New object store derived from objects reachable from given objects
+    orphans      New object store derived from orphaned class analysis
+    objSecPolicy New object store derived from objects in given ObjectSecurityPolicies
+    references   New object store derived from objects referencing given objects
 
   Data Manipulation:
-    datasource New object store derived from a given data store
-    algebra    New object store derived via set algebra on given object stores
+    datasource   New object store derived from a given data store
+    algebra      New object store derived via set algebra on given object stores
 
   Data Analysis:
-    inventory  Produce an object inventory of given data source: instance and byte counts by class
-    refPaths   Produce reference paths to objects in given data source
-    parents    Produce parent references to objects in given data source
-    spectro    Produce an object inventory that includes sample instances by class as well as instance and byte counts
+    inventory    Produce an object inventory of given data source: instance and byte counts by class
+    refPaths     Produce reference paths to objects in given data source
+    parents      Produce parent references to objects in given data source
+    spectro      Produce an object inventory that includes sample instances by class as well as instance 
+                 and byte counts
 
   Visualization:
-    view       Visualize results of data analysis
+    view         Visualize results of data analysis
 
   Utility
-    clear      Clear all dataStores
-    settings   Define default values for maxPaths, maxSessions and maxPercentCPU used by repository analysis tools
+    clear        Clear all dataStores
+    settings     Define default values for maxPaths, maxSessions and maxPercentCPU used by repository 
+                 analysis tools
 
 OPTIONS
   --help [command]
