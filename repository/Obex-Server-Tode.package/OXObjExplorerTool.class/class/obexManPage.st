@@ -49,5 +49,6 @@ EXAMPLES
 '.
   manPage subCommands
     at: 'objects' put: self obexobjectsManPage;
+    at: 'instances' put: self obexinstancesManPage;
     yourself.
   ^ manPage
