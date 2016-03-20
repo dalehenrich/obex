@@ -14,7 +14,8 @@ SYNOPSIS
 
 DESCRIPTION
   The `object connectedTo` command creates a new data source by finding objects reachable from the 
-  given objects.
+  given objects. Connected objects are those objects found by following the inctances of each of the
+  objects until a leaf object (no references) is encountered.
 
   Objects may be specified as a smalltalk expression (--st), or a list of oops. The smalltalk expression 
   should return a collection of objects or an object that responds to #do:.
