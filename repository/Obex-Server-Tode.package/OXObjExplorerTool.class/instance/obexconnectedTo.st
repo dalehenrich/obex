@@ -7,25 +7,31 @@ obexconnectedTo
 
   "browse method --spec `OXObjExplorerTool class>>obexconnectedToManPage`"
 
-  | dataSource objects dataSourceClass |
+  | dataSource objectsArray dataSourceClass |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
       #('st' nil #'required').
       #('dataSource' nil #'required').
       #('type' nil #'required')}.
-  objects := subOptions
+  objectsArray := (subOptions
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
-      objects := subOptions
+      objectsArray := subOptions
         at: 'dataSource'
-        ifPresent: [ :dataSourceName | (self obexDataStoreRoot dataStoreNamed: dataSourceName) objects asArray ]
+        ifPresent: [ :dataSourceName | (self obexDataStoreRoot dataStoreNamed: dataSourceName) objects ]
         ifAbsent: [ 
           subArguments isEmpty
-            ifTrue: [ self error: 'Missing required argument(s) oops. See man page for details.' ].
-          (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ])
-            asArray ] ].
+            ifTrue: [ 
+              objIn isObexDataStore
+                ifTrue: [ objIn objects ]
+                ifFalse: [ 
+                  objIn isCollection
+                    ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
+                  objIn ] ]
+            ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ] ] ])
+    asArray.
   subOptions
     at: 'type'
     ifAbsent: [ 
@@ -54,7 +60,7 @@ obexconnectedTo
                           OXBitmap ]
                         ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ].
   System commit.
-  dataSource := dataSourceClass findObjectsConnectedTo: objects.
+  dataSource := dataSourceClass findObjectsConnectedTo: objectsArray.
   ^ subOptions
     at: 'name'
     ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]

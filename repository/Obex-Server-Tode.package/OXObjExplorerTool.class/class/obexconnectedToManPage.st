@@ -17,8 +17,10 @@ DESCRIPTION
   given objects. Connected objects are those objects found by following the inctances of each of the
   objects until a leaf object (no references) is encountered.
 
-  Objects may be specified as a smalltalk expression (--st), or a list of oops. The smalltalk expression 
-  should return a collection of objects or an object that responds to #do:.
+  Objects may be specified as a smalltalk expression (--st), a list of oops, or from objIn. The smalltalk 
+  expression should return a collection of objects or an object that responds to #asArray. objIn must be a
+  collection of objects, an object that responds to #asArray, or a data store (subclass of 
+  GSGenericDataStore) otherwise an error will be thrown.
 
   With the --dataSource option you can use another data source as the list of objects.
 
@@ -41,5 +43,7 @@ SEE ALSO
 
   obex instances --name=`test resource classes` ObexTestObject ObexTestObjectArray
   obex connectedTo --type=oopArray --dataSource=`test resource classes`
+
+  obex instances ObexTestObject ObexTestObjectArray; obex connectedTo --type=oopArray
 '.
   ^ manPage

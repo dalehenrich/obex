@@ -18,7 +18,8 @@ DESCRIPTION
 
   Class names may be explicitly specified on the command line, as a smalltalk expression (--st) or from 
   objIn. The class name arguments must match the name of a class exactly. If the --st option is used, the 
-  smalltalk expression must return a collection of classes. objIn must be a collection of classes.
+  smalltalk expression must return a collection of classes or an object that responds to #asArray. objIn 
+  must be a collection of classes or an object that responds to #asArray.
 
   For more information on the --type options and data sources, see the `man obex objects`.
 

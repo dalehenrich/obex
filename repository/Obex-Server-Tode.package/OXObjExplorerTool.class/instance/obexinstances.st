@@ -7,15 +7,15 @@ obexinstances
 
   "browse method --spec `OXObjExplorerTool class>>obexinstancesManPage`"
 
-  | dataSourceClass classes dataSource |
+  | dataSourceClass classesArray dataSource |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
       #('st' nil #'required').
       #('type' nil #'required')}.
-  classes := subOptions
+  classesArray := subOptions
     at: 'st'
-    ifPresent: [ :expression | expression evaluate ]
+    ifPresent: [ :expression | expression evaluate asArray ]
     ifAbsent: [ 
       (subArguments isEmpty
         ifTrue: [ 
@@ -24,8 +24,8 @@ obexinstances
           objIn ]
         ifFalse: [ subArguments collect: [ :className | Smalltalk at: className ] ])
         asArray ].
-  classes := classes reject: [ :class | class isBehavior not ].
-  classes isEmpty
+  classesArray := classesArray reject: [ :class | class isBehavior not ].
+  classesArray isEmpty
     ifTrue: [ self error: 'No classes in list. See man page for details.' ].
   subOptions
     at: 'type'
@@ -56,7 +56,7 @@ obexinstances
                         ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ].
   System commit.
   dataSource := dataSourceClass
-    listInstances: classes
+    listInstances: classesArray
     withMaxSessions: self defaultMaxSessions
     maxCpuUsage: self defaultMaxPercentCpu.
   ^ subOptions

@@ -17,9 +17,8 @@ DESCRIPTION
   analyses. The `obex objects` command adds a new data store to the stack. 
 
   Objects may be specified as a smalltalk expression (--st), a list of oops, or from objIn. The smalltalk 
-  expression should return a collection of objects or an object that responds to #asArray. objIn must be a
-  collection of objects or a data store (subclass of GSGenericDataStore) otherwise an error will be 
-  thrown.
+  expression should return a collection of objects. objIn must be a collection of objects or a data store 
+  (subclass of GSGenericDataStore) otherwise an error will be thrown.
 
   The type of storage used is controlled by the --type option. The `array` and `set` types store the 
   objects in either an Array or IdentitySet, the objects are stored as objects. The `oopArray` and 

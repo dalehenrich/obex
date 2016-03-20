@@ -11,4 +11,6 @@ testObexConnectedToBitmapCommand
     evaluateCommandString: 'obex connectedTo --type=bitmap ' , oop printString;
     evaluateCommandString:
         'obex connectedTo --name=`hello world` --type=bitmap ' , oop printString;
+    evaluateCommandString:
+        'obex instances ObexTestObject ObexTestObjectArray; obex connectedTo';
     yourself

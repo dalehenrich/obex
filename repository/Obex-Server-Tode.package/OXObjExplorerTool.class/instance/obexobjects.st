@@ -17,7 +17,7 @@ obexobjects
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
-      (subArguments isEmpty
+      subArguments isEmpty
         ifTrue: [ 
           objIn isObexDataStore
             ifTrue: [ objIn objects ]
@@ -25,8 +25,7 @@ obexobjects
               objIn isCollection
                 ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
               objIn ] ]
-        ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ])
-        asArray ].
+        ifFalse: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ] ].
   subOptions
     at: 'type'
     ifAbsent: [ 
