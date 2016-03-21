@@ -2,7 +2,7 @@ obex data sources
 obexconnectedTo
   "
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
-                   [--dataSource=<dataStore-name> | --st=<st-expression> | oop...]
+                   [--st=<st-expression> | oop...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexconnectedToManPage`"
@@ -12,25 +12,20 @@ obexconnectedTo
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
       #('st' nil #'required').
-      #('dataSource' nil #'required').
       #('type' nil #'required')}.
   objectsArray := (subOptions
     at: 'st'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ 
-      objectsArray := subOptions
-        at: 'dataSource'
-        ifPresent: [ :dataSourceName | (self obexDataStoreRoot dataStoreNamed: dataSourceName) objects ]
-        ifAbsent: [ 
-          subArguments isEmpty
-            ifTrue: [ 
-              objIn isObexDataStore
-                ifTrue: [ objIn objects ]
-                ifFalse: [ 
-                  objIn isCollection
-                    ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
-                  objIn ] ]
-            ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ] ] ])
+      subArguments isEmpty
+        ifTrue: [ 
+          objIn isObexDataStore
+            ifTrue: [ objIn objects ]
+            ifFalse: [ 
+              objIn isCollection
+                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
+              objIn ] ]
+        ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ] ])
     asArray.
   subOptions
     at: 'type'

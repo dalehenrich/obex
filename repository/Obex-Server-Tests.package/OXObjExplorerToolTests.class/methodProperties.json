@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testObexConnectedToCommand" : "dkh 03/20/2016 11:03",
+		"testObexConnectedToCommand" : "dkh 03/20/2016 18:56",
+		"testObexDataStoreCommand" : "dkh 03/20/2016 19:38",
 		"testObexInstancesCommand" : "dkh 03/20/2016 10:02",
 		"testObexObjectsCommand" : "dkh 03/20/2016 09:47" } }

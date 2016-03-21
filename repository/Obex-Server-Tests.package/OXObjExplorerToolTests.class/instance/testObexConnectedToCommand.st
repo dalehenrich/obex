@@ -15,9 +15,5 @@ testObexConnectedToCommand
     evaluateCommandString:
         'obex connectedTo --name=`hello world` --type=set ' , oop printString;
     evaluateCommandString:
-        'obex instances --name=`test resource classes` --type=array ObexTestObject';
-    evaluateCommandString:
-        'obex connectedTo --type=oopArray --dataSource=`test resource classes`';
-    evaluateCommandString:
         'obex instances --type=oopArray ObexTestObject ObexTestObjectArray; obex connectedTo --type=oopArray';
     yourself

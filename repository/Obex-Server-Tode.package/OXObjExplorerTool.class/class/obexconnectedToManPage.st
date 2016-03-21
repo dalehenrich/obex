@@ -10,7 +10,7 @@ obexconnectedToManPage
 
 SYNOPSIS
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
-                   [--dataSource=<dataStore-name> | --st=<st-expression> | oop...]
+                   [--st=<st-expression> | oop...]
 
 DESCRIPTION
   The `object connectedTo` command creates a new data source by finding objects reachable from the 
@@ -21,8 +21,6 @@ DESCRIPTION
   expression should return a collection of objects or an object that responds to #asArray. objIn must be a
   collection of objects, an object that responds to #asArray, or a data store (subclass of 
   GSGenericDataStore) otherwise an error will be thrown.
-
-  With the --dataSource option you can use another data source as the list of objects.
 
   For more information on the --type options and data sources, see the `man obex objects`.
 
@@ -41,9 +39,7 @@ SEE ALSO
 
   obex connectedTo --name=`connected leaf objects` --type=oopArray --st=`ObexTestResource current simpleLeaves`
 
-  obex instances --name=`test resource classes` ObexTestObject ObexTestObjectArray
-  obex connectedTo --type=oopArray --dataSource=`test resource classes`
-
   obex instances ObexTestObject ObexTestObjectArray; obex connectedTo --type=oopArray
+  obex dataStore --stackId=object; obex connectedTo --type=oopArray
 '.
   ^ manPage

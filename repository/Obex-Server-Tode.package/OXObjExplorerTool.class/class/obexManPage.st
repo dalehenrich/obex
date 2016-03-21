@@ -21,7 +21,7 @@ DESCRIPTION
     references   New object store derived from objects referencing given objects
 
   Data Manipulation:
-    datasource   New object store derived from a given data store
+    dataStore    New object store derived from an existing data store
     algebra      New object store derived via set algebra on given object stores
 
   Data Analysis:
@@ -51,5 +51,6 @@ EXAMPLES
     at: 'objects' put: self obexobjectsManPage;
     at: 'instances' put: self obexinstancesManPage;
     at: 'connectedTo' put: self obexconnectedToManPage;
+    at: 'dataStore' put: self obexdataStoreManPage;
     yourself.
   ^ manPage
