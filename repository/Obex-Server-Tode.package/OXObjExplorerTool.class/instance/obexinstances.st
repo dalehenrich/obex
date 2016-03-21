@@ -19,9 +19,12 @@ obexinstances
     ifAbsent: [ 
       (subArguments isEmpty
         ifTrue: [ 
-          objIn isCollection
-            ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
-          objIn ]
+          objIn isObexDataStore
+            ifTrue: [ objIn objects ]
+            ifFalse: [ 
+              objIn isCollection
+                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
+              objIn ] ]
         ifFalse: [ subArguments collect: [ :className | Smalltalk at: className ] ])
         asArray ].
   classesArray := classesArray reject: [ :class | class isBehavior not ].
