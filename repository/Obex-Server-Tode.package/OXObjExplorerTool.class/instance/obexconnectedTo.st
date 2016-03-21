@@ -1,4 +1,4 @@
-obex data sources
+obex data analysis
 obexconnectedTo
   "
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]

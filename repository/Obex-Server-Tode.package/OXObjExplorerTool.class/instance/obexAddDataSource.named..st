@@ -1,6 +1,7 @@
 obex data sources
 obexAddDataSource: dataSource named: aStringOrNil
   | dataStore |
+  dataSource persist.
   dataStore := OXObjectDataStore new
     objects: dataSource;
     yourself.

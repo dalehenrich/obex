@@ -7,4 +7,12 @@ installOn: aTDTopezServer
     registerEditorClass: OXClientObjectElementBuilder
       for: Object
       aspect: #'navigateOX';
-    yourself
+    yourself.
+  Smalltalk
+    at: #'GsBitmap'
+    ifPresent: [ :cls | 
+      TDTopezServer
+        registerBuilderClass: TDGsBitmapNodeBuilder
+          for: GsBitmap
+          aspect: #'view';
+        yourself ]
