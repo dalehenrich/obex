@@ -1,4 +1,4 @@
-tests
+*obex-server-34x-tests
 testObexObjectsCommandBitmapAsis
   "ensure that asis type is viable"
 
