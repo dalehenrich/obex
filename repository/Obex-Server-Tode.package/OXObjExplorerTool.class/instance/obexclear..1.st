@@ -1,4 +1,4 @@
-obex
+obex utilities
 obexclear
   "
   obex clear

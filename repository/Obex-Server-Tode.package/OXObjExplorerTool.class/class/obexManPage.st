@@ -36,7 +36,8 @@ DESCRIPTION
     view         Visualize results of data analysis
 
   Utility
-    clear        Clear all dataStores
+    clear        Clear obex data stores
+
     settings     Define default values for maxPaths, maxSessions and maxPercentCPU used by repository 
                  analysis tools
 
@@ -53,5 +54,6 @@ EXAMPLES
     at: 'instances' put: self obexinstancesManPage;
     at: 'connectedTo' put: self obexconnectedToManPage;
     at: 'dataStore' put: self obexdataStoreManPage;
+    at: 'clear' put: self obexclearManPage;
     yourself.
   ^ manPage

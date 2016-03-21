@@ -1,4 +1,4 @@
-obex
+obex man pages
 obexclearManPage
   | manPage |
   manPage := TDManPage
@@ -6,14 +6,20 @@ obexclearManPage
     sourceMethod: self name asString , '>>obexclear'
     fromString:
       'NAME
-  obex clear - Clear reference path cache
+  obex clear - Clear obex data stores
 
 SYNOPSIS
   obex clear
 
 DESCRIPTION
+  Reset the persistent data stores for obex.
 
 EXAMPLES
+  obex -h
+
   obex clear 
+
+SEE ALSO
+  obex --help objects
 '.
   ^ manPage

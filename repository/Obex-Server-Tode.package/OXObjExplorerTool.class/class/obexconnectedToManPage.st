@@ -33,11 +33,8 @@ SEE ALSO
   obex connectedTo 26355713 26355457 26420993
   obex connectedTo --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
 
-  obex connectedTo --type=oopArray --st=`ObexTestResource current simpleLeaves`
-  obex connectedTo --type=set --st=`ObexTestResource current simpleLeaves`
-  obex connectedTo --type=bitmap --st=`ObexTestResource current simpleLeaves`
-
-  obex connectedTo --name=`connected leaf objects` --type=oopArray --st=`ObexTestResource current simpleLeaves`
+  obex connectedTo --name=`connected leaf objects` --type=oopArray \
+                  --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
 
   obex instances ObexTestObject ObexTestObjectArray; obex connectedTo --type=oopArray
   obex dataStore --stackId=object; obex connectedTo --type=oopArray
