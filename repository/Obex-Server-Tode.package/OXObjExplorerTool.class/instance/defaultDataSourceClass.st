@@ -1,6 +1,3 @@
 defaults
 defaultDataSourceClass
-  ^ Smalltalk
-    at: #'GsBitmap'
-    ifPresent: [ :cls | OXBitmap ]
-    ifAbsent: [ OXOopArray ]
+  ^ (Smalltalk at: #'GsBitmap') ifNotNil: [ OXBitmap ] ifNil: [ OXOopArray ]

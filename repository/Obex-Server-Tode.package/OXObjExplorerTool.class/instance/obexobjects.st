@@ -50,7 +50,8 @@ obexobjects
                         ifFalse: [ 
                           type = 'asis'
                             ifTrue: [ objects ]
-                            ifFalse: [ self defaultDataSourceClass ] ] ] ] ] ] ].
+                            ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ] ]
+    ifAbsent: [ self defaultDataSourceClass from: objects ].
   ^ subOptions
     at: 'name'
     ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]

@@ -48,7 +48,8 @@ obexconnectedTo
                             at: #'GsBitmap'
                             ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
                           OXBitmap ]
-                        ifFalse: [ self defaultDataSourceClass ] ] ] ] ] ].
+                        ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ]
+    ifAbsent: [ self defaultDataSourceClass ].
   dataStoreNameOrNil := subOptions
     at: 'name'
     ifPresent: [ :dataStoreName | dataStoreName ]
