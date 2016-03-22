@@ -1,4 +1,4 @@
-obex data sources
+obex instances
 obexinstances
   "
   obex instances [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
@@ -7,7 +7,7 @@ obexinstances
 
   "browse method --spec `OXObjExplorerTool class>>obexinstancesManPage`"
 
-  | dataSourceClass classesArray dataSource |
+  | classesArray dataSourceClass dataStoreNameOrNil |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
@@ -53,12 +53,11 @@ obexinstances
                           OXBitmap ]
                         ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ]
     ifAbsent: [ self defaultDataSourceClass ].
-  System commit.
-  dataSource := dataSourceClass
-    listInstances: classesArray
-    withMaxSessions: self defaultMaxSessions
-    maxCpuUsage: self defaultMaxPercentCpu.
-  ^ subOptions
+  dataStoreNameOrNil := subOptions
     at: 'name'
-    ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]
-    ifAbsent: [ self obexAddDataSource: dataSource ]
+    ifPresent: [ :dataStoreName | dataStoreName ]
+    ifAbsent: [  ].
+  ^ self
+    obexInstancesOf: classesArray
+    using: dataSourceClass
+    named: dataStoreNameOrNil

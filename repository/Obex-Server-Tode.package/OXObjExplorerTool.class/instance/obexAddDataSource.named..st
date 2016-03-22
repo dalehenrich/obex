@@ -1,4 +1,4 @@
-obex data sources
+data sources
 obexAddDataSource: dataSource named: aStringOrNil
   | dataStore |
   dataSource isObexDataSource

@@ -1,4 +1,4 @@
-obex
+data sources
 obexRootDataStoreName
   ^ self options
     at: 'dataStore'

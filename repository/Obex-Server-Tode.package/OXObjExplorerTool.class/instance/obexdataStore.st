@@ -1,4 +1,4 @@
-obex
+data sources
 obexdataStore
   "
   obex dataStore --stackId=objectInventory|objects|parentsOf|referencePaths|spectro | <dataStore-name>

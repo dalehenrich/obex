@@ -1,4 +1,4 @@
-obex data sources
+obex objects
 obexobjects
   "
   obex objects [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap|asis]
@@ -7,7 +7,7 @@ obexobjects
 
   "browse method --spec `OXObjExplorerTool class>>obexobjectsManPage`"
 
-  | dataSource objects |
+  | dataSourceClass objects dataStoreNameOrNil |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
@@ -26,33 +26,33 @@ obexobjects
                 ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
               objIn ] ]
         ifFalse: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ] ].
-  dataSource := subOptions
+  dataSourceClass := subOptions
     at: 'type'
     ifPresent: [ :type | 
       type = 'array'
-        ifTrue: [ OXObjectArray from: objects ]
+        ifTrue: [ OXObjectArray ]
         ifFalse: [ 
           type = 'set'
-            ifTrue: [ OXObjectIdentitySet from: objects ]
+            ifTrue: [ OXObjectIdentitySet ]
             ifFalse: [ 
               type = 'oopArray'
-                ifTrue: [ OXOopArray from: objects ]
+                ifTrue: [ OXOopArray ]
                 ifFalse: [ 
                   type = 'oopSet'
-                    ifTrue: [ OXOopIdentitySet from: objects ]
+                    ifTrue: [ OXOopIdentitySet ]
                     ifFalse: [ 
                       type = 'bitmap'
                         ifTrue: [ 
                           Smalltalk
                             at: #'GsBitmap'
                             ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
-                          OXBitmap from: objects ]
+                          OXBitmap ]
                         ifFalse: [ 
                           type = 'asis'
-                            ifTrue: [ objects ]
-                            ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ] ]
-    ifAbsent: [ self defaultDataSourceClass from: objects ].
-  ^ subOptions
+                            ifTrue: [ nil ]
+                            ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ] ].
+  dataStoreNameOrNil := subOptions
     at: 'name'
-    ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]
-    ifAbsent: [ self obexAddDataSource: dataSource ]
+    ifPresent: [ :dataStoreName | dataStoreName ]
+    ifAbsent: [  ].
+  ^ self obexObjects: objects for: dataSourceClass named: dataStoreNameOrNil
