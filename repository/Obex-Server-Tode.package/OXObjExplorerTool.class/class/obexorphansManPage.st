@@ -13,6 +13,8 @@ SYNOPSIS
 
 DESCRIPTION
 
+ additional case: class var reference to a class, then add new version of the class and remove from the class history ....
+
 EXAMPLES
   obex orphans 
   obex view --detective=orphans

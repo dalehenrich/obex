@@ -45,8 +45,7 @@ obexspectro
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ #() ].
-  srcDataStore := (self obexDataStoreRoot dataStores
-    perform: dataStoreKey asSymbol) top.
+  srcDataStore := (self obexDataStoreRoot perform: dataStoreKey asSymbol) top.
   srcDataStore
     parentLimit: classLimit;
     excludedArray: excludeArray.
