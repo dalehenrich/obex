@@ -30,11 +30,6 @@ obexinstances
   classesArray := classesArray reject: [ :class | class isBehavior not ].
   classesArray isEmpty
     ifTrue: [ self error: 'No classes in list. See man page for details.' ].
-  subOptions
-    at: 'type'
-    ifAbsent: [ 
-      "default type"
-      subOptions at: 'type' put: 'bitmap' ].
   dataSourceClass := subOptions
     at: 'type'
     ifPresent: [ :type | 
@@ -56,7 +51,7 @@ obexinstances
                             at: #'GsBitmap'
                             ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
                           OXBitmap ]
-                        ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ].
+                        ifFalse: [ self defaultDataSourceClass ] ] ] ] ] ].
   System commit.
   dataSource := dataSourceClass
     listInstances: classesArray

@@ -1,4 +1,4 @@
-obex data analysis
+obex connectedTo
 obexconnectedTo
   "
   obex connectedTo [--name=<dataStore-name>] [--type=array|set|oopArray|oopSet|bitmap]
@@ -7,7 +7,7 @@ obexconnectedTo
 
   "browse method --spec `OXObjExplorerTool class>>obexconnectedToManPage`"
 
-  | dataSource objectsArray dataSourceClass |
+  | dataStoreNameOrNil objectsArray dataSourceClass |
   self
     getSubcommandOptsMixedLongShort:
       {#('name' nil #'required').
@@ -27,11 +27,6 @@ obexconnectedTo
               objIn ] ]
         ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ] ])
     asArray.
-  subOptions
-    at: 'type'
-    ifAbsent: [ 
-      "default type"
-      subOptions at: 'type' put: 'bitmap' ].
   dataSourceClass := subOptions
     at: 'type'
     ifPresent: [ :type | 
@@ -53,10 +48,12 @@ obexconnectedTo
                             at: #'GsBitmap'
                             ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
                           OXBitmap ]
-                        ifFalse: [ self error: 'Unknown type: ' , type printString , '. See man page for details' ] ] ] ] ] ].
-  System commit.
-  dataSource := dataSourceClass findObjectsConnectedTo: objectsArray.
-  ^ subOptions
+                        ifFalse: [ self defaultDataSourceClass ] ] ] ] ] ].
+  dataStoreNameOrNil := subOptions
     at: 'name'
-    ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]
-    ifAbsent: [ self obexAddDataSource: dataSource ]
+    ifPresent: [ :dataStoreName | dataStoreName ]
+    ifAbsent: [  ].
+  ^ self
+    obexFindObjectsConnectedTo: objectsArray
+    using: dataSourceClass
+    named: dataStoreNameOrNil

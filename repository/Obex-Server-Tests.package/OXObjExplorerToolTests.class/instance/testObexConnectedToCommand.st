@@ -12,6 +12,7 @@ testObexConnectedToCommand
     evaluateCommandString: 'obex connectedTo --type=set ' , oop printString;
     evaluateCommandString: 'obex connectedTo --type=oopArray ' , oop printString;
     evaluateCommandString: 'obex connectedTo --type=oopSet ' , oop printString;
+    evaluateCommandString: 'obex connectedTo ' , oop printString;
     evaluateCommandString:
         'obex connectedTo --name=`hello world` --type=set ' , oop printString;
     evaluateCommandString:

@@ -26,11 +26,6 @@ obexobjects
                 ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
               objIn ] ]
         ifFalse: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ] ].
-  subOptions
-    at: 'type'
-    ifAbsent: [ 
-      "default type"
-      subOptions at: 'type' put: 'bitmap' ].
   dataSource := subOptions
     at: 'type'
     ifPresent: [ :type | 
@@ -55,7 +50,7 @@ obexobjects
                         ifFalse: [ 
                           type = 'asis'
                             ifTrue: [ objects ]
-                            ifFalse: [ self error: 'Unknown type: ' , type printString ] ] ] ] ] ] ].
+                            ifFalse: [ self defaultDataSourceClass ] ] ] ] ] ] ].
   ^ subOptions
     at: 'name'
     ifPresent: [ :dataStoreName | self obexAddDataSource: dataSource named: dataStoreName ]

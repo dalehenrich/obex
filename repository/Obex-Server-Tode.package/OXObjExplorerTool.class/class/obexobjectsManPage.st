@@ -34,7 +34,7 @@ DESCRIPTION
   efficient and does not consume temp object space, so are very useful for managing large numbers of 
   objects.
 
-  The default type is `bitmap`.
+  The default type is `bitmap` for GemSTone version 3.4 and later, otherwise `oopArray`.
 
 EXAMPLES
   obex objects -h
