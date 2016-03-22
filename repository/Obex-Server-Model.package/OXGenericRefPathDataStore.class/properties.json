@@ -10,7 +10,9 @@
 		"searchObjectMap",
 		"oopToNodeMap",
 		"searchNodeMap",
-		"classNameMap" ],
+		"classNameMap",
+		"maxThreads",
+		"maxCpuUsage" ],
 	"name" : "OXGenericRefPathDataStore",
 	"pools" : [
 		 ],
