@@ -5,9 +5,9 @@ listReferences: objectsArray limit: limit withMaxThreads: maxSessions maxCpuUsag
   maxCpuUsage := maxPercentCpu.
   self
     searchResult:
-      (SystemRepository
-        listReferences: objectsArray
-        withLimit: limit
-        withMaxThreads: maxThreads
-        maxCpuUsage: maxCpuUsage).
+      (self
+        rawListReferences: objectsArray
+        limit: limit
+        withMaxThreads: maxSessions
+        maxCpuUsage: maxPercentCpu).
   self analyze
