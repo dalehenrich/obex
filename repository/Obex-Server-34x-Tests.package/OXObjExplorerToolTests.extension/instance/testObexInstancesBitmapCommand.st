@@ -3,13 +3,14 @@ testObexInstancesBitmapCommand
   "run without errors"
 
   self
-    evaluateCommandString: 'obex instances ObexTestObject ObexTestObjectArray';
     evaluateCommandString:
-        'obex instances --type=bitmap --st=`{ObexTestObject.  ObexTestObjectArray}`';
+        'obex instances ObexTestSomeObject ObexTestSomeObjectByte';
     evaluateCommandString:
-        'obex instances --type=bitmap ObexTestObject ObexTestObjectArray';
+        'obex instances --type=bitmap --st=`{ObexTestSomeObject.  ObexTestSomeObjectByte}`';
     evaluateCommandString:
-        'obex instances --name=`hello world` --type=bitmap ObexTestObject ObexTestObjectArray';
+        'obex instances --type=bitmap ObexTestSomeObject ObexTestSomeObjectByte';
     evaluateCommandString:
-        'eval `{ObexTestObject. ObexTestObjectArray}`; obex instances';
+        'obex instances --name=`hello world` --type=bitmap ObexTestSomeObject ObexTestSomeObjectByte';
+    evaluateCommandString:
+        'eval `{ObexTestSomeObject. ObexTestSomeObjectByte}`; obex instances';
     yourself

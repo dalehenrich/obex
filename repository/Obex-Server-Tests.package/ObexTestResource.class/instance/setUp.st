@@ -6,4 +6,5 @@ setUp
   self
     setUpSimpleData;
     setUpOrphanClasses;
+    setUpSomeData;
     yourself

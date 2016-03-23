@@ -3,11 +3,11 @@ testObexObjectsCommand
   "run without errors"
 
   | oop |
-  oop := ObexTestResource current simpleLeaves asOop.
+  oop := ObexTestResource current someData asOop.
   self
     evaluateCommandString: 'obex --help objects';
     evaluateCommandString:
-        'obex objects --type=oopSet --st=`ObexTestResource current simpleLeaves`';
+        'obex objects --type=oopSet --st=`ObexTestResource current someData`';
     evaluateCommandString: 'obex objects --type=array ' , oop printString;
     evaluateCommandString: 'obex objects --type=set ' , oop printString;
     evaluateCommandString: 'obex objects --type=oopArray ' , oop printString;

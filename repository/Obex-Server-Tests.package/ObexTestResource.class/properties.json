@@ -8,7 +8,8 @@
 	"instvars" : [
 		"simpleData",
 		"simpleLeaves",
-		"simpleDataExcludedParents" ],
+		"simpleDataExcludedParents",
+		"someData" ],
 	"name" : "ObexTestResource",
 	"pools" : [
 		 ],

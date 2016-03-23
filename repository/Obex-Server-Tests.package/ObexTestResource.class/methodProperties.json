@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"setUp" : "dkh 03/16/2016 11:03",
+		"setUp" : "dkh 03/23/2016 11:14",
 		"setUpBug46116" : "dkh 03/16/2016 11:05",
 		"setUpOrphanClasses" : "dkh 03/16/2016 11:05",
 		"setUpSimpleData" : "dkh 03/16/2016 15:20",
+		"setUpSomeData" : "dkh 03/23/2016 11:35",
 		"setupOrphanClass1" : "dkh 03/16/2016 11:17",
 		"simpleData" : "dkh 01/14/2016 17:40",
 		"simpleDataExcludedParents" : "dkh 03/15/2016 11:58",
@@ -13,4 +14,5 @@
 		"simpleLeaves" : "dkh 01/14/2016 18:01",
 		"simpleLeaves:" : "dkh 03/16/2016 15:18",
 		"simpleObjects" : "dkh 03/14/2016 15:22",
+		"someData" : "dkh 03/23/2016 11:15",
 		"withoutClassMigrationDo:" : "dkh 03/16/2016 11:14" } }

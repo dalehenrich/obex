@@ -3,14 +3,14 @@ testObexConnectedToBitmapCommand
   "run without errors"
 
   | oop |
-  oop := ObexTestResource current simpleLeaves asOop.
+  oop := ObexTestResource current someData asOop.
   self
     evaluateCommandString: 'obex connectedTo ' , oop printString;
     evaluateCommandString:
-        'obex connectedTo --type=bitmap --st=`ObexTestResource current simpleLeaves`';
+        'obex connectedTo --type=bitmap --st=`ObexTestResource current someData`';
     evaluateCommandString: 'obex connectedTo --type=bitmap ' , oop printString;
     evaluateCommandString:
         'obex connectedTo --name=`hello world` --type=bitmap ' , oop printString;
     evaluateCommandString:
-        'obex instances ObexTestObject ObexTestObjectArray; obex connectedTo';
+        'obex instances ObexTestSomeObject ObexTestSomeObjectByte; obex connectedTo';
     yourself

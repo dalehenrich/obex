@@ -3,7 +3,7 @@ testObexObjectsCommandBitmapAsis
   "ensure that asis type is viable"
 
   | oop |
-  oop := ObexTestResource current simpleLeaves asOop.
+  oop := ObexTestResource current someData asOop.
   self
     evaluateCommandString:
         'obex objects --name=classes --type=asis --st=`{ObexTestObject. ObexTestObjectArray}`';

@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "ObexGenericDataSourceCollectionsTestCase",
+	"name" : "ObexTestSomeObjectByte",
 	"pools" : [
 		 ],
-	"super" : "ObexGenericTestCase",
-	"type" : "normal" }
+	"super" : "ObexTestObjectByte",
+	"type" : "bytes" }

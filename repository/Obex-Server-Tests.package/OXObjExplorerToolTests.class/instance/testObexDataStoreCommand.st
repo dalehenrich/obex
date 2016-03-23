@@ -3,7 +3,7 @@ testObexDataStoreCommand
   "run without errors"
 
   | oop |
-  oop := ObexTestResource current simpleLeaves asOop.
+  oop := ObexTestResource current someData asOop.
   self
     evaluateCommandString: 'obex --help dataStore';
     evaluateCommandString:
