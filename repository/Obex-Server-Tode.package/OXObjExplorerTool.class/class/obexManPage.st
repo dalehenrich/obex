@@ -55,7 +55,7 @@ EXAMPLES
     at: 'connectedTo' put: self obexconnectedToManPage;
     at: 'dataStore' put: self obexdataStoreManPage;
     at: 'clear' put: self obexclearManPage;
-    at: 'references' put self obexreferencesManPage;
-    at: 'view' put self obexviewManPage;
+    at: 'references' put: self obexreferencesManPage;
+    at: 'view' put: self obexviewManPage;
     yourself.
   ^ manPage
