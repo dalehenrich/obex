@@ -3,6 +3,9 @@ obexReferencesTo: objectsArray withMaxSessions: maxSessions maxCpuUsage: maxPerc
   | dataStore results |
   dataStore := OXReferencesToDataStore new
     listReferences: objectsArray
-    limit: 0
-    withMaxThreads: maxSessions
-    maxCpuUsage: maxPercentCpu
+      limit: 0
+      withMaxThreads: maxSessions
+      maxCpuUsage: maxPercentCpu;
+    dataStoreName: dataStoreNameOrNil;
+    yourself.
+  ^ dataStore pushOnStack: #'references' in: self obexDataStoreRoot

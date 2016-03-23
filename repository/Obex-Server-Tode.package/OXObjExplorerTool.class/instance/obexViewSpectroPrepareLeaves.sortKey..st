@@ -1,4 +1,4 @@
-obex view
+obex viewX
 obexViewSpectroPrepareLeaves: obexDataStore sortKey: sortKey
   | dataStore leaves samples sel |
   dataStore := obexDataStore objectInventory top.

@@ -1,4 +1,4 @@
-obex view
+obex viewX
 obexViewReferenceDective: obexDataStore
   self
     obexViewDective: obexDataStore referencePaths top

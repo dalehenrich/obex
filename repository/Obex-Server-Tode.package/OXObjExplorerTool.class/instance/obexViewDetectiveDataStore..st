@@ -1,8 +1,9 @@
-obex viewX
-obexViewDective: dataStore initalNodes: initialNodes
-  | clientElement |
+obex view
+obexViewDetectiveDataStore: detectiveDataStore
+  | clientElement initialNodes |
+  initialNodes := self obexProcessNodes: detectiveDataStore searchNodeMap keys.
   clientElement := OXPointerDetectiveClientElement new
-    theObject: dataStore;
+    theObject: detectiveDataStore;
     usePersistentClientElementCache: true;
     windowBuilder: self;
     editorAspectSelector: #'activateObjectExplorerEditor';

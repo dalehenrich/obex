@@ -1,4 +1,4 @@
-obex view
+obex viewX
 obexViewClassHistogram: dataStore sorted: sortedList label: label selector: selector filter: regexPattern limit: limit
   | clientElement viewLimit sorted |
   clientElement := OXHistogramClientElement new
