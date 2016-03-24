@@ -12,6 +12,4 @@ analyzeReferenceArray: ar node: node nodeRef: nodeRef
         lastNode addChild: theNode ].
     lastNode := theNode.
     nodeRef add: theNode ].
-  (searchNodeMap at: node ifAbsent: [ searchNodeMap at: node put: {} ])
-    add: nodeRef.
   self commit

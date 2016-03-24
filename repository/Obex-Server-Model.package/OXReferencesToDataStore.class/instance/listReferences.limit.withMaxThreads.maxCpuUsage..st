@@ -10,4 +10,10 @@ listReferences: objectsArray limit: limit withMaxThreads: maxSessions maxCpuUsag
         limit: limit
         withMaxThreads: maxSessions
         maxCpuUsage: maxPercentCpu).
-  self analyze
+  self analyze.
+  objectsArray
+    do: [ :each | 
+      | node |
+      "searchNodeMap keys used to prime view with initial objects"
+      node := self oopToNodeMap at: each asOop.
+      searchNodeMap at: node put: #() ]

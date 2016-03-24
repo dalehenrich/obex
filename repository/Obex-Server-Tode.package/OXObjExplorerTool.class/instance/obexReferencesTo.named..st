@@ -1,7 +1,3 @@
 obex references
 obexReferencesTo: objectsArray named: dataStoreNameOrNil
-  ^ self
-    obexReferencesTo: objectsArray
-    withMaxSessions: self defaultMaxSessions
-    maxCpuUsage: self defaultMaxPercentCpu
-    named: dataStoreNameOrNil
+  ^ self obexReferencesTo: objectsArray named: dataStoreNameOrNil excluded: #()

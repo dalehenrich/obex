@@ -25,11 +25,6 @@ DESCRIPTION
   For more information on the --type options and data sources, see the `man obex objects`.
 
 EXAMPLES
-  obex -h
-
-SEE ALSO
-  obex --help connectedTo
-
   obex connectedTo 26355713 26355457 26420993
   obex connectedTo --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
 
@@ -37,6 +32,9 @@ SEE ALSO
                   --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
 
   obex instances ObexTestObject ObexTestObjectArray; obex connectedTo --type=oopArray
-  obex dataStore --stackId=object; obex connectedTo --type=oopArray
+  obex dataStore --stackId=objects; obex connectedTo --type=oopArray
+
+SEE ALSO
+  obex --help objects
 '.
   ^ manPage

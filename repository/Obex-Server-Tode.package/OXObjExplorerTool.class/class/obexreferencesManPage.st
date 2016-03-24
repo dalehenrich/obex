@@ -9,7 +9,8 @@ obexreferencesManPage
   obex references - New object store derived from objects referencing given objects
 
 SYNOPSIS
-  obex references [--name=<dataStore-name>] [--memory] [--classes] [--st=<st-expression> | oop-or-classname...]
+  obex references [--name=<dataStore-name>] [--memory] [--classes] [--exclude=<st-expression>]
+                  [--st=<st-expression> | oop-or-classname...]
 
 DESCRIPTION
   The `object references` command creates a new data source by collecting references to the given
@@ -19,7 +20,8 @@ DESCRIPTION
   For more information on the --type options and data sources, see the `man obex objects`.
 
 EXAMPLES
-  obex -h
+  obex objects --st=`ObexTestResource current someData`
+  obex dataStore --stackId=objects; obex references --exclude=`{ObexTestResource current}`
 
 SEE ALSO
   obex --help objects

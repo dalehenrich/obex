@@ -24,8 +24,6 @@ DESCRIPTION
   For more information on the --type options and data sources, see the `man obex objects`.
 
 EXAMPLES
-  obex -h
-
   obex instances ObexTestObject ObexTestObjectArray
   obex instances --name=`test resource classes` ObexTestObject ObexTestObjectArray
 
