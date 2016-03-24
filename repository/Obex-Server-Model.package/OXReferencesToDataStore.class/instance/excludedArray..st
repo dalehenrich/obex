@@ -1,6 +1,6 @@
 accessing
 excludedArray: anObject
-  excludedArray := anObject asIdentitySet.	"more efficient for our purposes"
+  excludedArray := anObject.
   false
     ifTrue: [ 
       self inMemory
@@ -9,4 +9,6 @@ excludedArray: anObject
           excludedArray
             add: self rawSearchObjectMap;
             add: self rawTargetObjects;
-            add: self rawSearchResult ] ]
+            add: self rawSearchResult;
+            add: anObject;
+            add: excludedArray ] ]

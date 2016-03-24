@@ -2,8 +2,8 @@ analysis
 analyze
   oopToNodeMap := IntegerKeyValueDictionary new.
   searchNodeMap := IdentityKeyValueDictionary new.
-  self searchObjects
-    do: [ :searchObject | 
+  self searchObjectMap
+    keysAndValuesDo: [ :searchObject :ignored | 
       | node |
       node := OXSearchNode for: searchObject in: self.
       oopToNodeMap at: searchObject asOop put: node.

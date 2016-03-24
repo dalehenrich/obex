@@ -1,6 +1,6 @@
 tests
 testInMemoryBasic
-  | simpleData obj dataStore oopToNodeMap nodes leaves excluded |
+  | simpleData obj dataStore oopToNodeMap nodes leaves excluded xNodes yNodes |
   simpleData := ObexTestObject new.
   obj := ObexTestObject1 new.
   simpleData
@@ -9,7 +9,6 @@ testInMemoryBasic
         add: obj;
         yourself).
   leaves := {obj}.
-  obj := simpleData := nil.
   excluded := {}.
   excluded
     add: leaves;
@@ -17,14 +16,15 @@ testInMemoryBasic
     add: self.
   dataStore := OXReferencesToDataStore new
     excludedArray: excluded;
-    listInMemoryReferences: leaves;
     yourself.
+  dataStore listInMemoryReferences: leaves.
   oopToNodeMap := dataStore oopToNodeMap.
-  nodes := leaves collect: [ :leaf | oopToNodeMap at: leaf asOop ].
+  xNodes := nodes := leaves collect: [ :leaf | oopToNodeMap at: leaf asOop ].
   nodes := nodes sort: [ :a :b | a printString <= b printString ].
   self
     assert:
-      (nodes collect: [ :each | each testPrintString ]) = #('ObexTestObject1, [0::1]').
+      (yNodes := nodes collect: [ :each | each testPrintString ])
+        = #('ObexTestObject1, [0::1]').
   self
     assert:
       ((nodes at: 1) parents asArray collect: [ :each | each testPrintString ])
