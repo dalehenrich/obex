@@ -14,4 +14,4 @@ customNodeLabelFor: anObject theClassName: theClassName
     ifTrue: [ 
       ^ theClassName , '[' , anObject key printString , ']' , ', '
         , anObject asOop printString ].
-  ^ 'a ' , theClassName
+  ^ nil
