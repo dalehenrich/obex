@@ -1,6 +1,6 @@
 analysis
 listReferences: objectsArray limit: limit withMaxThreads: maxSessions maxCpuUsage: maxPercentCpu
-  targetObjects := TransientValue value: objectsArray.
+  self rawTargetObjects value: objectsArray.
   maxThreads := maxSessions.
   maxCpuUsage := maxPercentCpu.
   self

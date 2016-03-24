@@ -14,6 +14,8 @@ SYNOPSIS
 DESCRIPTION
   Reset the persistent data stores for obex.
 
+  [SHOULD HAVE --name and --stackId args for clearing individual datatores] 
+
 EXAMPLES
   obex -h
 

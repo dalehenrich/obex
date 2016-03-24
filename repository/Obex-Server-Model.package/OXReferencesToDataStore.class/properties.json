@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"targetObjects" ],
+		"targetObjects",
+		"inMemory" ],
 	"name" : "OXReferencesToDataStore",
 	"pools" : [
 		 ],

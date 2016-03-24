@@ -1,3 +1,3 @@
 accessing
 searchResult
-  ^ searchResult value
+  ^ self rawSearchResult value

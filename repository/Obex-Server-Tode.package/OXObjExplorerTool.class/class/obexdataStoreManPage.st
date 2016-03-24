@@ -12,6 +12,8 @@ SYNOPSIS
   obex dataStore --stackId=objectInventory|objects|parentsOf|referencePaths|spectro | <dataStore-name>
 
 DESCRIPTION
+
+  [SHOULD HAVE args for listing names ...]
    
     
 EXAMPLES

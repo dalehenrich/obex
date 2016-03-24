@@ -1,7 +1,7 @@
 accessing
 searchResult: anArray
   | referencePathCount |
-  searchResult := TransientValue value: anArray.
+  self rawSearchResult value: anArray.
   summary := nil.
   self summary at: 'searchObjects' put: self searchObjects size.
   referencePathCount := 0.

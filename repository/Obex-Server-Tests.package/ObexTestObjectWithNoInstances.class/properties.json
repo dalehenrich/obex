@@ -1,0 +1,14 @@
+{
+	"category" : "Obex-Server-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 03/24/2016 11:47",
+	"instvars" : [
+		 ],
+	"name" : "ObexTestObjectWithNoInstances",
+	"pools" : [
+		 ],
+	"super" : "ObexTestObject",
+	"type" : "normal" }

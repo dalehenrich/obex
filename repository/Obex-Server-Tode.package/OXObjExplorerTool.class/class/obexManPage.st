@@ -26,7 +26,6 @@ DESCRIPTION
 
     inventory    Produce an object inventory of given data source: instance and byte counts by class
     refPaths     Produce reference paths to objects in given data source
-    parents      Produce parent references to objects in given data source
     spectro      Produce an object inventory that includes sample instances by class as well as instance 
                  and byte counts
     orphans      New object store derived from orphaned class analysis
@@ -39,7 +38,7 @@ DESCRIPTION
     clear        Clear obex data stores
 
     settings     Define default values for maxPaths, maxSessions and maxPercentCPU used by repository 
-                 analysis tools
+                 analysis tools (--fast --slow, individual tuning)
 
 OPTIONS
   --help [command]

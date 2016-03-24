@@ -9,7 +9,7 @@ obexreferencesManPage
   obex references - New object store derived from objects referencing given objects
 
 SYNOPSIS
-  obex references [--name=<dataStore-name>] [--memory] [--classes] [--exclude=<st-expression>]
+  obex references [--name=<dataStore-name>] [--memory | --classes] [--exclude=<st-expression>]
                   [--st=<st-expression> | oop-or-classname...]
 
 DESCRIPTION
