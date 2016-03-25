@@ -5,7 +5,7 @@ analyzeReference: referenceObject node: node
     ifFalse: [ 
       referenceObject isCommitted
         ifFalse: [ ^ self ] ].
-  (self excludedArray includes: referenceObject)
+  (self excludedArray includesIdentical: referenceObject)
     ifTrue: [ ^ self ].
   theNode := self lookupNodeForObject: referenceObject rootNode: false.
   node addParent: theNode.
