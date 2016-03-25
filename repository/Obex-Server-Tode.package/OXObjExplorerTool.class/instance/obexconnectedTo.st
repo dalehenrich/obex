@@ -13,7 +13,7 @@ obexconnectedTo
       {#('name' nil #'required').
       #('st' nil #'required').
       #('type' nil #'required')}.
-  objectsArray := self self
+  objectsArray := self
     handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
   dataSourceClass := subOptions
     at: 'type'
