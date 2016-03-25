@@ -4,7 +4,7 @@
 	"instance" : {
 		"analyze" : "dkh 03/24/2016 16:22",
 		"analyzeReference:node:" : "dkh 03/24/2016 12:05",
-		"calculateParentsOfOXNode:" : "dkh 03/24/2016 12:12",
+		"calculateParentsOfOXNode:" : "dkh 03/24/2016 17:19",
 		"excludedArray:" : "dkh 03/24/2016 16:14",
 		"inMemory" : "dkh 03/24/2016 11:59",
 		"inMemory:" : "dkh 03/24/2016 11:59",
@@ -15,4 +15,4 @@
 		"rawListReferences:limit:withMaxThreads:maxCpuUsage:" : "dkh 03/23/2016 05:38",
 		"rawSearchObjectMap" : "dkh 03/24/2016 12:41",
 		"rawTargetObjects" : "dkh 03/24/2016 12:39",
-		"searchObjectMap" : "dkh 03/24/2016 15:45" } }
+		"searchObjectMap" : "dkh 03/24/2016 17:32" } }
