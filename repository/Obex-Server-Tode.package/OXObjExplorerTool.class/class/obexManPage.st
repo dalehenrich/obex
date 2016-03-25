@@ -25,7 +25,7 @@ DESCRIPTION
     parentsOf    New object store derived from objects referencing given objects (GemStone 3.4 and later)
     references   New object store derived from objects referencing given objects
 
-    refPaths     Produce reference paths to objects in given data source
+    refPaths     Produce reference paths to objects in given data source (find all reference paths)
     spectro      Produce an object inventory that includes sample instances by class as well as instance 
                  and byte counts
     orphans      New object store derived from orphaned class analysis
