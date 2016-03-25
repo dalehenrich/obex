@@ -14,8 +14,9 @@ SYNOPSIS
 
 DESCRIPTION
   The `object references` command creates a new data source by collecting references to the given
-  objects. If the --memory option is present, the command collects references to to the given objects 
-  in memory.
+  objects using Repository>>listReferences:withLimit:withMaxThreads:maxCpuUsage:. If the --memory option 
+  is present, the command collects references to to the given objects in memory using 
+  Repository>>listReferencesInMemory:.
 
   For more information on the --type options and data sources, see the `man obex objects`.
 

@@ -14,7 +14,7 @@ SYNOPSIS
 
 DESCRIPTION
   The `object instances` command creates a new data source by collecting instances of the given
-  class names.
+  class names using Repository>>listInstances:.
 
   Class names may be explicitly specified on the command line, as a smalltalk expression (--st) or from 
   objIn. The class name arguments must match the name of a class exactly. If the --st option is used, the 

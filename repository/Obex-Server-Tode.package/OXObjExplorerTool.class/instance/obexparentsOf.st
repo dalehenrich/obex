@@ -1,8 +1,7 @@
-obex references
+obex parentsOf
 obexparentsOf
   "
-  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>]
-                  [--st=<st-expression> | oop...]
+  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--st=<st-expression> | oop...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexparentsOfManPage`"
