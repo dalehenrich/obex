@@ -13,19 +13,8 @@ obexobjects
       {#('name' nil #'required').
       #('st' nil #'required').
       #('type' nil #'required')}.
-  objects := subOptions
-    at: 'st'
-    ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ 
-      subArguments isEmpty
-        ifTrue: [ 
-          objIn isObexDataStore
-            ifTrue: [ objIn objects ]
-            ifFalse: [ 
-              objIn isCollection
-                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
-              objIn ] ]
-        ifFalse: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ] ].
+  objects := self
+    handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
   dataSourceClass := subOptions
     at: 'type'
     ifPresent: [ :type | 
@@ -45,7 +34,7 @@ obexobjects
                         ifTrue: [ 
                           Smalltalk
                             at: #'GsBitmap'
-                            ifAbsent: [ self error: 'The `bitmap` type only support in GemStone 3.4 and later' ].
+                            ifAbsent: [ self error: 'The `bitmap` type only supported in GemStone 3.4 and later' ].
                           OXBitmap ]
                         ifFalse: [ 
                           type = 'asis'

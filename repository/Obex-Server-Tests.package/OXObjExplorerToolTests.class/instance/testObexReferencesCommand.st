@@ -3,7 +3,7 @@ testObexReferencesCommand
   "run without errors"
 
   | oop |
-  oop := ObexTestResource current someData first asOop.
+  oop := ObexTestResource current someData asOop.
   self
     evaluateCommandString: 'obex --help references';
     evaluateCommandString: 'obex references ' , oop printString;

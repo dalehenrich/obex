@@ -13,20 +13,8 @@ obexconnectedTo
       {#('name' nil #'required').
       #('st' nil #'required').
       #('type' nil #'required')}.
-  objectsArray := (subOptions
-    at: 'st'
-    ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ 
-      subArguments isEmpty
-        ifTrue: [ 
-          objIn isObexDataStore
-            ifTrue: [ objIn objects ]
-            ifFalse: [ 
-              objIn isCollection
-                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
-              objIn ] ]
-        ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop asNumber ] ] ])
-    asArray.
+  objectsArray := self self
+    handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
   dataSourceClass := subOptions
     at: 'type'
     ifPresent: [ :type | 

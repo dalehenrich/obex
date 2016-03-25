@@ -13,20 +13,8 @@ obexinstances
       {#('name' nil #'required').
       #('st' nil #'required').
       #('type' nil #'required')}.
-  classesArray := subOptions
-    at: 'st'
-    ifPresent: [ :expression | expression evaluate asArray ]
-    ifAbsent: [ 
-      (subArguments isEmpty
-        ifTrue: [ 
-          objIn isObexDataStore
-            ifTrue: [ objIn objects ]
-            ifFalse: [ 
-              objIn isCollection
-                ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
-              objIn ] ]
-        ifFalse: [ subArguments collect: [ :className | Smalltalk at: className ] ])
-        asArray ].
+  classesArray := self
+    handleObjectsArrayOptionsSubArgsCollect: [ :className | Smalltalk at: className ].
   classesArray := classesArray reject: [ :class | class isBehavior not ].
   classesArray isEmpty
     ifTrue: [ self error: 'No classes in list. See man page for details.' ].
