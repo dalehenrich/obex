@@ -17,8 +17,6 @@ DESCRIPTION
    
     
 EXAMPLES
-  obex objects -h
-
   obex dataStore --stackId=objects
   obex dataStore `leaf objects`
 '.

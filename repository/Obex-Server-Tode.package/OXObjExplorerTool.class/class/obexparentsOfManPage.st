@@ -19,9 +19,15 @@ DESCRIPTION
 
 EXAMPLES
   obex objects --st=`ObexTestResource current someData`
-  obex dataStore --stackId=objects; obex parentsOf --exclude=`{ObexTestResource current}`
+  obex dataStore --stackId=objects
+  obex parentsOf --exclude=`{ObexTestResource current}`
 
   obex parentsOf 1234537
+
+  obex instances --st=`ObexTestObject subclasses`
+  eval `self objects asArray copyFrom: 1 to: 3`   # select 3 of the instances - objIn is a data store
+  obex parentsOf
+  obex view --detective
 
 SEE ALSO
   obex --help objects

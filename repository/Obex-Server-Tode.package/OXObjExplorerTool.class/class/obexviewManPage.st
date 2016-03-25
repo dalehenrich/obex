@@ -23,8 +23,6 @@ DESCRIPTION
   that have had their parents displayed are shown as purple.
 
 EXAMPLES
-  obex -h view
-
   obex objects --st=`ObexTestResource current someData`
   obex references --exclude=`{ObexTestResource current}`
   obex view --detective

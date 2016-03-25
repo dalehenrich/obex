@@ -17,8 +17,6 @@ DESCRIPTION
   [SHOULD HAVE --name and --stackId args for clearing individual datatores] 
 
 EXAMPLES
-  obex -h
-
   obex clear 
 
 SEE ALSO

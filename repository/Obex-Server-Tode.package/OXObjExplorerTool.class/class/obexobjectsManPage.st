@@ -37,8 +37,6 @@ DESCRIPTION
   The default type is `bitmap` for GemSTone version 3.4 and later, otherwise `oopArray`.
 
 EXAMPLES
-  obex objects -h
-
   obex objects 26355713 26355457 26420993
   obex objects --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
 
