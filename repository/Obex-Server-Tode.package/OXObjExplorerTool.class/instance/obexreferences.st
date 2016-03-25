@@ -1,7 +1,7 @@
 obex references
 obexreferences
   "
-  obex references [--name=<dataStore-name>] [--memory] [--exclude=<st-expression>]
+  obex references [--name=<dataStore-name>] [--memory|--parentsOf|--references] [--exclude=<st-expression>]
                   [--st=<st-expression> | oop...]
 "
 
@@ -13,7 +13,9 @@ obexreferences
       {#('name' nil #'required').
       #('st' nil #'required').
       #('exclude' nil #'required').
-      #('memory' nil #'none')}.
+      #('memory' nil #'none').
+      #('parentsOf' nil #'none').
+      #('references' nil #'none')}.
   excluded := subOptions
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]

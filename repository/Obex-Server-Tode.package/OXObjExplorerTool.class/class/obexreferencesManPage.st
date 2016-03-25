@@ -23,6 +23,8 @@ EXAMPLES
   obex objects --st=`ObexTestResource current someData`
   obex dataStore --stackId=objects; obex references --exclude=`{ObexTestResource current}`
 
+  obex references 1234537
+
   eval `| a | a := {}. a add: (1-> a). a`; obex references --memory; obex view --detective
 
 SEE ALSO
