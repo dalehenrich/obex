@@ -18,7 +18,7 @@ obexreferences
   excluded := subOptions
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ #() ].
+    ifAbsent: [ {} ].
   objectsArray := subOptions
     at: 'st'
     ifPresent: [ :expression | expression evaluate asArray ]
@@ -43,7 +43,7 @@ obexreferences
     ifAbsent: [  ].
   ^ subOptions
     at: 'memory'
-    ifPresent: [ 
+    ifPresent: [ :ignored | 
       self
         obexInMemoryReferencesTo: objectsArray
         named: dataStoreNameOrNil

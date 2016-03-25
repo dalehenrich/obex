@@ -1,4 +1,4 @@
 accessing
 excludedArray
-  excludedArray ifNil: [ ^ #() ].
+  excludedArray ifNil: [ excludedArray := #() ].
   ^ excludedArray

@@ -1,3 +1,3 @@
 ston
 excludedInstVarNames
-  ^ #(#'children' #'parents' #'clientElement' #'dataSource')
+  ^ #(#'children' #'parents' #'clientElement' #'dataSource' #'reifiedObject')

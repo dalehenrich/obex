@@ -1,3 +1,3 @@
 obex references
 obexReferencesTo: objectsArray named: dataStoreNameOrNil
-  ^ self obexReferencesTo: objectsArray named: dataStoreNameOrNil excluded: #()
+  ^ self obexReferencesTo: objectsArray named: dataStoreNameOrNil excluded: {}
