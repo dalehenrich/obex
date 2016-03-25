@@ -1,8 +1,8 @@
 obex references
 obexreferences
   "
-  obex references [--name=<dataStore-name>] [--memory | --classes] [--exclude=<st-expression>]
-                  [--st=<st-expression> | oop-or-classname...]
+  obex references [--name=<dataStore-name>] [--memory] [--exclude=<st-expression>]
+                  [--st=<st-expression> | oop...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexreferencesManPage`"
@@ -13,8 +13,7 @@ obexreferences
       {#('name' nil #'required').
       #('st' nil #'required').
       #('exclude' nil #'required').
-      #('memory' nil #'none').
-      #('classes' nil #'none')}.
+      #('memory' nil #'none')}.
   excluded := subOptions
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]
@@ -31,11 +30,7 @@ obexreferences
               objIn isCollection
                 ifFalse: [ self error: 'objIn is not a collection. See man page for details.' ].
               objIn ] ]
-        ifFalse: [ 
-          subOptions
-            at: 'classes'
-            ifPresent: [ subArguments collect: [ :className | Smalltalk at: className ] ]
-            ifAbsent: [ subArguments collect: [ :oop | Object _objectForOop: oop ] ] ])
+        ifFalse: [ subArguments collect: [ :oop | Object _objectForOop: oop ] ])
         asArray ].
   dataStoreNameOrNil := subOptions
     at: 'name'
@@ -48,12 +43,4 @@ obexreferences
         obexInMemoryReferencesTo: objectsArray
         named: dataStoreNameOrNil
         excluded: excluded ]
-    ifAbsent: [ 
-      subOptions
-        at: 'classes'
-        ifPresent: [ 
-          self
-            obexReferencesToInstancesOfClasses: objectsArray
-            named: dataStoreNameOrNil
-            excluded: excluded ]
-        ifAbsent: [ self obexReferencesTo: objectsArray named: dataStoreNameOrNil excluded: excluded ] ]
+    ifAbsent: [ self obexReferencesTo: objectsArray named: dataStoreNameOrNil excluded: excluded ]

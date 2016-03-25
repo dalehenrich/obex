@@ -9,14 +9,13 @@ obexreferencesManPage
   obex references - New object store derived from objects referencing given objects
 
 SYNOPSIS
-  obex references [--name=<dataStore-name>] [--memory | --classes] [--exclude=<st-expression>]
-                  [--st=<st-expression> | oop-or-classname...]
+  obex references [--name=<dataStore-name>] [--memory] [--exclude=<st-expression>]
+                  [--st=<st-expression> | oop...]
 
 DESCRIPTION
   The `object references` command creates a new data source by collecting references to the given
-  objects. If the --classes option is present, the command collects references to instances of the
-  given class names. If the --memory option is present, the command collects references to to the 
-  given objects in memory.
+  objects. If the --memory option is present, the command collects references to to the given objects 
+  in memory.
 
   For more information on the --type options and data sources, see the `man obex objects`.
 
