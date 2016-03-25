@@ -1,15 +1,15 @@
 obex man pages
-obexreferencesManPage
+obexparentsOfManPage
   | manPage |
   manPage := TDManPage
-    commandName: 'references'
-    sourceMethod: self name asString , '>>obexreferences'
+    commandName: 'parentsOf'
+    sourceMethod: self name asString , '>>obexparentsOf'
     fromString:
       'NAME
-  obex references - New object store derived from objects referencing given objects
+  obex parentsOf - New object store derived from objects referencing given objects (GemStone 3.4 and later)
 
 SYNOPSIS
-  obex references [--name=<dataStore-name>] [--memory] [--exclude=<st-expression>]
+  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>]
                   [--st=<st-expression> | oop...]
 
 DESCRIPTION
@@ -21,11 +21,9 @@ DESCRIPTION
 
 EXAMPLES
   obex objects --st=`ObexTestResource current someData`
-  obex dataStore --stackId=objects; obex references --exclude=`{ObexTestResource current}`
+  obex dataStore --stackId=objects; obex parentsOf --exclude=`{ObexTestResource current}`
 
-  obex references 1234537
-
-  eval `| a | a := {}. a add: (1-> a). a`; obex references --memory; obex view --detective
+  obex parentsOf 1234537
 
 SEE ALSO
   obex --help objects

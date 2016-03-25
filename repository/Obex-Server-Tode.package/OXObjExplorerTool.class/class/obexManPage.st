@@ -22,6 +22,7 @@ DESCRIPTION
 
   Object Reference Analysis:
     connectedTo  New object store derived from objects reachable from given objects
+    parentsOf    New object store derived from objects referencing given objects (GemStone 3.4 and later)
     references   New object store derived from objects referencing given objects
 
     refPaths     Produce reference paths to objects in given data source
@@ -55,5 +56,6 @@ EXAMPLES
     at: 'clear' put: self obexclearManPage;
     at: 'references' put: self obexreferencesManPage;
     at: 'view' put: self obexviewManPage;
+    at: 'parentsOf' put: self obexparentsOfManPage;
     yourself.
   ^ manPage
