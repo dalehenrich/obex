@@ -1,6 +1,6 @@
 obex findAllRefs
 obexFindAllReferencePathsToObjects: objects limitObjArray: limitArray
-  self
+  ^ self
     obexFindAllReferencePathsToObjects: objects
     limitObjArray: limitArray
     maxPaths: self obexDefaultMaxPaths
