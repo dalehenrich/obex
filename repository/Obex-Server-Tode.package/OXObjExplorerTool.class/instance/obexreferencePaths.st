@@ -1,4 +1,4 @@
-obex all referencePaths
+obex referencePaths
 obexreferencePaths
   "
   obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] 

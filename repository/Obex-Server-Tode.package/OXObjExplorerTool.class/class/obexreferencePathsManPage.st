@@ -1,4 +1,4 @@
-obex in-process man pages
+obex man pages
 obexreferencePathsManPage
   | manPage |
   manPage := TDManPage

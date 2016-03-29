@@ -1,4 +1,4 @@
-obex all referencePaths
+obex referencePaths
 obexFindAllReferencePathsToObjects: objects limitObjArray: limitArray maxPaths: maxPaths
   | result |
   result := OXAllReferencePathsDataStore new
