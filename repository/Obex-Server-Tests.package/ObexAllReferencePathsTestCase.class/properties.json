@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 03/28/2016 17:16",
 	"instvars" : [
 		"oldSimpleDataExcludedParents" ],
-	"name" : "ObexCalcTestCase",
+	"name" : "ObexAllReferencePathsTestCase",
 	"pools" : [
 		 ],
 	"super" : "ObexGenericTestCase",

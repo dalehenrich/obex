@@ -1,4 +1,4 @@
-obex referencePaths
+obex all referencePaths
 obexreferencePaths
   "
   obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] 
@@ -23,7 +23,7 @@ obexreferencePaths
   limitArray := subOptions
     at: 'limit'
     ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ OXReferencePathDataStore minLimitSetForRefPathScan ].
+    ifAbsent: [ OXAllReferencePathsDataStore minLimitSetForRefPathScan ].
   objects do: [ :each | limitArray remove: each ifAbsent: [  ] ].
   ^ self
     obexFindAllReferencePathsToObjects: objects

@@ -13,7 +13,7 @@ testSimple
   PersistentRoot simpleLeaves: #().
   System commit.
   tool := self obexTool.
-  limitArray := tool obexMinLimitSetForRefPathScan.
+  limitArray := OXAllReferencePathsDataStore minLimitSetForRefPathScan.
   limitArray add: ObexTestResource current.
   tool
     obexFindAllReferencePathsToObjects: leaves asArray

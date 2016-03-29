@@ -4,9 +4,9 @@ findReferencePathsMenuAction: listElement selectionIndex: selectionIndex
   obex := listElement topez toolInstanceFor: 'obex'.
   System commit.
   objectArray := {(self object dotSelfObject)}.
-  limitArray := OXReferencePathDataStore minLimitSetForRefPathScan.
+  limitArray := OXAllReferencePathsDataStore minLimitSetForRefPathScan.
   objectArray do: [ :each | limitArray remove: each ifAbsent: [  ] ].
-  dataStore := OXReferencePathDataStore new
+  dataStore := OXAllReferencePathsDataStore new
     findAllReferencePathsToObjects: objectArray
       limitObjArray: limitArray
       printToLog: false

@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "dkh 03/28/2016 17:17",
 	"instvars" : [
 		"maxPaths" ],
-	"name" : "OXReferencePathDataStore",
+	"name" : "OXAllReferencePathsDataStore",
 	"pools" : [
 		 ],
 	"super" : "OXGenericRefPathDataStore",

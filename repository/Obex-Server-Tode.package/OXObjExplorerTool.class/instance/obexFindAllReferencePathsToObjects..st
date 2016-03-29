@@ -1,6 +1,6 @@
-obex referencePaths
+obex all referencePaths
 obexFindAllReferencePathsToObjects: objects
   ^ self
     obexFindAllReferencePathsToObjects: objects
-    limitObjArray: self obexMinLimitSetForRefPathScan
+    limitObjArray: OXAllReferencePathsDataStore minLimitSetForRefPathScan
     maxPaths: self obexDefaultMaxPaths
