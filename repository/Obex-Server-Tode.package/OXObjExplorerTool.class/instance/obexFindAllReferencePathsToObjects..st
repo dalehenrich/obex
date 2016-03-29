@@ -1,4 +1,4 @@
-obex findAllRefs
+obex referencePaths
 obexFindAllReferencePathsToObjects: objects
   ^ self
     obexFindAllReferencePathsToObjects: objects

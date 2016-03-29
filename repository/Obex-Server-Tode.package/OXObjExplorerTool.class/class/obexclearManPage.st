@@ -1,4 +1,4 @@
-obex man pages
+obex in-process man pages
 obexclearManPage
   | manPage |
   manPage := TDManPage

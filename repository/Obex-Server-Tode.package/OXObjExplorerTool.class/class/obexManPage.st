@@ -1,4 +1,4 @@
-obex man pages
+obex in-process man pages
 obexManPage
   | manPage |
   manPage := TDManPage
@@ -12,33 +12,33 @@ SYNOPSIS
 
 DESCRIPTION
   Data Sources:
-    objects      New object store derived from lists of objects
-    instances    New object store derived from instances of classes
+    objects        New object store derived from lists of objects
+    instances      New object store derived from instances of classes
 
-    inventory    Produce an object inventory of given data source: instance and byte counts by class
+    inventory      Produce an object inventory of given data source: instance and byte counts by class
 
   Data Manipulation:
-    dataStore    New object store derived from an existing data store
+    dataStore      New object store derived from an existing data store
 
   Object Reference Analysis:
-    connectedTo  New object store derived from objects reachable from given objects
-    parentsOf    New object store derived from objects referencing given objects (GemStone 3.4 and later)
-    references   New object store derived from objects referencing given objects
+    connectedTo    New object store derived from objects reachable from given objects
+    parentsOf      New object store derived from objects referencing given objects (GemStone 3.4 and later)
+    references     New object store derived from objects referencing given objects
+    referencePaths New object store derived from all reference path for given objects
 
-    refPaths     Produce reference paths to objects in given data source (find all reference paths)
-    spectro      Produce an object inventory that includes sample instances by class as well as instance 
-                 and byte counts
-    orphans      New object store derived from orphaned class analysis
-    objSecPolicy New object store derived from objects in given ObjectSecurityPolicies
+    spectro        Produce an object inventory that includes sample instances by class as well as instance 
+                   and byte counts
+    orphans        New object store derived from orphaned class analysis
+    objSecPolicy   New object store derived from objects in given ObjectSecurityPolicies
 
   Visualization:
-    view         Visualize results of data analysis
+    view           Visualize results of data analysis
 
   Utility
-    clear        Clear obex data stores
+    clear          Clear obex data stores
 
-    settings     Define default values for maxPaths, maxSessions and maxPercentCPU used by repository 
-                 analysis tools (--fast --slow, individual tuning)
+    settings       Define default values for maxPaths, maxSessions and maxPercentCPU used by repository 
+                   analysis tools (--fast --slow, individual tuning)
 
 OPTIONS
   --help [command]
@@ -57,5 +57,6 @@ EXAMPLES
     at: 'references' put: self obexreferencesManPage;
     at: 'view' put: self obexviewManPage;
     at: 'parentsOf' put: self obexparentsOfManPage;
+    at: 'referencePaths' put: self obexreferencePathsManPage;
     yourself.
   ^ manPage

@@ -1,4 +1,4 @@
-obex findAllRefs
+obex referencePaths
 obexFindAllReferencePathsToObjects: objects limitObjArray: limitArray
   ^ self
     obexFindAllReferencePathsToObjects: objects

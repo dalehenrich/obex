@@ -1,7 +1,8 @@
 obex referencePaths
 obexreferencePaths
   "
-  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] [--st=<st-expression> | oop...]
+  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] 
+                      [--st=<st-expression> | oop...]
 "
 
   | objects maxPaths dataStore limitArray |
@@ -19,9 +20,10 @@ obexreferencePaths
   objects := self
     handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
   System commit.
-  limitArray := true
-    ifTrue: [ self obexMinLimitSetForRefPathScan ]
-    ifFalse: [ SystemRepository buildLimitSetForRefPathScan ].
+  limitArray := subOptions
+    at: 'limit'
+    ifPresent: [ :expression | expression evaluate ]
+    ifAbsent: [ OXReferencePathDataStore minLimitSetForRefPathScan ].
   objects do: [ :each | limitArray remove: each ifAbsent: [  ] ].
   ^ self
     obexFindAllReferencePathsToObjects: objects
