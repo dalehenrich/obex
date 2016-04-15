@@ -24,6 +24,8 @@ DESCRIPTION
 
   For more information on the --type options and data sources, see the `man obex objects`.
 
+  For information on --name option and data sources, see `man obex dataStore`.
+
 EXAMPLES
   obex connectedTo 26355713 26355457 26420993
   obex connectedTo --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
@@ -36,5 +38,6 @@ EXAMPLES
 
 SEE ALSO
   obex --help objects
+  obex --help dataStore
 '.
   ^ manPage

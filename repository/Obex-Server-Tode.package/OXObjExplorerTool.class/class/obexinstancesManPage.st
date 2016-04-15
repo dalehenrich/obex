@@ -21,7 +21,9 @@ DESCRIPTION
   smalltalk expression must return a collection of classes or an object that responds to #asArray. objIn 
   must be a collection of classes or an object that responds to #asArray.
 
-  For more information on the --type options and data sources, see the `man obex objects`.
+  For more information on the --type options and data sources, see `man obex objects`.
+
+  For information on --name option and data sources, see `man obex dataStore`.
 
 EXAMPLES
   obex instances ObexTestObject ObexTestObjectArray
@@ -34,5 +36,6 @@ EXAMPLES
 
 SEE ALSO
   obex --help objects
+  obex --help dataStore
 '.
   ^ manPage

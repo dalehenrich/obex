@@ -7,9 +7,6 @@ os:
 smalltalk:
   - GemStone-3.3.0
 
-script:
-  - $SMALLTALK_CI_HOME/run.sh # --debug
-
 cache:
   directories:
     - $SMALLTALK_CI_CACHE

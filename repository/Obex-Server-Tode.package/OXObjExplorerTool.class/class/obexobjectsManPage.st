@@ -36,6 +36,8 @@ DESCRIPTION
 
   The default type is `bitmap` for GemSTone version 3.4 and later, otherwise `oopArray`.
 
+  For information on --name option and data sources, see `man obex dataStore`.
+
 EXAMPLES
   obex objects 26355713 26355457 26420993
   obex objects --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
@@ -47,5 +49,8 @@ EXAMPLES
   obex objects --name=`leaf objects` --type=oopArray --st=`ObexTestResource current simpleLeaves`
 
   eval `{Object new}`; obex objects
+
+SEE ALSO
+  obex --help dataStore
 '.
   ^ manPage

@@ -1,13 +1,15 @@
 obex inventory
 obexinventory
   "
-  obex inventory [--max=<max-sessions>] [--pct=<pct-cpu-limit>] [--st=<st-expression> | oop...] 
+  obex inventory [--name=<dataStore-name>] [--max=<max-sessions>] [--pct=<pct-cpu-limit>] 
+                 [--repo | --st=<st-expression> | oop...] 
 "
 
-  | maxSessions percentCpu objects |
+  | maxSessions percentCpu dataSource dataStoreNameOrNil |
   self
     getSubcommandOptsMixedLongShort:
       {#('max' nil #'required').
+      #('repo' nil #'none').
       #('st' nil #'required').
       #('pct' nil #'required')}.
   subOptions
@@ -18,14 +20,19 @@ obexinventory
     at: 'pct'
     ifPresent: [ :arg | percentCpu := arg asInteger ]
     ifAbsent: [ percentCpu := self obexDefaultObjectInventoryPercentCpu ].
-  objects := subOptions
-    at: 'st'
-    ifPresent: [ :expression | expression evaluate ]
-    ifAbsent: [ (subArguments collect: [ :oop | Object _objectForOop: oop asNumber ]) asArray ].
-  objects isEmpty
-    ifTrue: [ self obexInventoryRepository: maxSessions percentCpu: percentCpu ]
-    ifFalse: [ 
+  dataSource := subOptions
+    at: 'repos'
+    ifPresent: [ :ignored | self obexInventoryRepository: maxSessions percentCpu: percentCpu ]
+    ifAbsent: [ 
+      | objects |
+      objects := self
+        handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
       self
         obexInventoryCollection: objects
         maxSessions: maxSessions
-        percentCpu: percentCpu ]
+        percentCpu: percentCpu ].
+  dataStoreNameOrNil := subOptions
+    at: 'name'
+    ifPresent: [ :dataStoreName | dataStoreName ]
+    ifAbsent: [  ].
+  self obexAddDataSource: dataSource named: dataStoreNameOrNil

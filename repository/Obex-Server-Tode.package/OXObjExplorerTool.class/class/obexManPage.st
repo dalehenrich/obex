@@ -15,13 +15,13 @@ DESCRIPTION
     objects        New object store derived from lists of objects
     instances      New object store derived from instances of classes
 
-    inventory      Produce an object inventory of given data source: instance and byte counts by class
-
   Data Manipulation:
     dataStore      New object store derived from an existing data store
 
   Object Reference Analysis:
     connectedTo    New object store derived from objects reachable from given objects
+    inventory      New object store derived object inventory of given data source: 
+                   instance and byte counts by class
     parentsOf      New object store derived from objects referencing given objects (GemStone 3.4 and later)
     references     New object store derived from objects referencing given objects
     referencePaths New object store derived from all reference path for given objects
@@ -58,5 +58,6 @@ EXAMPLES
     at: 'view' put: self obexviewManPage;
     at: 'parentsOf' put: self obexparentsOfManPage;
     at: 'referencePaths' put: self obexreferencePathsManPage;
+    at: 'inventory' put: self obexinventoryManPage;
     yourself.
   ^ manPage

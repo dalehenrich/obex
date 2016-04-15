@@ -13,14 +13,17 @@ SYNOPSIS
                       [--st=<st-expression> | oop...]
 
 DESCRIPTION
-  The `object referencePaths` command creates a new data source by collecting all reference paths to the given
-  objects using Repository>>Repository>>findAllReferencePathsToObjects:limitObjArray:printToLog:maxPaths:. 
+  The `object referencePaths` command creates a new data source by collecting all reference paths to the 
+  given objects using 
+  Repository>>Repository>>findAllReferencePathsToObjects:limitObjArray:printToLog:maxPaths:. 
 
   If the --limit option is not specified, a minimal limit set as defined by 
   OXGenericRefPathDataStore class>>minLimitSetForRefPathScan is used.
 
-  If the --limit option is used, an Array of objects is expect and it will be used as the `limitObjArray` argument
-  in the findAllReferencePaths call.
+  If the --limit option is used, an Array of objects is expect and it will be used as the `limitObjArray` 
+  argument in the findAllReferencePaths call.
+
+  For information on --name option and data sources, see `man obex dataStore`.
 
 EXAMPLES
   obex objects --st=`ObexTestResource current someData`
@@ -29,16 +32,21 @@ EXAMPLES
   obex referencePaths 1234537
 
   obex instances TDTopezServer
-  eval `self objects asArray reject: [:each | TDTopezServer instanceMap values includes: each]`
+  eval `self objects asArray reject: [:each | TDTopezServer instanceMap includes: each]`
   obex referencePaths --limit=`SystemRepository buildLimitSetForRefPathScan`
   obex view --detective
 
+  gs flushCaches --hard
+  gs mfc
+  abort
+  gs reclaimAll
   obex instances TDTopezServer
-  eval `self objects asArray reject: [:each | TDTopezServer instanceMap values includes: each]`
+  eval `self objects asArray reject: [:each | TDTopezServer instanceMap includes: each]`
   obex referencePaths
-  obex view --detective
+  obex view --detective  # should be empty
 
 SEE ALSO
   obex --help objects
+  obex --help dataStore
 '.
   ^ manPage

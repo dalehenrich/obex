@@ -1,4 +1,4 @@
-obex inventory
+obex viewX
 obexViewClassInstancesCount: obexInstanceCountDataStore filter: filter limit: limit
   self
     obexViewClassHistogram: obexInstanceCountDataStore

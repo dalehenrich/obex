@@ -14,6 +14,8 @@ SYNOPSIS
 DESCRIPTION
 
   [SHOULD HAVE args for listing names ...]
+
+  [EXPLAIN accessing by dataStore names ... or should that be data source names?
    
     
 EXAMPLES
