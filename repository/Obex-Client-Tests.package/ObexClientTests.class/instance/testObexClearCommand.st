@@ -1,8 +1,7 @@
 tests
 testObexClearCommand
-	"run without errors"
-
-	| ans1 ans2 |
-	ans1 := self evaluateCommandString: 'obex --help clear'.
-	ans2 := self evaluateCommandString: 'obex clear'.
-	self halt.
+	| result |
+	result := self evaluateCommandString: 'obex --help clear'.
+	self assert: (result isKindOf: Text).
+	result := self evaluateCommandString: 'obex clear'.
+	self assert: (result isKindOf: Text)
