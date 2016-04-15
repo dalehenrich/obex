@@ -33,9 +33,12 @@ baseline: spec
         package: 'Roassal2' with: [ spec requires: #('Trachel') ];
         package: 'Trachel';
         package: 'Obex-Core-Model' with: [ spec requires: #('Roassal2') ];
+        package: 'Obex-Client-Tests'
+          with: [ spec requires: #('Obex-Client-Tode') ];
         yourself.
       spec
         group: 'Core' with: #('Obex-Client-Model' 'Obex-Client-Tode');
+        group: 'Tests' with: #('Obex-Client-Tests');
         yourself ].
   spec
     for: #(#'gs3.3.x' #'gs3.4.x')
