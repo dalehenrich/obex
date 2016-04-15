@@ -18,23 +18,23 @@
    - The $GS_HOME/shared/repos/tode git repo will be updated to the latest version of the dev branch during installation.
 
 1. Install Object Explorer
-   - Install Object Explorer in a tODE stone
+   - Create an Object Explorer stone
 
      ```shell
      cd $GS_HOME/shared/repos
      git clone https://github.com/dalehenrich/obex.git
-     # $GS_HOME/bin/createStone obex_test 3.2.12
-     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallServer obex_test
+     createStone -u http://gsdevkit.github.io/GsDevKit_home/Obex.ston -i Obex -l Obex -z $GS_HOME/shared/repos/obex/.smalltalk.ston obex_330 3.3.0
      ```
 
-   - Install Object Explorere in a client
+   - Create an Object Explorer client
 
      ```shell
-     # $GS_HOME/bin/createClient tode_obex
-     $GS_HOME/shared/repos/obex/gsDevKit/bin/obexInstallClient tode_obex
+     # Create tODE client named obex
+     createClient -t pharo obex_40 -l -v Pharo4.0 -s obex_330 -z $GS_HOME/shared/repos/obex/.smalltalk.ston
+     startClient obex_40
      ```
 
-2. Log into the stone where you installed the Object Exploer and open an editor on the README from within tODE, so that you can run the examples:
+2. Log into the stone where you installed the Object Explorer and open an editor on the README from within tODE, so that you can run the examples:
 
    ```
    edit /sys/stone/dirs/Obex/README.md
