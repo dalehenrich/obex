@@ -7,5 +7,10 @@ SmalltalkCISpec {
       #onWarningLog : true,
       #platforms : [ #gemstone, #pharo ]
     }
-  ]
+  ],
+  #testing : {
+    #exclude : {
+      #packages : [ 'Roassal2', 'Trachel' ]
+    }
+  }
 }
