@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"evaluateCommandString:" : "TravisCI 4/15/2016 14:31",
-		"sessionDescription" : "TravisCI 4/15/2016 14:33",
+		"sessionDescription" : "TravisCI 4/15/2016 19:38",
 		"setUp" : "TravisCI 4/15/2016 14:41",
 		"tearDown" : "TravisCI 4/15/2016 14:29",
 		"testObexClearCommand" : "TravisCI 4/15/2016 15:21" } }
