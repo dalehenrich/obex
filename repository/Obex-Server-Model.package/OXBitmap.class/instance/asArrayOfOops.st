@@ -2,4 +2,4 @@ accessing
 asArrayOfOops
   "array of oops"
 
-  ^ self _collection asArrayOfOops
+  ^ self _collection _asArrayOfOops

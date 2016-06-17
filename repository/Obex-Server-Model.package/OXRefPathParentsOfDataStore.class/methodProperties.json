@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"analyze" : "dkh 03/10/2016 16:33",
-		"analyzeReferenceGsBitmap:node:" : "dkh 03/23/2016 16:59",
+		"analyzeReferenceGsBitmap:node:" : "dkh 06/16/2016 17:01",
 		"calculateParentsOfOXNode:" : "dkh 03/25/2016 10:39",
 		"findRefPathsParentsOfObjects:" : "dkh 03/25/2016 10:38",
 		"findRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "dkh 03/25/2016 10:39",
