@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"allReferencePathsToObjects:limits:printToLog:maxPaths:" : "dkh 06/22/2016 13:54",
 		"analyze" : "dkh 03/28/2016 17:17",
 		"analyzeReferenceArray:node:" : "dkh 03/28/2016 17:17",
 		"analyzeReferenceArray:node:nodeRef:" : "dkh 03/28/2016 17:17",

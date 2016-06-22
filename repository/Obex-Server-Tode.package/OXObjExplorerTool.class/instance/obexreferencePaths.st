@@ -1,7 +1,7 @@
 obex referencePaths
 obexreferencePaths
   "
-  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] 
+  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] [--old]
                       [--st=<st-expression> | oop...]
 "
 
@@ -12,6 +12,7 @@ obexreferencePaths
       #('maxPaths' nil #'required').
       #('name' nil #'required').
       #('limit' nil #'required').
+      #('old' nil #'none').
       #('st' nil #'required')}.
   subOptions
     at: 'maxPaths'
@@ -25,7 +26,15 @@ obexreferencePaths
     ifPresent: [ :expression | expression evaluate ]
     ifAbsent: [ OXAllReferencePathsDataStore minLimitSetForRefPathScan ].
   objects do: [ :each | limitArray remove: each ifAbsent: [  ] ].
-  ^ self
-    obexFindAllReferencePathsToObjects: objects
-    limitObjArray: limitArray
-    maxPaths: maxPaths
+  ^ subOptions
+    at: 'old'
+    ifPresent: [ :ignored | 
+      self
+        obexFindAllReferencePathsToObjects: objects
+        limitObjArray: limitArray
+        maxPaths: maxPaths ]
+    ifAbsent: [ 
+      self
+        obexAllReferencePathsToObjects: objects
+        limits: limitArray
+        maxPaths: maxPaths ]

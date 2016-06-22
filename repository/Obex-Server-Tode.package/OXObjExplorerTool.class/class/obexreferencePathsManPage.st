@@ -9,7 +9,7 @@ obexreferencePathsManPage
   obex referencePaths - New object store derived from all reference path for given objects
 
 SYNOPSIS
-  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] 
+  obex referencePaths [--name=<dataStore-name>] [--maxPaths=<max-ref-paths>] [--limit=<st-expression>] [--old]
                       [--st=<st-expression> | oop...]
 
 DESCRIPTION
