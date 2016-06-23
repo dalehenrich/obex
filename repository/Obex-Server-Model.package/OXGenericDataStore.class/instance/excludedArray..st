@@ -1,4 +1,3 @@
 accessing
 excludedArray: anObject
-
-   excludedArray := anObject
+  excludedArray := TransientValue value: anObject

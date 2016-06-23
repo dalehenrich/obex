@@ -1,4 +1,4 @@
 accessing
 excludedArray
-  excludedArray ifNil: [ excludedArray := #() ].
-  ^ excludedArray
+  excludedArray ifNil: [ excludedArray := TransientValue value: #() ].
+  ^ excludedArray value

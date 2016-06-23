@@ -1,13 +1,14 @@
 node callbacks
 allReferencePathsToObjects: objects limits: limitArray printToLog: aBool maxPaths: maximumPaths
-  excludedArray := limitArray reject: [ :each | objects includes: each ].
+  excludedArray := TransientValue
+    value: (limitArray reject: [ :each | objects includes: each ]).
   maxPaths := maximumPaths.
   System commit.
   self
     searchResult:
       (SystemRepository
         allReferencePathsToObjects: objects
-        limits: excludedArray
+        limits: excludedArray value
         printToLog: aBool
         maxPaths: maxPaths).
   self analyze

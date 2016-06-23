@@ -4,6 +4,6 @@ obexFindAllReferencePathsToObjects: objects limitObjArray: limitArray maxPaths: 
   result := OXAllReferencePathsDataStore new
     findAllReferencePathsToObjects: objects
     limitObjArray: limitArray
-    printToLog: false
+    printToLog: true
     maxPaths: maxPaths.
   ^ result pushOnStack: #'referencePaths' in: self obexDataStoreRoot
