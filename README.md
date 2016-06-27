@@ -16,6 +16,12 @@
 0. Prerequisites
    - Use a recently updated version of the master branch of GsDevKit_home.
    - The $GS_HOME/shared/repos/tode git repo will be updated to the latest version of the dev branch during installation.
+   - Roassal graphics depends upon the Cairo graphics package and needs to be installed on Linux:
+     ```
+     sudo apt-get install libcairo2:i386
+     ```
+
+     From the *CairoLibraryLoader class>>cantFindCairoOnLinux* method.
 
 1. Install Object Explorer
    - Create an Object Explorer stone
