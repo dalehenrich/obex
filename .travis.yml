@@ -8,7 +8,7 @@ env:
   - GSCI_CLIENTS="Pharo-3.0 Pharo-4.0 Pharo-5.0" GSCI_DEVKIT_BRANCH=dev
 
 smalltalk:
-  - GemStone-3.3.0
+  - GemStone-3.3.1
 
 cache:
   directories:
