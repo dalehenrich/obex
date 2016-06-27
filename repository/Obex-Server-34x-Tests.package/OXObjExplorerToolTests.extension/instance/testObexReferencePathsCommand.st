@@ -1,4 +1,4 @@
-tests
+*obex-server-34x-tests
 testObexReferencePathsCommand
   "run without errors"
 
