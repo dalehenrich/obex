@@ -1,7 +1,8 @@
 obex parentsOf
 obexparentsOf
   "
-  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--st=<st-expression> | oop...]
+  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--static] \
+                 [--st=<st-expression> | oop...]
 "
 
   "browse method --spec `OXObjExplorerTool class>>obexparentsOfManPage`"
@@ -12,7 +13,7 @@ obexparentsOf
       {#('name' nil #'required').
       #('st' nil #'required').
       #('exclude' nil #'required').
-      #('memory' nil #'none')}.
+      #('static' nil #'none')}.
   excluded := subOptions
     at: 'exclude'
     ifPresent: [ :expression | expression evaluate ]
@@ -23,7 +24,11 @@ obexparentsOf
     at: 'name'
     ifPresent: [ :dataStoreName | dataStoreName ]
     ifAbsent: [  ].
-  ^ self
-    obexParentsOf: objectsArray
-    named: dataStoreNameOrNil
-    excluded: excluded
+  ^ subOptions
+    at: 'static'
+    ifPresent: [ :ignored | 
+      self
+        obexStaticParentsOf: objectsArray
+        named: dataStoreNameOrNil
+        excluded: excluded ]
+    ifAbsent: [ self obexParentsOf: objectsArray named: dataStoreNameOrNil excluded: excluded ]

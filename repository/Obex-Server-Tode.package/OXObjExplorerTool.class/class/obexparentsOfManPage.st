@@ -9,7 +9,8 @@ obexparentsOfManPage
   obex parentsOf - New object store derived from objects referencing given objects (GemStone 3.4 and later)
 
 SYNOPSIS
-  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--st=<st-expression> | oop...]
+  obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--static] \
+                 [--st=<st-expression> | oop...]
 
 DESCRIPTION
   The `object parents` command creates a new data source by collecting references to the given
