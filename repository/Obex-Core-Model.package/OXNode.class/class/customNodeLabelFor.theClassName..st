@@ -12,6 +12,6 @@ customNodeLabelFor: anObject theClassName: theClassName
         , anObject selector asString , ']' , ', ' , anObject asOop printString ].
   (anObject isKindOf: Association)
     ifTrue: [ 
-      ^ theClassName , '[' , anObject key printString , ']' , ', '
+      ^ theClassName , '[' , anObject key class printString , ']' , ', '
         , anObject asOop printString ].
   ^ nil
