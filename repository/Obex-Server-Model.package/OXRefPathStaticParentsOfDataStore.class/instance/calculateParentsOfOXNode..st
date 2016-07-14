@@ -2,7 +2,9 @@ node callbacks
 calculateParentsOfOXNode: anOXNode
   "look up parents for anOXNode object without running an additional analysis"
 
-  | parentInfo |
-  parentInfo := SystemRepository
-    _refPathParentsOf: (Object _objectForOop: anOXNode oop).
-  self analyzeReferenceGsBitmap: parentInfo parentOops node: anOXNode
+  | parentsInfo searchObject |
+  searchObject := Object _objectForOop: anOXNode oop.
+  parentsInfo := SystemRepository _refPathParentsOf: searchObject.
+  System commit.
+  self oopToNodeMap at: searchObject asOop put: anOXNode.
+  self analyzeReferenceGsBitmap: parentsInfo parentOops node: anOXNode

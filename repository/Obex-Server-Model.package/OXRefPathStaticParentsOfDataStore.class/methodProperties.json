@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"calculateParentsOfOXNode:" : "TravisCI 07/13/2016 13:49",
+		"analyzeReferenceGsBitmap:node:" : "TravisCI 07/13/2016 15:50",
+		"calculateParentsOfOXNode:" : "TravisCI 07/13/2016 15:46",
+		"onlySearchObjects" : "TravisCI 07/13/2016 17:00",
 		"refPathCleanup" : "TravisCI 07/13/2016 13:47" } }

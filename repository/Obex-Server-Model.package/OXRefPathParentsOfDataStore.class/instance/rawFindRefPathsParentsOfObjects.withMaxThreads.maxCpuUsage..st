@@ -10,7 +10,7 @@ rawFindRefPathsParentsOfObjects: objects withMaxThreads: maxSessions maxCpuUsage
   SystemRepository
     _refPathDoScanForParents: objects
     excludeParentRefs: self excludedArray
-    onlySearchObjs: true.
+    onlySearchObjs: self onlySearchObjects.
   result := objects
     collect: [ :anObject | SystemRepository _refPathParentsOf: anObject ].
   self refPathCleanup.

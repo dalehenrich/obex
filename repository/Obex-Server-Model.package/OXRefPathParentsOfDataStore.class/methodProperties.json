@@ -7,7 +7,8 @@
 		"calculateParentsOfOXNode:" : "dkh 03/25/2016 10:39",
 		"findRefPathsParentsOfObjects:" : "dkh 03/25/2016 10:38",
 		"findRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "dkh 03/25/2016 10:39",
-		"rawFindRefPathsParentsOfObjects:" : "TravisCI 07/13/2016 13:41",
-		"rawFindRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "TravisCI 07/13/2016 13:41",
+		"onlySearchObjects" : "TravisCI 07/13/2016 17:00",
+		"rawFindRefPathsParentsOfObjects:" : "TravisCI 07/13/2016 17:00",
+		"rawFindRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "TravisCI 07/13/2016 17:00",
 		"refPathCleanup" : "TravisCI 07/13/2016 13:41",
 		"searchObjectMap" : "dkh 01/27/2016 15:44" } }
