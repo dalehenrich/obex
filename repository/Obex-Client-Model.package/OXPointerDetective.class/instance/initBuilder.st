@@ -30,6 +30,7 @@ initBuilder
 					('inspect' -> [ :exploraNode | self topez inspectOXObject: exploraNode element model wrapper ]).
 					('inspect (reified)' -> [ :exploraNode | self topez inspectReifiedOXObject: exploraNode element model wrapper ]).
 					('inspect node' -> [ :exploraNode | self topez inspectOXNode: exploraNode element model wrapper ]).
+					('copy oop' -> [ :exploraNode | Clipboard clipboardText: exploraNode element model wrapper oop asString asText]).
 					('center'
 						-> [ :exploraNode | 
 							self view canvas camera translateTo: exploraNode element encompassingRectangle center.
