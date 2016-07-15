@@ -1,3 +1,3 @@
 testing
-hassAdditionalParents
+hasAdditionalParents
   ^ self additionalParentsAvailable

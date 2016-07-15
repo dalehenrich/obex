@@ -1,3 +1,3 @@
 testing
 isLeaf
-  self targetFoundInSearch
+  ^ self targetFoundInSearch
