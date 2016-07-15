@@ -5,7 +5,7 @@ analyze
   self searchObjectMap
     keysAndValuesDo: [ :searchObject :ignored | 
       | node |
-      node := OXSearchNode for: searchObject in: self.
+      node := self searchNodeClass for: searchObject in: self.
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
       (self searchObjectMap at: searchObject)

@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"analyze" : "dkh 03/24/2016 16:22",
+		"analyze" : "TravisCI 07/14/2016 16:33",
 		"analyzeReference:node:" : "dkh 03/25/2016 07:11",
-		"calculateParentsOfOXNode:" : "dkh 03/24/2016 17:19",
+		"calculateParentsOfOXNode:" : "TravisCI 07/14/2016 15:48",
 		"excludedArray" : "dkh 06/22/2016 17:11",
 		"inMemory" : "dkh 03/24/2016 11:59",
 		"inMemory:" : "dkh 03/24/2016 11:59",

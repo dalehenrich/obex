@@ -2,7 +2,7 @@ node callbacks
 calculateParentsOfOXNode: anOXNode
   | ds objects searchObject results |
   System commit.
-  searchObject := Object _objectForOop: anOXNode oop.
+  searchObject := anOXNode object.
   objects := {searchObject}.
   results := self
     rawFindRefPathsParentsOfObjects: objects
@@ -10,4 +10,4 @@ calculateParentsOfOXNode: anOXNode
     maxCpuUsage: maxCpuUsage.
   self oopToNodeMap at: searchObject asOop put: anOXNode.
   results
-    do: [ :parentsInfo | self analyzeReferenceGsBitmap: parentsInfo parentOops node: anOXNode ]
+    do: [ :parentsInfo | self analyzeReferenceParentsInfo: parentsInfo node: anOXNode ]

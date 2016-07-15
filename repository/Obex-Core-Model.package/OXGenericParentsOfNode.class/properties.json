@@ -1,0 +1,15 @@
+{
+	"category" : "Obex-Core-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"additionalParentsAvailable",
+		"targetFoundInSearch" ],
+	"name" : "OXGenericParentsOfNode",
+	"pools" : [
+		 ],
+	"super" : "OXNode",
+	"type" : "normal" }

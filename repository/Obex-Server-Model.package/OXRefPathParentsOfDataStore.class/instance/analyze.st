@@ -5,12 +5,12 @@ analyze
   self searchObjects
     do: [ :searchObject | 
       | node |
-      node := OXSearchNode for: searchObject in: self.
+      node := self searchNodeClass for: searchObject in: self.
       node parents: IdentitySet new.
       oopToNodeMap at: searchObject asOop put: node.
       self commit.
       self
-        analyzeReferenceGsBitmap: (self searchObjectMap at: searchObject)
+        analyzeReferenceParentsInfo: (self searchObjectMap at: searchObject)
         node: node ].
   classNameMap := StringKeyValueDictionary new.
   oopToNodeMap values

@@ -7,7 +7,7 @@ lookupNodeForOop: referenceOop rootNode: createRootNode
       | referenceNode referenceObject |
       referenceObject := Object _objectForOop: referenceOop.
       referenceNode := createRootNode
-        ifTrue: [ OXRootNode for: referenceObject in: self ]
-        ifFalse: [ OXReferenceNode for: referenceObject in: self ].
+        ifTrue: [ self rootNodeClass for: referenceObject in: self ]
+        ifFalse: [ self referenceNodeClass for: referenceObject in: self ].
       oopToNodeMap at: referenceOop put: referenceNode.
       referenceNode ]

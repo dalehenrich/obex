@@ -1,6 +1,6 @@
 actions
 inspectOXObject: topez
-  (Object _objectForOop: self oop)
+  self object
     editUsing:
       ((TDEditorSpec topez: topez editorAspect: #'navigateOX')
         builderAspect: #'inspect';

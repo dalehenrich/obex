@@ -1,14 +1,15 @@
 {
 	"class" : {
-		 },
+		"referenceNodeClass" : "TravisCI 07/14/2016 16:48",
+		"rootNodeClass" : "TravisCI 07/14/2016 16:47",
+		"searchNodeClass" : "TravisCI 07/14/2016 16:48" },
 	"instance" : {
-		"analyze" : "dkh 03/10/2016 16:33",
-		"analyzeReferenceGsBitmap:node:" : "dkh 06/16/2016 17:01",
-		"calculateParentsOfOXNode:" : "dkh 03/25/2016 10:39",
+		"analyze" : "TravisCI 07/14/2016 17:40",
+		"analyzeReferenceParentsInfo:node:" : "TravisCI 07/14/2016 17:26",
+		"calculateParentsOfOXNode:" : "TravisCI 07/14/2016 17:16",
 		"findRefPathsParentsOfObjects:" : "dkh 03/25/2016 10:38",
 		"findRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "dkh 03/25/2016 10:39",
 		"onlySearchObjects" : "TravisCI 07/13/2016 17:00",
-		"rawFindRefPathsParentsOfObjects:" : "TravisCI 07/13/2016 17:00",
 		"rawFindRefPathsParentsOfObjects:withMaxThreads:maxCpuUsage:" : "TravisCI 07/13/2016 17:00",
 		"refPathCleanup" : "TravisCI 07/13/2016 13:41",
-		"searchObjectMap" : "dkh 01/27/2016 15:44" } }
+		"searchObjectMap" : "TravisCI 07/14/2016 17:19" } }

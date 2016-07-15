@@ -5,14 +5,14 @@ calculateParentsOfOXNode: anOXNode
   self inMemory
     ifTrue: [ 
       | objectArray |
-      objectArray := {(Object _objectForOop: anOXNode oop)}.
+      objectArray := {(anOXNode object)}.
       results := self rawListInMemoryReferences: objectArray.
       self excludedArray
         add: objectArray;
         add: (results at: 1) ]
     ifFalse: [ 
       | objectArray searchObject |
-      searchObject := Object _objectForOop: anOXNode oop.
+      searchObject := anOXNode object.
       objectArray := {searchObject}.
       results := self
         rawListReferences: objectArray

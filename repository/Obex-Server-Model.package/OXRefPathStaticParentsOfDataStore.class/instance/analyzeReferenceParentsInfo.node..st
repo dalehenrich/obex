@@ -1,7 +1,7 @@
 analysis
-analyzeReferenceGsBitmap: aGsBitmap node: node
-  super analyzeReferenceGsBitmap: aGsBitmap node: node.
-  aGsBitmap
+analyzeReferenceParentsInfo: parentsInfo node: node
+  super analyzeReferenceParentsInfo: parentsInfo node: node.
+  parentsInfo parentOops
     _doAsOops: [ :referenceOop | 
       | theNode parentsInfo |
       theNode := self lookupNodeForOop: referenceOop rootNode: false.
