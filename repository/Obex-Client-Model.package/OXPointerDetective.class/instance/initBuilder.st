@@ -22,14 +22,14 @@ initBuilder
 					| nde |
 					nde := exploraNode element.
 					exploraNode expandDirection: #LeftClick -> #From with: (self showPointersTo: nde model).
-					nde model wrapper isNonTerminal
-						ifTrue: [ exploraNode element color: (Color blue alpha: 0.5) ] ]
+					 exploraNode element color: (nde model wrapper nodeFillColorFor: self) ]
 			with: [ :nde | self showPointersTo: nde ];
 		withPopup: [ :nde | self labelForNode: nde ];
 		onRightClickMenu:
 				{
 					('inspect' -> [ :exploraNode | self topez inspectOXObject: exploraNode element model wrapper ]).
 					('inspect (reified)' -> [ :exploraNode | self topez inspectReifiedOXObject: exploraNode element model wrapper ]).
+					('inspect node' -> [ :exploraNode | self topez inspectOXNode: exploraNode element model wrapper ]).
 					('center'
 						-> [ :exploraNode | 
 							self view canvas camera translateTo: exploraNode element encompassingRectangle center.

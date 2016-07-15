@@ -9,5 +9,5 @@ nodeFillColorFor: builder
 	self isMetaclassReference
 		ifTrue: [ ^ Color gray alpha: 0.5 ].
 	self hasAdditionalParents
-		ifTrue: [ ^ Color yellow alpha: 0.5 ].
+		ifTrue: [ ^ Color orange alpha: 0.5 ].
 	^ Color blue alpha: 0.5
