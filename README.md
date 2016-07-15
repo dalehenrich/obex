@@ -36,8 +36,8 @@
 
      ```shell
      # Create tODE client named obex
-     createClient -t pharo obex_40 -l -v Pharo4.0 -s obex_330 -z $GS_HOME/shared/repos/obex/.smalltalk.ston
-     startClient obex_40
+     createClient -t pharo obex -l -v Pharo3.0 -s obex_330 -z $GS_HOME/shared/repos/obex/.smalltalk.ston
+     startClient obex
      ```
 
 2. Log into the stone where you installed the Object Explorer and open an editor on the README from within tODE, so that you can run the examples:
