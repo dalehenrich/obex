@@ -9,7 +9,8 @@
 		"simpleData",
 		"simpleLeaves",
 		"simpleDataExcludedParents",
-		"someData" ],
+		"someData",
+		"simpleMultipleParentsData" ],
 	"name" : "ObexTestResource",
 	"pools" : [
 		 ],

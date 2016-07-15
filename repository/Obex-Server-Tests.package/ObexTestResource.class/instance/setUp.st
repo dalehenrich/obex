@@ -7,4 +7,5 @@ setUp
     setUpSimpleData;
     setUpOrphanClasses;
     setUpSomeData;
+    setUpSimpleMultipleParentsData;
     yourself
