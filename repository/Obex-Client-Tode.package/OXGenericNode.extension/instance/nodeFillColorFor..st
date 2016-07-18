@@ -3,7 +3,9 @@ nodeFillColorFor: builder
 	self isRoot
 		ifTrue: [ ^ Color red alpha: 0.5 ].
 	self isLeaf
-		ifTrue: [ ^ Color green alpha: 0.5 ].
+		ifTrue: [ 
+			self isDone ifTrue: [^ Color green  alpha: 0.4].
+			^ Color green ].
 	self isDone not
 		ifTrue: [ ^ Color brown alpha: 0.5 ].
 	self isMetaclassReference
