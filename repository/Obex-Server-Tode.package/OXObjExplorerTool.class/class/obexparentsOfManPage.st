@@ -10,7 +10,7 @@ obexparentsOfManPage
 
 SYNOPSIS
   obex parentsOf [--name=<dataStore-name>] [--exclude=<st-expression>] [--static] \
-                 [--st=<st-expression> | oop...]
+                 [--maxSessions=<max-sessions> | --aggressive] [--st=<st-expression> | oop...]
 
 DESCRIPTION
   The `object parents` command creates a new data source by collecting references to the given
@@ -24,6 +24,9 @@ EXAMPLES
   obex objects --st=`ObexTestResource current someData`
   obex dataStore --stackId=objects
   obex parentsOf --exclude=`{ObexTestResource current}`
+
+  obex parentsOf --maxSessions=4 --exclude=`{ObexTestResource current}`
+  obex parentsOf --aggressive --exclude=`{ObexTestResource current}`
 
   obex parentsOf 1234537
 
