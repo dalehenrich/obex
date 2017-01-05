@@ -11,6 +11,7 @@ SmalltalkCISpec {
   #testing : {
     #exclude : {
       #packages : [ 'Roassal2', 'Trachel' ]
-    }
+    },
+    #failOnZeroTests : false
   }
 }
