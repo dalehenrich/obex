@@ -32,6 +32,7 @@ DESCRIPTION
     objSecPolicy   New object store derived from objects in given ObjectSecurityPolicies
 
   Visualization:
+    report         Inspector on structured report objects derived from results of data analysis
     view           Visualize results of data analysis
 
   Utility
