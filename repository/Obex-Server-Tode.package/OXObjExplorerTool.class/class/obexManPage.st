@@ -60,5 +60,6 @@ EXAMPLES
     at: 'parentsOf' put: self obexparentsOfManPage;
     at: 'referencePaths' put: self obexreferencePathsManPage;
     at: 'inventory' put: self obexinventoryManPage;
+    at: 'report' put: self obexreportManPage;
     yourself.
   ^ manPage
