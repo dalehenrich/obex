@@ -5,12 +5,15 @@ obexreport
 "
 
   | limit |
-  self getSubcommandOptsMixedLongShort: {#('limit' nil #'required').
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('limit' nil #'required').
       #('inventory' nil #'required')}.
   subOptions at: 'limit' ifPresent: [ :limitArg | limit := limitArg asNumber ].
   subOptions
     at: 'inventory'
-    ifPresent: [ :sortKey | | labelMap sortSelectorMap |
+    ifPresent: [ :sortKey | 
+      | labelMap sortSelectorMap |
       sortSelectorMap := Dictionary new
         at: 'bytes' put: #'sortedClassByteCountList';
         at: 'instances' put: #'sortedClassInstanceCountList';
@@ -21,7 +24,7 @@ obexreport
         at: 'instances' put: 'Class instance count';
         at: 'name' put: 'Class name';
         yourself.
-      self
+      ^ self
         obexReportClassInstancesCount:
           self obexDataStoreRoot objectInventory top
         label: (labelMap at: sortKey)

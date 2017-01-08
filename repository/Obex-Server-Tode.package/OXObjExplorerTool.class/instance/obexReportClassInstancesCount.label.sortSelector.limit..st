@@ -8,9 +8,12 @@ obexReportClassInstancesCount: obexInstanceCountDataStore label: label sortSelec
   sortSelector == #'name'
     ifTrue: [ sorted := sorted sortBy: [ :a :b | a className <= b className ] ].
   limit ifNotNil: [ sorted := sorted copyFrom: 1 to: (sorted size min: limit) ].
-  sorted editUsing: ((TDEditorSpec topez: topez editorAspect: #'edit')
+  sorted
+    editUsing:
+      ((TDEditorSpec topez: topez editorAspect: #'edit')
         builderAspect: #'view';
         windowLabel: label;
         windowLocation: #'inspector';
         windowName: #'obexReport';
-        yourself)
+        yourself).
+  ^ sorted

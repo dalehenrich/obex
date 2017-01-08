@@ -6,7 +6,9 @@ obexinventory
 "
 
   | maxSessions percentCpu dataSource dataStoreNameOrNil |
-  self getSubcommandOptsMixedLongShort: {#('max' nil #'required').
+  self
+    getSubcommandOptsMixedLongShort:
+      {#('max' nil #'required').
       #('repo' nil #'none').
       #('st' nil #'required').
       #('pct' nil #'required')}.
@@ -21,7 +23,8 @@ obexinventory
   dataSource := subOptions
     at: 'repo'
     ifPresent: [ :ignored | self obexInventoryRepository: maxSessions percentCpu: percentCpu ]
-    ifAbsent: [ | objects |
+    ifAbsent: [ 
+      | objects |
       objects := self
         handleObjectsArrayOptionsSubArgsCollect: [ :oop | Object _objectForOop: oop asNumber ].
       self
@@ -32,4 +35,5 @@ obexinventory
     at: 'name'
     ifPresent: [ :dataStoreName | dataStoreName ]
     ifAbsent: [  ].
-  self obexAddDataSource: dataSource named: dataStoreNameOrNil
+  self obexAddDataSource: dataSource named: dataStoreNameOrNil.
+  ^ dataSource
