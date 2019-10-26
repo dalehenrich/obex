@@ -80,19 +80,19 @@
      obex instances --classes=3 --passes=0 obex.dbf.gz
      ```
 
-###Object Reference Paths
+### Object Reference Paths
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/sample.png" />
 
-###Class Instance Count Histogram
+### Class Instance Count Histogram
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classInstances.png" />
 
-###Class Bytes Count Histogram
+### Class Bytes Count Histogram
 
 <img style="border: 2px solid #000000;" src="https://raw.githubusercontent.com/dalehenrich/obex/master/docs/images/classBytes.png" />
 
-###Class Instance Counts based on selected set of instances
+### Class Instance Counts based on selected set of instances
 
 Each of the green nodes in the graph the instance count of the listed class in the image. The parent nodes of the green nodes (to the right) list the instance count of the classes that **reference** the instances in the child node ... and so on.
 
