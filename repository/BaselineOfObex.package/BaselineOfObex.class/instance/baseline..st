@@ -41,7 +41,7 @@ baseline: spec
         group: 'Tests' with: #('Obex-Client-Tests');
         yourself ].
   spec
-    for: #(#'gs3.3.x' #'gs3.4.x')
+    for: #(#'gs3.3.x' #'gs3.4.x' #'gs3.5.x')
     do: [ 
       spec
         package: 'Obex-Server-Tode'
@@ -59,7 +59,7 @@ baseline: spec
         group: 'Tests' with: #('Obex-Server-Tests');
         yourself ].
   spec
-    for: #(#'gs3.4.x')
+    for: #(#'gs3.4.x' #'gs3.5.x')
     do: [ 
       spec
         package: 'Obex-Server-Tests'
