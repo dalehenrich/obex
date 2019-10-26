@@ -50,7 +50,7 @@
    - [**Pointer Detective**](#object-reference-paths): calculate reference paths; open interactive detective view:
 
      ```
-     obex calc --maxPaths=3 --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
+     obex parentsOf --st=`{(MetacelloProjectRegistration registry registrations at: 1) projectSpec}`
      obex view --detective
      ```
 

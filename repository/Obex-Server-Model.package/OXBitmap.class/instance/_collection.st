@@ -4,7 +4,7 @@ _collection
     ifNil: [ 
       | bm |
       bm := GsBitmap new
-        addAll: self persistenOopArray;
+        addAll: self _persistentOopArray;
         yourself.
       _collection value: bm ].
   ^ _collection value
