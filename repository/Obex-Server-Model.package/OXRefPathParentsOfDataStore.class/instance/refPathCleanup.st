@@ -1,3 +1,3 @@
 analysis
 refPathCleanup
-  SystemRepository refPathCleanup
+  GsSingleRefPathFinder refPathCleanup
