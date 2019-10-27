@@ -4,7 +4,7 @@ calculateParentsOfOXNode: anOXNode
 
   | parentsInfo searchObject |
   searchObject := anOXNode object.
-  parentsInfo := SystemRepository _refPathParentsOf: searchObject.
+  parentsInfo := GsReferencePathParentsInfo _refPathParentsOf: searchObject.
   System commit.
   self oopToNodeMap at: searchObject asOop put: anOXNode.
   self analyzeReferenceParentsInfo: parentsInfo node: anOXNode

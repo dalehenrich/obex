@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"analyzeReferenceParentsInfo:node:" : "TravisCI 07/15/2016 07:59",
-		"calculateParentsOfOXNode:" : "TravisCI 07/14/2016 17:41",
+		"analyzeReferenceParentsInfo:node:" : "smalltalkCI 10/27/2019 11:39",
+		"calculateParentsOfOXNode:" : "smalltalkCI 10/27/2019 11:39",
 		"onlySearchObjects" : "TravisCI 07/13/2016 17:00",
 		"refPathCleanup" : "TravisCI 07/13/2016 13:47" } }

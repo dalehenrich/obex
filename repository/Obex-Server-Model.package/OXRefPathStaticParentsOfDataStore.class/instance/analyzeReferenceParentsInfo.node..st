@@ -5,7 +5,7 @@ analyzeReferenceParentsInfo: parentsInfo node: node
     _doAsOops: [ :referenceOop | 
       | theNode parentsInfo |
       theNode := self lookupNodeForOop: referenceOop rootNode: false.
-      parentsInfo := SystemRepository _refPathParentsOf: referenceOop.
+      parentsInfo := GsReferencePathParentsInfo _refPathParentsOf: referenceOop.
       theNode
         additionalParentsAvailable: parentsInfo additionalParentsAvailable;
         targetFoundInSearch: parentsInfo targetFoundInSearch;

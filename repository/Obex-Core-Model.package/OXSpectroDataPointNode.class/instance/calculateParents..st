@@ -25,7 +25,7 @@ calculateParents: parentNodeType
     excludeParentRefs: self exludedParentsArray
     onlySearchObjs: true.
   parentsOfResult := objects
-    collect: [ :anObject | SystemRepository _refPathParentsOf: anObject ].
+    collect: [ :anObject | GsReferencePathParentsInfo _refPathParentsOf: anObject ].
   SystemRepository refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
