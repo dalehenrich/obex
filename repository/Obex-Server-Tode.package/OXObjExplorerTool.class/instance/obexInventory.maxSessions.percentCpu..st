@@ -18,4 +18,5 @@ obexInventory: objInventory maxSessions: maxSessions percentCpu: percentCpu
         label;
         yourself.
       dataStore objectInventory at: clsOop put: ds ].
-  dataStore pushOnStack: #'objectInventory' in: self obexDataStoreRoot
+  dataStore pushOnStack: #'objectInventory' in: self obexDataStoreRoot.
+  ^ dataStore

@@ -13,7 +13,7 @@ obexInventoryHiddenSet: hiddenSetNumber maxSessions: maxSessions percentCpu: per
     listInstances: nil
     toFile: nil
     inMemoryOnly: false.
-  self
+  ^ self
     obexInventory: objInventory
     maxSessions: maxSessions
     percentCpu: percentCpu

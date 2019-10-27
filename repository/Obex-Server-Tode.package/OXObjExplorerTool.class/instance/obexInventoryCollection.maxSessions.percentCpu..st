@@ -4,7 +4,7 @@ obexInventoryCollection: aCollectionOfObjects maxSessions: maxSessions percentCp
   System truncateHiddenSet: 41 toSize: 0.
   coll := aCollectionOfObjects reject: [ :each | each isSpecial ].
   System addAll: coll asArray toHiddenSet: 41.
-  self
+  ^ self
     obexInventoryHiddenSet: 41
     maxSessions: maxSessions
     percentCpu: percentCpu
