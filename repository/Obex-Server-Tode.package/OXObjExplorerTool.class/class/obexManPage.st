@@ -61,5 +61,6 @@ EXAMPLES
     at: 'referencePaths' put: self obexreferencePathsManPage;
     at: 'inventory' put: self obexinventoryManPage;
     at: 'report' put: self obexreportManPage;
+    at: 'spectro' put: self obexspectroManPage;
     yourself.
   ^ manPage

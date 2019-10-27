@@ -3,7 +3,7 @@
 		"for:nodeType:label:" : "dkh 01/12/2016 11:23" },
 	"instance" : {
 		"calculateParents" : "dkh 01/12/2016 11:23",
-		"calculateParents:" : "smalltalkCI 10/27/2019 11:40",
+		"calculateParents:" : "smalltalkCI 10/27/2019 12:57",
 		"exludedParentsArray" : "dkh 01/16/2016 10:52",
 		"maxCpuUsage" : "dkh 01/12/2016 11:23",
 		"maxThreads" : "dkh 01/12/2016 11:23",

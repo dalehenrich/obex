@@ -15,18 +15,18 @@ calculateParents: parentNodeType
     yourself.
   objects := dataPoint samples value asArray.
   System commit.
-  SystemRepository
+  GsSingleRefPathFinder
     _refPathSetupScanWithMaxThreads: 1
     waitForLock: 3
     pageBufSize: 8
     percentCpuLimit: 90.
-  SystemRepository
+  GsSingleRefPathFinder
     _refPathDoScanForParents: objects
     excludeParentRefs: self exludedParentsArray
     onlySearchObjs: true.
   parentsOfResult := objects
     collect: [ :anObject | GsReferencePathParentsInfo _refPathParentsOf: anObject ].
-  SystemRepository refPathCleanup.
+  GsSingleRefPathFinder refPathCleanup.
   classInstanceMap := IntegerKeyValueDictionary new.
   classSamplesMap := IntegerKeyValueDictionary new.
   parentsOfResult
